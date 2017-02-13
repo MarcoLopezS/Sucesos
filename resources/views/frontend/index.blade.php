@@ -14,7 +14,7 @@
                                 <a href="/noticia">
                                     <span class="badge text-uppercase badge-overlay badge-tech">Tecnología</span>
                                     <div class="overlay"></div>
-                                    <img src="images/home/01/1.jpg" class="img-responsive" alt=""/>
+                                    <img src="/images/home/01/1.jpg" class="img-responsive" alt=""/>
                                     <div class="layout-detail padding-25">
                                         <div class="icon-32 video"></div>
                                         <h4>Elon Musk Just Unveiled His New Vision for Tesla</h4>
@@ -29,7 +29,7 @@
                                 <a href="/noticia">
                                     <span class="badge text-uppercase badge-overlay badge-travel">Travel</span>
                                     <div class="overlay"></div>
-                                    <img src="images/home/01/2.jpg" class="img-responsive" alt=""/>
+                                    <img src="/images/home/01/2.jpg" class="img-responsive" alt=""/>
                                     <div class="layout-detail padding-20">
                                         <h5>Is International Banking Getting Better or Worse?</h5>
                                         <div class="meta"><span class="date">Sep. 27, 2016</span><span class="comments">2</span></div>
@@ -40,7 +40,7 @@
                                 <a href="/noticia">
                                     <span class="badge text-uppercase badge-overlay badge-science">Science</span>
                                     <div class="overlay"></div>
-                                    <img src="images/home/01/3.jpg" class="img-responsive" alt=""/>
+                                    <img src="/images/home/01/3.jpg" class="img-responsive" alt=""/>
                                     <div class="layout-detail padding-20">
                                         <div class="icon-24 video2 default"></div>
                                         <h5>Facebook Messenger Just Crossed a Huge Milestone</h5>
@@ -56,7 +56,7 @@
                         <div class="col-md-4 col-sm-4">
                             <div class="layout_2--item">
                                 <div class="thumb">
-                                    <a href="/noticia"><img src="images/home/02/1.jpg" class="img-responsive" alt=""/></a>
+                                    <a href="/noticia"><img src="/images/home/02/1.jpg" class="img-responsive" alt=""/></a>
                                 </div>
                                 <span class="cat">Business</span>
                                 <h4><a href="/noticia">Unilever Buys Dollar Shave Club for $1 Billion</a></h4>
@@ -66,7 +66,7 @@
                         <div class="col-md-4 col-sm-4">
                             <div class="layout_2--item">
                                 <div class="thumb">
-                                    <a href="/noticia"><img src="images/home/02/2.jpg" class="img-responsive" alt=""/></a>
+                                    <a href="/noticia"><img src="/images/home/02/2.jpg" class="img-responsive" alt=""/></a>
                                 </div>
                                 <span class="cat">Sports</span>
                                 <h4><a href="/noticia">Fox Pushes Back Against Report of Roger Ailes' Firing</a></h4>
@@ -76,7 +76,7 @@
                         <div class="col-md-4 col-sm-4">
                             <div class="layout_2--item">
                                 <div class="thumb">
-                                    <a href="/noticia"><img src="images/home/02/3.jpg" class="img-responsive" alt=""/></a>
+                                    <a href="/noticia"><img src="/images/home/02/3.jpg" class="img-responsive" alt=""/></a>
                                 </div>
                                 <span class="cat">Politics</span>
                                 <h4><a href="/noticia">We're About to Live in a World of Economic Hunger Games</a></h4>
@@ -89,7 +89,7 @@
                             <div class="layout_2--item">
                                 <div class="thumb">
                                     <div class="icon-24 video2"></div>
-                                    <a href="/noticia"><img src="images/home/02/4.jpg" class="img-responsive" alt=""/></a>
+                                    <a href="/noticia"><img src="/images/home/02/4.jpg" class="img-responsive" alt=""/></a>
                                 </div>
                                 <span class="cat">Tecnología</span>
                                 <h4><a href="/noticia">Here's Why Netflix's Stock Is Tanking Right Now</a></h4>
@@ -99,7 +99,7 @@
                         <div class="col-md-4 col-sm-4">
                             <div class="layout_2--item">
                                 <div class="thumb">
-                                    <a href="/noticia"><img src="images/home/02/5.jpg" class="img-responsive" alt=""/></a>
+                                    <a href="/noticia"><img src="/images/home/02/5.jpg" class="img-responsive" alt=""/></a>
                                 </div>
                                 <span class="cat">Entertainment</span>
                                 <h4><a href="/noticia">Time Nominated for a 2016 Primetime Emmy Award</a></h4>
@@ -110,7 +110,7 @@
                             <div class="layout_2--item">
                                 <div class="thumb">
                                     <div class="icon-24 gallery2"></div>
-                                    <a href="/noticia"><img src="images/home/02/6.jpg" class="img-responsive" alt=""/></a>
+                                    <a href="/noticia"><img src="/images/home/02/6.jpg" class="img-responsive" alt=""/></a>
                                 </div>
                                 <span class="cat">World</span>
                                 <h4><a href="/noticia">This Company Just Became the Biggest IPO of 2016</a></h4>
@@ -149,14 +149,14 @@
                     <ul class="trending padding-top-30 padding-bottom-15">
                         <li>
                             <div class="thumb">
-                                <img src="images/category/01/9.jpg" class="img-responsive" alt="">
+                                <img src="/images/category/01/9.jpg" class="img-responsive" alt="">
                             </div>
                             <h4><a href="/noticia">Nest's New Product Is an Outdoor Security Camera</a></h4>
                             <div class="meta"><span class="date">Sep. 26, 2016</span><span class="rating">9.4</span></div>
                         </li>
                         <li>
                             <div class="thumb">
-                                <img src="images/category/01/13.jpg" class="img-responsive" alt="">
+                                <img src="/images/category/01/13.jpg" class="img-responsive" alt="">
                             </div>
                             <span class="cat">Business</span>
                             <h4><a href="/noticia">What to Know About the History of the Fed's Beige Book</a></h4>
@@ -166,7 +166,7 @@
                             <div class="thumb">
                                 <div class="icon-24 gallery2"></div>
                                 <div class="overlay-alt"></div>
-                                <img src="images/category/01/14.jpg" class="img-responsive" alt="">
+                                <img src="/images/category/01/14.jpg" class="img-responsive" alt="">
                             </div>
                             <h4><a href="/noticia">The Ultimate Job Seeker's Guide to LinkedIn</a></h4>
                             <div class="meta"><span class="date">Sep. 22, 2016</span><span class="rating">8.8</span></div>
@@ -194,6 +194,122 @@
                     <div class="clearfix"></div>
                 </div>
             </aside>
+        </div>
+    </div>
+
+    <div class="video-carousel-wrap bg-dark">
+        <div class="container">
+            <h5><span>Watch this</span> <a href="#">View all <i class="fa fa-angle-right"></i></a></h5>
+            <div class="clearfix"></div>
+            <div class="col-md-8 col-sm-7 no-padding">
+                <div class="video-container">
+                    <video id="video" width="400" onclick="togglePause()" controls>
+                        <source src="video/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="layout_1--item vc-item1 active">
+                        <div class="video-play"></div>
+                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
+                        <div class="overlay"></div>
+                        <img src="/images/home/06/1.jpg" class="img-responsive" alt=""/>
+                        <div class="layout-detail padding-25">
+                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
+                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
+                        </div>
+                    </div>
+                    <div class="layout_1--item vc-item2">
+                        <div class="video-play"></div>
+                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
+                        <div class="overlay"></div>
+                        <img src="/images/home/06/2.jpg" class="img-responsive" alt=""/>
+                        <div class="layout-detail padding-25">
+                            <h4>The Best New Features Coming to Your Windows</h4>
+                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
+                        </div>
+                    </div>
+                    <div class="layout_1--item vc-item3">
+                        <div class="video-play"></div>
+                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
+                        <div class="overlay"></div>
+                        <img src="/images/home/06/3.jpg" class="img-responsive" alt=""/>
+                        <div class="layout-detail padding-25">
+                            <h4>This Child Model Is So Over Being On Live TV</h4>
+                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
+                        </div>
+                    </div>
+                    <div class="layout_1--item vc-item4">
+                        <div class="video-play"></div>
+                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
+                        <div class="overlay"></div>
+                        <img src="/images/home/06/4.jpg" class="img-responsive" alt=""/>
+                        <div class="layout-detail padding-25">
+                            <h4>Outrage at bloodied Aleppo boy photo and lorem</h4>
+                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
+                        </div>
+                    </div>
+                    <div class="layout_1--item vc-item5">
+                        <div class="video-play"></div>
+                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
+                        <div class="overlay"></div>
+                        <img src="/images/home/06/5.jpg" class="img-responsive" alt=""/>
+                        <div class="layout-detail padding-25">
+                            <h4>The best lorem ipsum video of 2016 releaed</h4>
+                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-5 no-padding">
+                <div class="now-playing">
+                    <i class="fa fa-play"></i>
+                    <p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>
+                </div>
+                <div class="video-list">
+                    <ul>
+                        <li class="vl-video1">
+                            <div class="thumb">
+                                <div class="overlay-alt"></div>
+                                <div class="video-play-32"></div>
+                                <img src="/images/home/06/thumb/1.jpg" class="img-responsive" alt=""/>
+                            </div>
+                            <p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>
+                        </li>
+                        <li class="vl-video2">
+                            <div class="thumb">
+                                <div class="overlay-alt"></div>
+                                <div class="video-play-32"></div>
+                                <img src="/images/home/06/thumb/2.jpg" class="img-responsive" alt=""/>
+                            </div>
+                            <p>The Best New Features Coming to Your Windows<span>18:35</span></p>
+                        </li>
+                        <li class="vl-video3">
+                            <div class="thumb">
+                                <div class="overlay-alt"></div>
+                                <div class="video-play-32"></div>
+                                <img src="/images/home/06/thumb/3.jpg" class="img-responsive" alt=""/>
+                            </div>
+                            <p>This Child Model Is So Over Being On Live TV <span>11:20</span></p>
+                        </li>
+                        <li class="vl-video4">
+                            <div class="thumb">
+                                <div class="overlay-alt"></div>
+                                <div class="video-play-32"></div>
+                                <img src="/images/home/06/thumb/4.jpg" class="img-responsive" alt=""/>
+                            </div>
+                            <p>Outrage at bloodied Aleppo boy photo and lorem <span>15:25</span></p>
+                        </li>
+                        <li class="vl-video5">
+                            <div class="thumb">
+                                <div class="overlay-alt"></div>
+                                <div class="video-play-32"></div>
+                                <img src="/images/home/06/thumb/5.jpg" class="img-responsive" alt=""/>
+                            </div>
+                            <p>The best lorem ipsum video of 2016 releaed <span>13:45</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 @stop
