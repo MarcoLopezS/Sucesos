@@ -197,9 +197,9 @@
         </div>
     </div>
 
-    <div class="video-carousel-wrap bg-dark">
+    <div class="padding-bottom-50 video-container-white">
         <div class="container">
-            <h5><span>Watch this</span> <a href="#">View all <i class="fa fa-angle-right"></i></a></h5>
+            <h3 class="heading-1"><span>Latest Videos</span></h3>
             <div class="clearfix"></div>
             <div class="col-md-8 col-sm-7 no-padding">
                 <div class="video-container">
@@ -210,7 +210,7 @@
                         <div class="video-play"></div>
                         <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
                         <div class="overlay"></div>
-                        <img src="/images/home/06/1.jpg" class="img-responsive" alt=""/>
+                        <img src="images/home/06/1.jpg" class="img-responsive" alt=""/>
                         <div class="layout-detail padding-25">
                             <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
                             <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
@@ -220,9 +220,9 @@
                         <div class="video-play"></div>
                         <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
                         <div class="overlay"></div>
-                        <img src="/images/home/06/2.jpg" class="img-responsive" alt=""/>
+                        <img src="images/home/06/2.jpg" class="img-responsive" alt=""/>
                         <div class="layout-detail padding-25">
-                            <h4>The Best New Features Coming to Your Windows</h4>
+                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
                             <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
                         </div>
                     </div>
@@ -230,9 +230,9 @@
                         <div class="video-play"></div>
                         <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
                         <div class="overlay"></div>
-                        <img src="/images/home/06/3.jpg" class="img-responsive" alt=""/>
+                        <img src="images/home/06/3.jpg" class="img-responsive" alt=""/>
                         <div class="layout-detail padding-25">
-                            <h4>This Child Model Is So Over Being On Live TV</h4>
+                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
                             <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
                         </div>
                     </div>
@@ -240,9 +240,9 @@
                         <div class="video-play"></div>
                         <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
                         <div class="overlay"></div>
-                        <img src="/images/home/06/4.jpg" class="img-responsive" alt=""/>
+                        <img src="images/home/06/4.jpg" class="img-responsive" alt=""/>
                         <div class="layout-detail padding-25">
-                            <h4>Outrage at bloodied Aleppo boy photo and lorem</h4>
+                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
                             <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
                         </div>
                     </div>
@@ -250,15 +250,14 @@
                         <div class="video-play"></div>
                         <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
                         <div class="overlay"></div>
-                        <img src="/images/home/06/5.jpg" class="img-responsive" alt=""/>
+                        <img src="images/home/06/5.jpg" class="img-responsive" alt=""/>
                         <div class="layout-detail padding-25">
-                            <h4>The best lorem ipsum video of 2016 releaed</h4>
+                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
                             <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4 col-sm-5 no-padding">
                 <div class="now-playing">
                     <i class="fa fa-play"></i>
@@ -270,7 +269,7 @@
                             <div class="thumb">
                                 <div class="overlay-alt"></div>
                                 <div class="video-play-32"></div>
-                                <img src="/images/home/06/thumb/1.jpg" class="img-responsive" alt=""/>
+                                <img src="images/home/06/thumb/1.jpg" class="img-responsive" alt=""/>
                             </div>
                             <p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>
                         </li>
@@ -278,7 +277,7 @@
                             <div class="thumb">
                                 <div class="overlay-alt"></div>
                                 <div class="video-play-32"></div>
-                                <img src="/images/home/06/thumb/2.jpg" class="img-responsive" alt=""/>
+                                <img src="images/home/06/thumb/2.jpg" class="img-responsive" alt=""/>
                             </div>
                             <p>The Best New Features Coming to Your Windows<span>18:35</span></p>
                         </li>
@@ -286,7 +285,7 @@
                             <div class="thumb">
                                 <div class="overlay-alt"></div>
                                 <div class="video-play-32"></div>
-                                <img src="/images/home/06/thumb/3.jpg" class="img-responsive" alt=""/>
+                                <img src="images/home/06/thumb/3.jpg" class="img-responsive" alt=""/>
                             </div>
                             <p>This Child Model Is So Over Being On Live TV <span>11:20</span></p>
                         </li>
@@ -294,7 +293,7 @@
                             <div class="thumb">
                                 <div class="overlay-alt"></div>
                                 <div class="video-play-32"></div>
-                                <img src="/images/home/06/thumb/4.jpg" class="img-responsive" alt=""/>
+                                <img src="images/home/06/thumb/4.jpg" class="img-responsive" alt=""/>
                             </div>
                             <p>Outrage at bloodied Aleppo boy photo and lorem <span>15:25</span></p>
                         </li>
@@ -302,7 +301,7 @@
                             <div class="thumb">
                                 <div class="overlay-alt"></div>
                                 <div class="video-play-32"></div>
-                                <img src="/images/home/06/thumb/5.jpg" class="img-responsive" alt=""/>
+                                <img src="images/home/06/thumb/5.jpg" class="img-responsive" alt=""/>
                             </div>
                             <p>The best lorem ipsum video of 2016 releaed <span>13:45</span></p>
                         </li>
