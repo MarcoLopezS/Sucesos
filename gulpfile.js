@@ -14,5 +14,13 @@ require('laravel-elixir-vue-2');
  */
 
 elixir((mix) => {
+    mix.less('animate.less');
+    mix.less('style.less');
+    mix.less('ts.less');
 
+    mix.version([
+        'css/animate.css',
+        'css/style.css',
+        'css/ts.css'
+    ]);
 });
