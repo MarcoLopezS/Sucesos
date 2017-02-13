@@ -4,6 +4,10 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
+Route::get('noticia', function () {
+    return view('frontend.noticia');
+});
+
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);
 

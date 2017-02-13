@@ -41,113 +41,20 @@
 
 <div class="wrapper">
 
-    <!-- SIDE MENU -->
-    <div id="sidebar-wrapper" class="hidden-xs">
-        <ul class="nav navbar-nav">
-            <li><a href="#">Inicio</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">World <span class="fa fa-angle-right"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Politics</a></li>
-                    <li><a href="#">Opinions</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Local</a></li>
-                    <li><a href="#">National</a></li>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">Business</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Politics <span class="fa fa-angle-right"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Politics</a></li>
-                    <li><a href="#">Opinions</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Local</a></li>
-                    <li><a href="#">National</a></li>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">Business</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sports <span class="fa fa-angle-right"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Politics</a></li>
-                    <li><a href="#">Opinions</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Local</a></li>
-                    <li><a href="#">National</a></li>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">Business</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Business <span class="fa fa-angle-right"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Politics</a></li>
-                    <li><a href="#">Opinions</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Local</a></li>
-                    <li><a href="#">National</a></li>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">Business</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opinion <span class="fa fa-angle-right"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Politics</a></li>
-                    <li><a href="#">Opinions</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Local</a></li>
-                    <li><a href="#">National</a></li>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">Business</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tech <span class="fa fa-angle-right"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Politics</a></li>
-                    <li><a href="#">Opinions</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Local</a></li>
-                    <li><a href="#">National</a></li>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">Business</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Lifestyle</a></li>
-            <li><a href="#">Science</a></li>
-            <li><a href="#">More</a></li>
-        </ul>
-    </div>
-    <!-- // SIDE MENU -->
-
     <!-- HEADER / MENU -->
     <header class="header1 header-megamenu">
         <div class="navbar-header padding-vertical-10">
             <div class="container">
-				<span class="offset-trigger hidden-xs">
-				<span></span>
-				<span></span>
-				<span></span>
-				</span>
-                <a href="index.html" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt=""/></a>
+				<a href="/" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt=""/></a>
                 <div class="ad-banner pull-right hidden-xs">
-                    <a href="#"><img src="images/ads/728x90.jpg" class="img-responsive" alt=""/></a>
+                    <a href="#"><img src="http://placeholdit.imgix.net/~text?txtsize=30&bg=c6c6c6&txtclr=000000&txt=Publicidad&w=729&h=90" class="img-responsive" alt=""/></a>
                 </div>
             </div>
         </div>
         <div class="clearfix"></div>
         <div class="container">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span>Navigation</span>
+                <span>Navegación</span>
                 <span class="fa fa-navicon"></span>
             </button>
 
@@ -160,55 +67,11 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown dropdown-v2">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html">Homepage 1</a></li>
-                            <li><a href="home-2.html">Homepage 2</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown dropdown-v2">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="category_01.html">Category 1</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown dropdown-v2">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Post pages</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="post_page_01.html">Post Page 1</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown dropdown-v2">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="shop-full.html">Shop - Fullwidth</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown dropdown-v2">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="header_menus_01.html">Header styles - 1</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown megamenu megamenu-5col megamenu-border">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="fa fa-angle-down"></span></a>
-                        <ul class="dropdown-menu no-padding">
-                            <li>
-                                <div class="row row-eq-height no-margin">
-                                    <div class="col-md-3 padding-20">
-                                        <h5>Homepages</h5>
-                                        <a href="index.html">Homepage 1</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="#">Politica</a></li>
+                    <li><a href="#">Economía</a></li>
+                    <li><a href="#">Tecnología</a></li>
+                    <li><a href="#">Columnistas</a></li>
                     <li class="pull-right hidden-xs">
                         <div class="search-trigger search-trigger2"><i class="fa fa-search"></i></div>
                     </li>
@@ -226,11 +89,9 @@
         <div class="container">
             <div class="row margin-bottom-30">
                 <div class="col-md-4 col-sm-4 margin-bottom-30 footer-info">
-                    <a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""/></a>
+                    <a href="/"><img src="images/logo-bn.png" class="img-responsive" alt=""/></a>
                     <p>Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat.</p>
-                    <span><i class="fa fa-map-marker"></i> 1610 Connecticut Avenue, NW, Suite 500</span>
-                    <span><i class="fa fa-envelope"></i> <a href="mailto:info@watcher.com">info@watcher.com</a></span>
-                    <span><i class="fa fa-phone"></i> +1-202-555-0113</span>
+                    <span><i class="fa fa-envelope"></i> <a href="mailto:info@watcher.com">info@sucesos.pe</a></span>
                 </div>
 
                 <div class="col-md-4 col-sm-4 margin-bottom-30 footer-trending">
@@ -278,18 +139,8 @@
             <!-- FOOTER COPYRIGHT -->
             <div class="footer-bottom">
                 <div class="row">
-                    <div class="col-md-4 col-sm-12">
-                        <p>&copy; Copyright 2016 Watcher.com. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-8 col-sm-12">
-                        <ul class="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Advertising</a></li>
-                            <li><a href="#">Subscribe</a></li>
-                        </ul>
+                    <div class="col-md-6 col-sm-12">
+                        <p>&copy; Copyright 2017 Sucesos.pe</p>
                     </div>
                 </div>
             </div>
@@ -311,6 +162,8 @@
     {!! HTML::script('js/wow.js') !!}
 
     {!! HTML::script('js/main.js') !!}
+
+    {!! HTML::script('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58a0ef96d417903d') !!}
 
     <!-- Twitterfeed -->
     <script src="js/tweecool.min.js"></script>
