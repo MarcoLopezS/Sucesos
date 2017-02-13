@@ -25,15 +25,26 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
+    protected $redirectPath = '/';
+    protected $redirectAfterLogout = '/';
+    protected $loginPath = 'login';
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'logout']);
+    }
+
+    /**
+     * Get the failed login message.
+     *
+     * @return string
+     */
+    protected function getFailedLoginMessage()
+    {
+        return 'Estas credenciales no coinciden con nuestros registros';
     }
 }
