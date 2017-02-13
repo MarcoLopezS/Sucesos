@@ -120,11 +120,12 @@
                     </div>
                 </div>
 
-                <div class="layout_3">
-                    <div class="row"> </div>
+                <h3 class="heading-1"><span>Columnistas</span></h3>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <img src="/images/columnista.png" width="100%" alt="">
+                    </div>
                 </div>
-
-                <div class="layout_2 margin-bottom-15"> </div>
             </div>
 
             <aside class="col-md-4 col-sm-4">
