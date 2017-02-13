@@ -200,7 +200,7 @@
                         <h3 class="heading-1"><span>Portada</span></h3>
                         <div class="layout_3--item">
                             <div class="thumb">
-                                <a href="#"><img src="http://cdn.expansion.mx/dims4/default/ddffee9/2147483647/thumbnail/400x517%5E/quality/75/?url=http%3A%2F%2Fcdn.expansion.mx%2Fc7%2F2a%2F0a23dbd04635966bf78433c8a68a%2Fexp-1205-portada.jpg" class="img-responsive" alt=""></a>
+                                <a href="#"><img src="/images/portada.jpg" class="img-responsive" alt=""></a>
                             </div>
                         </div>
                     </div>
