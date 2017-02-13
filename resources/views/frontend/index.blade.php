@@ -146,7 +146,7 @@
                 </div>
 
                 <div class="side-widget margin-bottom-50">
-                    <h3 class="heading-1"><span>Most Popular</span></h3>
+                    <h3 class="heading-1"><span>lo más visto</span></h3>
                     <ul class="trending padding-top-30 padding-bottom-15">
                         <li>
                             <div class="thumb">
@@ -211,7 +211,7 @@
 
     <div class="padding-bottom-50 video-container-white">
         <div class="container">
-            <h3 class="heading-1"><span>Latest Videos</span></h3>
+            <h3 class="heading-1"><span>Sucesos TV</span></h3>
             <div class="clearfix"></div>
             <div class="col-md-8 col-sm-7 no-padding">
                 <div class="video-container">
