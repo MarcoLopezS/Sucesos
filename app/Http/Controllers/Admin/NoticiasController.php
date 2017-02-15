@@ -85,7 +85,7 @@ class NoticiasController extends Controller {
 
 		//VARIABLES
 		$titulo = $request->input('titulo');
-		$slug_url = $this->noticiaRepo->SlugUrl($titulo);
+		$slug_url = SlugUrl($titulo);
         $categoria = $request->input('categoria');
         $tags = $request->input('tags');
         $imagen = $request->input('imagen');
@@ -130,8 +130,10 @@ class NoticiasController extends Controller {
 	public function edit($id)
 	{
 		$post = $this->noticiaRepo->findOrFail($id);
+        $categorias = $this->categoriaRepo->listPub();
+        $tags = $this->tagRepo->listPub();
 
-		return view('admin.noticias.edit', compact('post'));
+		return view('admin.noticias.edit', compact('post','categorias','tags'));
 	}
 
     /**
@@ -151,11 +153,19 @@ class NoticiasController extends Controller {
 
 		//VARIABLES
 		$titulo = $request->input('titulo');
-		$slug_url = $this->noticiaRepo->SlugUrl($titulo);
+		$slug_url = SlugUrl($titulo);
+        $tags = $request->input('tags');
+        $imagen = $request->input('imagen');
+        $imagen_carpeta = $request->input('imagen_carpeta');
 
 		//GUARDAR DATOS
 		$post->slug_url = $slug_url;
-		$this->noticiaRepo->update($post, $request->all());
+        $post->imagen = $imagen;
+        $post->imagen_carpeta = $imagen_carpeta;
+		$row = $this->noticiaRepo->update($post, $request->all());
+
+        //GUARDAR TAGS
+        $row->tags()->sync($tags);
 
 		//MENSAJE
 		flash()->success('El registro se actualizó satisfactoriamente.');

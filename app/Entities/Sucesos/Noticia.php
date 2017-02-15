@@ -38,6 +38,11 @@ class Noticia extends BaseEntity {
     /*
      * GETTERS
      */
+    public function getEtiquetasAttribute()
+    {
+        return $this->tags()->pluck('tag_id')->toArray();
+    }
+
     public function getUrlAttribute()
     {
         return route('noticias.select', [$this->id, $this->slug_url]);
@@ -53,6 +58,11 @@ class Noticia extends BaseEntity {
         return fechaPubAdmin($this->published_at);
     }
 
+    public function getImagenAdminAttribute()
+    {
+        return "/upload/".$this->imagen_carpeta."200x120/".$this->imagen;
+    }
+
     public function getImagenBlogAttribute()
     {
         return "/upload/".$this->imagen_carpeta."690/".$this->imagen;
@@ -61,6 +71,14 @@ class Noticia extends BaseEntity {
     public function getImagenBlogNotaAttribute()
     {
         return "/upload/".$this->imagen_carpeta."750/".$this->imagen;
+    }
+
+    /*
+     * SETTERS
+     */
+    public function setPublishedAtAttribute($value)
+    {
+        $this->attributes['published_at'] = fechaPublicacionBD($value.':00');
     }
 
     /*
