@@ -17,10 +17,14 @@ elixir((mix) => {
     mix.less('animate.less');
     mix.less('style.less');
     mix.less('ts.less');
+    mix.less('flexslider/flexslider.less', 'public/libs/flexslider/flexslider.css');
+    mix.scripts(['main.js'], 'public/js/main.js');
 
     mix.version([
         'css/animate.css',
         'css/style.css',
-        'css/ts.css'
+        'css/ts.css',
+        'libs/flexslider/flexslider.css',
+        'js/main.js'
     ]);
 });
