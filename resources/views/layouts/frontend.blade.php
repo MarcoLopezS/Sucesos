@@ -151,7 +151,7 @@
 </div>
 
     {{-- Enlaces Externos --}}
-    {!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js') !!}
+    {!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js') !!}
     {!! HTML::script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js') !!}
 
     {{-- Enlaces --}}
@@ -161,7 +161,7 @@
     {!! HTML::script('js/lity/lity.min.js') !!}
     {!! HTML::script('js/wow.js') !!}
 
-    {!! HTML::script('js/main.js') !!}
+    {!! HTML::script(elixir('js/main.js')) !!}
 
     {!! HTML::script('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58a0ef96d417903d') !!}
 
