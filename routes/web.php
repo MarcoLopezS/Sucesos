@@ -1,12 +1,11 @@
 <?php
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+//FRONTEND
+Route::get('/', ['as' => 'home', 'uses' => 'FrontendController@home']);
+Route::get('seccion/{url}', ['as' => 'categoria', 'uses' => 'FrontendController@categoria']);
+Route::get('tag/{url}', ['as' => 'tag', 'uses' => 'FrontendController@tag']);
+Route::get('nota/{id}-{url}', ['as' => 'noticia', 'uses' => 'FrontendController@noticia']);
 
-Route::get('noticia', function () {
-    return view('frontend.noticia');
-});
 
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);
@@ -14,8 +13,10 @@ Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptive
 //CAMBIAR ANCHO DE IMAGNE
 Route::get('/upload/{folder}/{width}/{image}', ['as' => 'image.withResize', 'uses' => 'ImageController@withResize']);
 
+//LOGIN
 Auth::routes();
 
+//ADMIN
 Route::group(['as' => 'admin.', 'middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
 
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
