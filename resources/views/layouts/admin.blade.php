@@ -87,9 +87,15 @@
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="{{ route('logout') }}">
+                                    <a href="{{ url('/logout') }}"
+                                       onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
                                         <i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión
                                     </a>
+
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
                                 </li>
                             </ul>
                         </li>
@@ -156,10 +162,16 @@
                         </ul>
                     </li>
                     <li class="">
-                        <a href="{{ route('logout') }}">
+                        <a href="{{ url('/logout') }}"
+                           onclick="event.preventDefault();
+                                                 document.getElementById('logout-form-side').submit();">
                             <i class="fa fa-sign-out" aria-hidden="true"></i>
                             <span class="title">Cerrar sesión</span>
                         </a>
+
+                        <form id="logout-form-side" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </li>
                 </ul>
                 <!-- END SIDEBAR MENU -->
