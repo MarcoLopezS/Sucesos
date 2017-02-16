@@ -10,8 +10,9 @@ $factory->define(\Sucesos\Entities\Sucesos\Noticia::class, function (Faker\Gener
         'publicar' => random_int(0, 1),
         'categoria_id' => random_int(1, 4),
         'user_id' => 1,
-        'imagen' => 'nuevo.jpg',
+        'imagen' => random_int(1, 10).'.jpg',
         'imagen_carpeta' => 'febrero2017/',
-        'published_at' => '2017-02-15 01:02:03'
+        'tipo' => $faker->randomElement(['destacado','normal']),
+        'published_at' => '15/02/2017 01:02'
     ];
 });

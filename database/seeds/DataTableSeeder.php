@@ -21,10 +21,10 @@ class DataTableSeeder extends Seeder
 
         //CATEGORIAS
         DB::table('categorias')->insert([
-            ['id' => '1', 'titulo' => 'SEO', 'slug_url' => 'seo', 'publicar' => 1],
-            ['id' => '2', 'titulo' => 'Noticias', 'slug_url' => 'noticias', 'publicar' => 1],
-            ['id' => '3', 'titulo' => 'Marketing', 'slug_url' => 'marketing', 'publicar' => 1],
-            ['id' => '4', 'titulo' => 'Programación', 'slug_url' => 'programacion', 'publicar' => 1]
+            ['id' => '1', 'titulo' => 'Economía', 'slug_url' => 'economia', 'publicar' => 1],
+            ['id' => '2', 'titulo' => 'Mundo', 'slug_url' => 'mundo', 'publicar' => 1],
+            ['id' => '3', 'titulo' => 'Politica', 'slug_url' => 'politica', 'publicar' => 1],
+            ['id' => '4', 'titulo' => 'Tecnología', 'slug_url' => 'tecnologia', 'publicar' => 1]
         ]);
 
         //TAGS
