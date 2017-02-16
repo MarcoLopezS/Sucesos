@@ -34,5 +34,8 @@ class DataTableSeeder extends Seeder
             ['id' => '3', 'titulo' => 'Apple', 'slug_url' => 'apple', 'publicar' => 1],
             ['id' => '4', 'titulo' => 'Bill Gates', 'slug_url' => 'bill-gates', 'publicar' => 1]
         ]);
+
+        //NOTICIAS
+        factory(\Sucesos\Entities\Sucesos\Noticia::class, 100)->create();
     }
 }
