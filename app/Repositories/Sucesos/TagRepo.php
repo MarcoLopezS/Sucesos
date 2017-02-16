@@ -13,6 +13,6 @@ class TagRepo extends BaseRepo{
     //LISTAR CATEGORIAS PUBLICADAS
     public function listPub()
     {
-        return $this->getModel()->where('publicar', 1)->lists('titulo', 'id')->toArray();
+        return $this->getModel()->where('publicar', 1)->pluck('titulo', 'id')->toArray();
     }
 }

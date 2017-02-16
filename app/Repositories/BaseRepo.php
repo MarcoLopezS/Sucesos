@@ -39,9 +39,9 @@ abstract class BaseRepo {
     }
 
     //LISTAR
-    public function lists($field, $id)
+    public function pluck($field, $id)
     {
-        return $this->getModel()->lists($field, $id);
+        return $this->getModel()->pluck($field, $id);
     }
 
     //MOSTRAR
@@ -91,7 +91,7 @@ abstract class BaseRepo {
 
     public function listTituloArray()
     {
-        return $this->getModel()->lists('titulo', 'id')->toArray();
+        return $this->getModel()->pluck('titulo', 'id')->toArray();
     }
 
     /* FECHA ACTUAL */
