@@ -1,5 +1,10 @@
 @extends('layouts.frontend')
 
+@php
+    $IDnormal = 1;
+    $IDdestacado = 1;
+@endphp
+
 @section('contenido_header')
 @stop
 
@@ -9,115 +14,65 @@
             <div class="col-md-8 col-sm-8">
                 <div class="layout_1 margin-bottom-30">
                     <div class="row">
-                        <div class="col-md-8">
-                            <div class="layout_1--item">
-                                <a href="/noticia">
-                                    <span class="badge text-uppercase badge-overlay badge-tech">Tecnología</span>
+                        <div id="destacado-izq" class="col-md-8"></div>
+                        <div id="destacado-der" class="col-md-4"></div>
+
+                        @foreach($destacado as $noticia)
+                            @php
+                                $noticia_titulo = $noticia->titulo;
+                                $noticia_url = $noticia->url;
+                                $noticia_imagen = $noticia->imagen_620_x_470;
+                                $noticia_categoria = $noticia->categoria_nombre;
+                                $noticia_fecha = $noticia->fecha;
+                            @endphp
+                            <div id="destacado-{{ $IDdestacado }}" class="layout_1--item">
+                                <a href="{{ $noticia_url }}">
+                                    <span class="badge text-uppercase badge-overlay">{{ $noticia_categoria }}</span>
                                     <div class="overlay"></div>
-                                    <img src="/images/home/01/1.jpg" class="img-responsive" alt=""/>
+                                    <img src="{{ $noticia_imagen }}" class="img-responsive" alt=""/>
                                     <div class="layout-detail padding-25">
-                                        <div class="icon-32 video"></div>
-                                        <h4>Elon Musk Just Unveiled His New Vision for Tesla</h4>
-                                        <p>Adipiscing elit, sed do eiusmod tempor incididunt...</p>
-                                        <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span></div>
+                                        <h4>{{ $noticia_titulo }}</h4>
+                                        <div class="meta"><span class="date">{{ $noticia_fecha }}</span></div>
                                     </div>
                                 </a>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="layout_1--item">
-                                <a href="/noticia">
-                                    <span class="badge text-uppercase badge-overlay badge-travel">Travel</span>
-                                    <div class="overlay"></div>
-                                    <img src="/images/home/01/2.jpg" class="img-responsive" alt=""/>
-                                    <div class="layout-detail padding-20">
-                                        <h5>Is International Banking Getting Better or Worse?</h5>
-                                        <div class="meta"><span class="date">Sep. 27, 2016</span><span class="comments">2</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="layout_1--item">
-                                <a href="/noticia">
-                                    <span class="badge text-uppercase badge-overlay badge-science">Science</span>
-                                    <div class="overlay"></div>
-                                    <img src="/images/home/01/3.jpg" class="img-responsive" alt=""/>
-                                    <div class="layout-detail padding-20">
-                                        <div class="icon-24 video2 default"></div>
-                                        <h5>Facebook Messenger Just Crossed a Huge Milestone</h5>
-                                        <div class="meta"><span class="date">Sep. 27, 2016</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            @php
+                                $IDdestacado = $IDdestacado + 1;
+                            @endphp
+                        @endforeach
+
                     </div>
                 </div>
                 <div class="layout_2 margin-bottom-20">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4">
+
+                    <div id="normal-sup" class="row"></div>
+                    <div id="normal-inf" class="row"></div>
+
+                    @foreach($normal as $noticia)
+                        @php
+                            $noticia_titulo = $noticia->titulo;
+                            $noticia_url = $noticia->url;
+                            $noticia_imagen = $noticia->imagen_490_x_300;
+                            $noticia_categoria = $noticia->categoria_nombre;
+                            $noticia_fecha = $noticia->fecha;
+                        @endphp
+
+                        <div id="normal-{{ $IDnormal }}" class="col-md-4 col-sm-4">
                             <div class="layout_2--item">
                                 <div class="thumb">
-                                    <a href="/noticia"><img src="/images/home/02/1.jpg" class="img-responsive" alt=""/></a>
+                                    <a href="{{ $noticia_url }}"><img src="{{ $noticia_imagen }}" class="img-responsive" alt=""/></a>
                                 </div>
-                                <span class="cat">Business</span>
-                                <h4><a href="/noticia">Unilever Buys Dollar Shave Club for $1 Billion</a></h4>
-                                <div class="meta"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span><span class="comments">2</span></div>
+                                <span class="cat">{{ $noticia_categoria }}</span>
+                                <h4><a href="{{ $noticia_url }}">{{ $noticia_titulo }}</a></h4>
+                                <div class="meta"><span class="date">{{ $noticia_fecha }}</span></div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="layout_2--item">
-                                <div class="thumb">
-                                    <a href="/noticia"><img src="/images/home/02/2.jpg" class="img-responsive" alt=""/></a>
-                                </div>
-                                <span class="cat">Sports</span>
-                                <h4><a href="/noticia">Fox Pushes Back Against Report of Roger Ailes' Firing</a></h4>
-                                <div class="meta"><span class="author">by Lisa E.</span><span class="date">Sep. 27, 2016</span></div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="layout_2--item">
-                                <div class="thumb">
-                                    <a href="/noticia"><img src="/images/home/02/3.jpg" class="img-responsive" alt=""/></a>
-                                </div>
-                                <span class="cat">Politics</span>
-                                <h4><a href="/noticia">We're About to Live in a World of Economic Hunger Games</a></h4>
-                                <div class="meta"><span class="author">by Alex F.</span><span class="date">Sep. 25, 2016</span><span class="comments">1</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                            <div class="layout_2--item">
-                                <div class="thumb">
-                                    <div class="icon-24 video2"></div>
-                                    <a href="/noticia"><img src="/images/home/02/4.jpg" class="img-responsive" alt=""/></a>
-                                </div>
-                                <span class="cat">Tecnología</span>
-                                <h4><a href="/noticia">Here's Why Netflix's Stock Is Tanking Right Now</a></h4>
-                                <div class="meta"><span class="author">by Katie R.</span><span class="date">Sep. 23, 2016</span></div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="layout_2--item">
-                                <div class="thumb">
-                                    <a href="/noticia"><img src="/images/home/02/5.jpg" class="img-responsive" alt=""/></a>
-                                </div>
-                                <span class="cat">Entertainment</span>
-                                <h4><a href="/noticia">Time Nominated for a 2016 Primetime Emmy Award</a></h4>
-                                <div class="meta"><span class="author">by Melissa L.</span><span class="date">Sep. 22, 2016</span><span class="comments">3</span></div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="layout_2--item">
-                                <div class="thumb">
-                                    <div class="icon-24 gallery2"></div>
-                                    <a href="/noticia"><img src="/images/home/02/6.jpg" class="img-responsive" alt=""/></a>
-                                </div>
-                                <span class="cat">World</span>
-                                <h4><a href="/noticia">This Company Just Became the Biggest IPO of 2016</a></h4>
-                                <div class="meta"><span class="author">by Lauren R.</span><span class="date">Sep. 20, 2016</span></div>
-                            </div>
-                        </div>
-                    </div>
+
+                        @php
+                            $IDnormal = $IDnormal + 1;
+                        @endphp
+                    @endforeach
+
                 </div>
 
                 <h3 class="heading-1"><span>Columnistas</span></h3>
