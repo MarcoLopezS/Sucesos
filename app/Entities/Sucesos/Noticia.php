@@ -8,7 +8,7 @@ class Noticia extends BaseEntity {
 
     use SoftDeletes;
     protected $dates = ['published_at','deleted_at'];
-	protected $fillable = ['titulo','slug_url','descripcion','contenido','publicar','published_at','user_id'];
+	protected $fillable = ['titulo','slug_url','descripcion','contenido','publicar','tipo','published_at','user_id'];
     protected $table = "noticias";
 
     /*
@@ -38,14 +38,14 @@ class Noticia extends BaseEntity {
     /*
      * GETTERS
      */
+    public function getCategoriaNombreAttribute()
+    {
+        return $this->categoria->titulo;
+    }
+
     public function getEtiquetasAttribute()
     {
         return $this->tags()->pluck('tag_id')->toArray();
-    }
-
-    public function getUrlAttribute()
-    {
-        return route('noticias.select', [$this->id, $this->slug_url]);
     }
 
     public function getFechaAttribute()
@@ -63,14 +63,24 @@ class Noticia extends BaseEntity {
         return "/upload/".$this->imagen_carpeta."200x120/".$this->imagen;
     }
 
-    public function getImagenBlogAttribute()
+    public function getImagen490x300Attribute()
     {
-        return "/upload/".$this->imagen_carpeta."690/".$this->imagen;
+        return "/upload/".$this->imagen_carpeta."490x300/".$this->imagen;
+    }
+
+    public function getImagen620x470Attribute()
+    {
+        return "/upload/".$this->imagen_carpeta."620x470/".$this->imagen;
     }
 
     public function getImagenBlogNotaAttribute()
     {
         return "/upload/".$this->imagen_carpeta."750/".$this->imagen;
+    }
+
+    public function getUrlAttribute()
+    {
+        return route('noticia', [$this->id, $this->slug_url]);
     }
 
     /*
@@ -89,6 +99,14 @@ class Noticia extends BaseEntity {
         if($value != "")
         {
             $query->where('categoria_id', $value);
+        }
+    }
+
+    public function scopeSTipo($query, $value)
+    {
+        if($value != "")
+        {
+            $query->where('tipo', $value);
         }
     }
 }

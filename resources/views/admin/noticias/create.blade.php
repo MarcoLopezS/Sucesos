@@ -97,6 +97,20 @@
                                 </div>
 
                                 <div class="form-group">
+                                    {!! Form::label('tipo', 'Tipo de Noticia', ['class' => 'control-label bold']) !!}
+                                    <div class="mt-radio-inline">
+                                        <label class="mt-radio">
+                                            {!! Form::radio('tipo', 'destacado', null) !!} Destacado
+                                            <span></span>
+                                        </label>
+                                        <label class="mt-radio">
+                                            {!! Form::radio('tipo', 'normal', true) !!} Normal
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     {!! Form::label('published_at', 'Fecha de publicación', ['class' => 'control-label bold']) !!}
                                     {!! Form::text('published_at', date('d/m/Y H:i'), ['class' => 'form-control datetimepicker']) !!}
                                 </div>

@@ -5,6 +5,8 @@
 @endsection
 
 @section('contenido_header')
+    {{-- FlexSlider --}}
+    {!! HTML::style(elixir('libs/flexslider/flexslider.css')) !!}
 @stop
 
 @section('contenido_body')
@@ -30,7 +32,21 @@
 			<div class="clearfix"></div>
 			<div class="col-md-8 col-sm-7 padding-bottom-30">
 				<div class="blog-excerpt">
-					<img src="/images/category/single/5.jpg" class="img-responsive" alt=""/>
+					{{--<img src="/images/category/single/5.jpg" class="img-responsive" alt=""/>--}}
+
+                    <div class="flexslider loading">
+                        <ul class="slides">
+                            <li><img src="images/category/slider/1.jpg" class="img-responsive" width="300" alt=""/></li>
+                            <li><img src="images/category/slider/2.jpg" class="img-responsive" alt=""/></li>
+                            <li><img src="images/category/slider/3.jpg" class="img-responsive" alt=""/></li>
+                            <li><img src="images/category/slider/4.jpg" class="img-responsive" alt=""/></li>
+                            <li><img src="images/category/slider/5.jpg" class="img-responsive" alt=""/></li>
+                            <li><img src="images/category/slider/6.jpg" class="img-responsive" alt=""/></li>
+                            <li><img src="images/category/slider/7.jpg" class="img-responsive" alt=""/></li>
+                            <li><img src="images/category/slider/8.jpg" class="img-responsive" alt=""/></li>
+                            <li><img src="images/category/slider/9.jpg" class="img-responsive" alt=""/></li>
+                        </ul>
+                    </div>
 
 					<div class="blog-single-head margin-top-25">
 						<h2>GyM se reorganiza: ¿qué opinan los analistas y AFP?</h2>
@@ -186,4 +202,21 @@
 @stop
 
 @section('contenido_footer')
+    {{-- FlexSlider --}}
+    {!! HTML::script('libs/flexslider/jquery.flexslider.js') !!}
+    <script>
+        $(document).on("ready", function() {
+            $('.flexslider').flexslider({
+                animation: 'fade',
+                animationLoop: true,
+                slideshow: true,
+                slideshowSpeed: 4000,
+                animationSpeed: 800,
+                pauseOnHover: true,
+                pauseOnAction:true,
+                controlNav: true,
+                directionNav: true
+            });
+        });
+    </script>
 @stop

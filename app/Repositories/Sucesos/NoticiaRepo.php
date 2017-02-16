@@ -12,14 +12,26 @@ class NoticiaRepo extends BaseRepo{
         return new Noticia();
     }
 
-    //PAGINAS NOTICIAS EN HOME
-    public function listaNoticias()
+    //NOTICIAS DESTACADAS EN HOME
+    public function listaNoticiasDestacada()
     {
         return $this->getModel()
                     ->where('published_at','<=',fechaActual())
                     ->where('publicar', 1)
+                    ->where('tipo', 'destacado')
                     ->orderBy('published_at', 'desc')
-                    ->paginate(4);
+                    ->paginate(3);
+    }
+
+    //NOTICIAS NORMAL EN HOME
+    public function listaNoticiasNormal()
+    {
+        return $this->getModel()
+                    ->where('published_at','<=',fechaActual())
+                    ->where('publicar', 1)
+                    ->where('tipo', 'normal')
+                    ->orderBy('published_at', 'desc')
+                    ->paginate(6);
     }
 
     //BUSQUEDA DE REGISTROS
@@ -28,6 +40,7 @@ class NoticiaRepo extends BaseRepo{
         return $this->getModel()
                     ->titulo($request->get('titulo'))
                     ->sCategoria($request->get('categoria'))
+                    ->sTipo($request->get('tipo'))
                     ->publicar($request->get('publicar'))
                     ->orderBy('published_at', 'desc')
                     ->paginate();

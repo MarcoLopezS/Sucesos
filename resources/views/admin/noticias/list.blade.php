@@ -9,13 +9,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 
-			<div class="portlet box blue-hoki">
-				
-				<div class="portlet-title">
-					<div class="caption">
-                        <i class="fa fa-globe"></i>Registros
-                    </div>
-				</div>
+			<div class="portlet light bordered">
 
 				<div class="portlet-body">
 
@@ -49,17 +43,21 @@
                                 <tr>
                                     <th>Titulo</th>
                                     <th>Categoría</th>
+                                    <th>Tipo Noticia</th>
                                     <th>Publicado</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="col-md-5">
+                                    <td class="col-md-4">
                                         {!! Form::text('titulo', null, ['class' => 'form-control input-sm', 'placeholder' => 'Titulo']) !!}
                                     </td>
-                                    <td class="col-md-3">
-                                        {!! Form::select('categoria', ['' => 'Seeccionar'] + $categorias, null, ['class' => 'form-control input-sm']) !!}
+                                    <td class="col-md-2">
+                                        {!! Form::select('categoria', ['' => 'Seleccionar'] + $categorias, null, ['class' => 'form-control input-sm']) !!}
+                                    </td>
+                                    <td class="col-md-2">
+                                        {!! Form::select('tipo', ['' => 'Seleccionar', 'destacado' => 'Destacado', 'normal' => 'Normal'], null, ['class' => 'form-control input-sm']) !!}
                                     </td>
                                     <td class="col-md-2">
                                         {!! Form::select('publicar', ['' => 'Seleccionar', '0' => 'No', '1' => 'Si'], null, ['class' => 'form-control input-sm']) !!}
@@ -82,8 +80,9 @@
                             <tr>
                                 <th class="text-center">Titulo</th>
                                 <th class="text-center">Categoría</th>
-                                <th class="text-center">Fecha publicación</th>
+                                <th class="text-center">Tipo Noticia</th>
                                 <th class="text-center">Publicar</th>
+                                <th class="text-center">Fecha publicación</th>
                                 <th class="text-center">Acciones</th>
                             </tr>
                         </thead>
@@ -93,12 +92,14 @@
                                     $row_id = $item->id;
                                     $row_titulo = $item->titulo;
                                     $row_categoria = $item->categoria->titulo;
+                                    $row_tipo = ucfirst($item->tipo);
                                     $row_fecha = $item->fecha_publicacion;
                                     $row_publicar = $item->publicar ? '<span class="badge badge-success badge-roundless">SI</span>' : '<span class="badge badge-default badge-roundless">NO</span>';
                                 @endphp
                             <tr data-id="{{ $row_id }}" data-title="{{ $row_titulo }}">
                                 <td>{{ $row_titulo }}</td>
                                 <td class="text-center">{{ $row_categoria }}</td>
+                                <td class="text-center">{{ $row_tipo }}</td>
                                 <td class="text-center">{{ $row_fecha }}</td>
                                 <td class="text-center">{!! $row_publicar !!}</td>
                                 <td class="text-center">
@@ -109,7 +110,7 @@
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="{{ route('admin.noticias.edit', $row_id) }}">Editar</a></li>
                                             <li><a href="#delete" class="btn-delete">Eliminar</a></li>
-                                            <li><a href="{{ route('admin.noticias.img.list', $row_id) }}">Imagenes</a></li>
+                                            <li><a href="{{ route('admin.noticias.img.list', $row_id) }}">Galería de Imagenes</a></li>
                                         </ul>
                                     </div>
                                 </td>

@@ -18,7 +18,9 @@ class NoticiasController extends Controller {
         'titulo' => 'required',
         'descripcion' => 'required|min:10|max:255',
         'contenido' => 'required',
+        'tags' => 'required',
         'categoria' => 'required',
+        'tipo' => 'required',
         'published_at' => 'required',
         'publicar' => 'required|in:1,0'
 	];
