@@ -19,11 +19,12 @@ class CreateDbTables extends Migration
 
             $table->string('titulo');
             $table->string('slug_url');
-            $table->string('descripcion')->nullable();
+            $table->text('descripcion')->nullable();
             $table->text('contenido')->nullable();
             $table->boolean('publicar')->default(false);
             $table->integer('categoria_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->enum('tipo', ['destacado', 'normal']);
 
             $table->string('imagen', 150);
             $table->string('imagen_carpeta', 100);
