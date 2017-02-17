@@ -36,6 +36,8 @@ class DataTableSeeder extends Seeder
         ]);
 
         //NOTICIAS
-        factory(\Sucesos\Entities\Sucesos\Noticia::class, 100)->create();
+        factory(\Sucesos\Entities\Sucesos\Noticia::class, 100)->create()->each(function ($u) {
+            $u->tags()->sync([1,2,3,4]);
+        });
     }
 }

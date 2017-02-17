@@ -6,7 +6,7 @@ $factory->define(\Sucesos\Entities\Sucesos\Noticia::class, function (Faker\Gener
         'titulo' => $titulo,
         'slug_url' => SlugUrl($titulo),
         'descripcion' => $faker->paragraphs(1, true),
-        'contenido' => $faker->paragraphs(3, true),
+        'contenido' => '<p>'.$faker->paragraphs(3, true).'</p>',
         'publicar' => random_int(0, 1),
         'categoria_id' => random_int(1, 4),
         'user_id' => 1,
