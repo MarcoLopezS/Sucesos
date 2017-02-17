@@ -12,6 +12,16 @@ class NoticiaRepo extends BaseRepo{
         return new Noticia();
     }
 
+    //NOTICIAS CATEGORIA
+    public function listaNoticiasCategoria($categoria)
+    {
+        return $this->getModel()
+                    ->where('categoria_id', $categoria)
+                    ->where('publicar', 1)
+                    ->orderBy('published_at', 'desc')
+                    ->paginate(4);
+    }
+
     //NOTICIAS DESTACADAS EN HOME
     public function listaNoticiasDestacada()
     {
@@ -32,6 +42,13 @@ class NoticiaRepo extends BaseRepo{
                     ->where('tipo', 'normal')
                     ->orderBy('published_at', 'desc')
                     ->paginate(6);
+    }
+
+    public function listaNoticiasRelacionadas($tags)
+    {
+        $tag = $tags->first()->id;
+
+        return $this->getModel()->where('');
     }
 
     //BUSQUEDA DE REGISTROS
