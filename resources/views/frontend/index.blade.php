@@ -21,7 +21,7 @@
                             @php
                                 $noticia_titulo = $noticia->titulo;
                                 $noticia_url = $noticia->url;
-                                $noticia_imagen = $noticia->imagen_620_x_470;
+                                $noticia_imagen = $noticia->imagen_noticia_destacada;
                                 $noticia_categoria = $noticia->categoria_nombre;
                                 $noticia_fecha = $noticia->fecha;
                             @endphp
@@ -52,7 +52,7 @@
                         @php
                             $noticia_titulo = $noticia->titulo;
                             $noticia_url = $noticia->url;
-                            $noticia_imagen = $noticia->imagen_490_x_300;
+                            $noticia_imagen = $noticia->imagen_noticia_normal;
                             $noticia_categoria = $noticia->categoria_nombre;
                             $noticia_fecha = $noticia->fecha;
                         @endphp
@@ -84,82 +84,13 @@
             </div>
 
             <aside class="col-md-4 col-sm-4">
-                <div class="side-widget margin-bottom-60">
-                    <h3 class="heading-1"><span>Siguenos</span></h3>
-                    <div class="side-share side-share2">
-                        <div class='share s_facebook'>
-                            <i class="fa fa-facebook"></i>
-                        </div>
-                        <div class='share s_linkedin'>
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                        <div class='share s_plus'>
-                            <i class="fa fa-google-plus"></i>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
+                @include('frontend.partials.siguenos')
 
-                <div class="side-widget margin-bottom-50">
-                    <h3 class="heading-1"><span>lo más visto</span></h3>
-                    <ul class="trending padding-top-30 padding-bottom-15">
-                        <li>
-                            <div class="thumb">
-                                <img src="/images/category/01/9.jpg" class="img-responsive" alt="">
-                            </div>
-                            <h4><a href="/noticia">Nest's New Product Is an Outdoor Security Camera</a></h4>
-                            <div class="meta"><span class="date">Sep. 26, 2016</span><span class="rating">9.4</span></div>
-                        </li>
-                        <li>
-                            <div class="thumb">
-                                <img src="/images/category/01/13.jpg" class="img-responsive" alt="">
-                            </div>
-                            <span class="cat">Business</span>
-                            <h4><a href="/noticia">What to Know About the History of the Fed's Beige Book</a></h4>
-                            <div class="meta"><span class="date">Sep. 24, 2016</span><span class="rating">9.1</span><span class="comments">4</span></div>
-                        </li>
-                        <li>
-                            <div class="thumb">
-                                <div class="icon-24 gallery2"></div>
-                                <div class="overlay-alt"></div>
-                                <img src="/images/category/01/14.jpg" class="img-responsive" alt="">
-                            </div>
-                            <h4><a href="/noticia">The Ultimate Job Seeker's Guide to LinkedIn</a></h4>
-                            <div class="meta"><span class="date">Sep. 22, 2016</span><span class="rating">8.8</span></div>
-                        </li>
-                    </ul>
-                </div>
+                @include('frontend.partials.mas-visto')
 
-                <div class="side-widget margin-bottom-60">
-                    <h3 class="heading-1"><span>Tags</span></h3>
-                    <ul class="tags">
-                        <li><a href="#">Finance</a></li>
-                        <li><a href="#">Travel</a></li>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Opinion</a></li>
-                        <li><a href="#">Tecnología</a></li>
-                        <li><a href="#">Entertainment</a></li>
-                        <li><a href="#">Politics</a></li>
-                        <li><a href="#">World</a></li>
-                        <li><a href="#">Lifestyle</a></li>
-                        <li><a href="#">Health</a></li>
-                        <li><a href="#">Science</a></li>
-                        <li><a href="#">Food</a></li>
-                        <li><a href="#">Sports</a></li>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
+                @include('frontend.partials.tags')
 
-                <div class="side-widget margin-bottom-60">
-                    <div class="side-widget margin-bottom-0">
-                        <h3 class="heading-1"><span>Portada</span></h3>
-                        <div class="layout_3--item">
-                            <div class="thumb">
-                                <a href="#"><img src="/images/portada.jpg" class="img-responsive" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @include('frontend.partials.portada')
             </aside>
         </div>
     </div>

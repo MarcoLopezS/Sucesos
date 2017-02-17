@@ -45,7 +45,7 @@
     <header class="header1 header-megamenu">
         <div class="navbar-header padding-vertical-10">
             <div class="container">
-				<a href="/" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt=""/></a>
+				<a href="/" class="navbar-brand"><img src="/images/logo.png" class="img-responsive" alt=""/></a>
                 <div class="ad-banner pull-right hidden-xs">
                     <a href="#"><img src="http://placeholdit.imgix.net/~text?txtsize=30&bg=c6c6c6&txtclr=000000&txt=Publicidad&w=729&h=90" class="img-responsive" alt=""/></a>
                 </div>
@@ -89,7 +89,7 @@
         <div class="container">
             <div class="row margin-bottom-30">
                 <div class="col-md-4 col-sm-4 margin-bottom-30 footer-info">
-                    <a href="/"><img src="images/logo-bn.png" class="img-responsive" alt=""/></a>
+                    <a href="/"><img src="/images/logo-bn.png" class="img-responsive" alt=""/></a>
                     <p>Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat.</p>
                     <span><i class="fa fa-envelope"></i> <a href="mailto:info@watcher.com">info@sucesos.pe</a></span>
                 </div>
@@ -98,17 +98,17 @@
                     <h5>Trending</h5>
                     <ul class="trending">
                         <li>
-                            <a href="post_page_01.html" class="pull-left"><img src="images/footer/trend/1.jpg" class="img-responsive" alt=""/></a>
+                            <a href="post_page_01.html" class="pull-left"><img src="/images/footer/trend/1.jpg" class="img-responsive" alt=""/></a>
                             <h4><a href="post_page_02.html">Why Uber Is Trying To Make Nice With Its Drivers</a></h4>
                             <span>Sep. 25, 2016</span>
                         </li>
                         <li>
-                            <a href="post_page_01.html" class="pull-left"><img src="images/footer/trend/2.jpg" class="img-responsive" alt=""/></a>
+                            <a href="post_page_01.html" class="pull-left"><img src="/images/footer/trend/2.jpg" class="img-responsive" alt=""/></a>
                             <h4><a href="post_page_02.html">How to See If Your Dropbox Account Was Hacked</a></h4>
                             <span>Sep. 23, 2016</span>
                         </li>
                         <li>
-                            <a href="post_page_01.html" class="pull-left"><img src="images/footer/trend/3.jpg" class="img-responsive" alt=""/></a>
+                            <a href="post_page_01.html" class="pull-left"><img src="/images/footer/trend/3.jpg" class="img-responsive" alt=""/></a>
                             <h4><a href="post_page_02.html">You Can Now Bid on Steve Jobs' Famous Black Turtleneck</a></h4>
                             <span>Sep. 21, 2016</span>
                         </li>
