@@ -20,7 +20,20 @@ class Tag extends BaseEntity {
      */
     public function getUrlAttribute()
     {
-        return route('noticias.tags.select', [$this->slug_url]);
+        return route('tag', [$this->slug_url]);
+    }
+
+    /*
+     * FUNCIONES
+     */
+    public function NoticiasRelacionadas($noticia)
+    {
+        return $this->noticias()->where('publicar', 1)->where('noticias.id','<>',$noticia)->limit(3)->get();
+    }
+
+    public function NoticiasTags()
+    {
+        return $this->noticias()->where('publicar', 1)->paginate(6);
     }
 
 }
