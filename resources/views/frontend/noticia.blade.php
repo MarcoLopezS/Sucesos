@@ -102,6 +102,8 @@
                         @php
                             $noticia_titulo = $noticia->titulo;
                             $noticia_url = $noticia->url;
+                            $noticia_categoria = $noticia->categoria_nombre;
+                            $noticia_categoria_url = $noticia->categoria_url;
                             $noticia_imagen = $noticia->imagen_noticia_relacionada;
                             $noticia_fecha = $noticia->fecha;
                         @endphp
@@ -110,7 +112,7 @@
                                 <div class="thumb">
                                     <a href="{{ $noticia_url }}"><img src="{{ $noticia_imagen }}" class="img-responsive" alt=""></a>
                                 </div>
-                                <span class="cat">Business</span>
+                                <span class="cat"><a href="{{ $noticia_categoria_url }}">{{ $noticia_categoria }}</a></span>
                                 <h4><a href="{{ $noticia_url }}">{{ $noticia_titulo }}</a></h4>
                                 <div class="meta"><span class="date">{{ $noticia_fecha }}</span></div>
                             </div>
