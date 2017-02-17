@@ -54,6 +54,13 @@ class CreateDbTables extends Migration
             $table->integer('tag_id');
         });
 
+        Schema::create('noticia_views', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer('noticia_id');
+            $table->timestamps();
+        });
+
         Schema::create('categorias', function(Blueprint $table)
         {
             $table->increments('id');
@@ -121,6 +128,7 @@ class CreateDbTables extends Migration
         Schema::drop('ajustes');
         Schema::drop('imagenes');
         Schema::drop('categorias');
+        Schema::drop('noticia_views');
         Schema::drop('noticia_tag');
         Schema::drop('tags');
         Schema::drop('noticias');
