@@ -10,9 +10,15 @@ class TagRepo extends BaseRepo{
         return new Tag();
     }
 
-    //LISTAR CATEGORIAS PUBLICADAS
+    //LISTAR CATEGORIAS PUBLICADAS (TITULO - ID)
     public function listPub()
     {
         return $this->getModel()->where('publicar', 1)->pluck('titulo', 'id')->toArray();
+    }
+
+    //LISTAR TAGS EN FRONTEND
+    public function listTags()
+    {
+        return $this->getModel()->where('publicar', 1)->orderBy('titulo','asc')->get();
     }
 }
