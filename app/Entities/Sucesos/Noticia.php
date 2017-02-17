@@ -24,6 +24,11 @@ class Noticia extends BaseEntity {
         return $this->morphMany(Imagen::class, 'imagenable');
     }
 
+    public function noticiaView()
+    {
+        return $this->hasMany(NoticiaView::class);
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
@@ -43,6 +48,11 @@ class Noticia extends BaseEntity {
         return $this->categoria->titulo;
     }
 
+    public function getCategoriaUrlAttribute()
+    {
+        return route('categoria', $this->categoria->slug_url);
+    }
+
     public function getEtiquetasAttribute()
     {
         return $this->tags()->pluck('tag_id')->toArray();
@@ -58,29 +68,45 @@ class Noticia extends BaseEntity {
         return fechaPubAdmin($this->published_at);
     }
 
+    public function getUrlAttribute()
+    {
+        return route('noticia', [$this->id, $this->slug_url]);
+    }
+
+    //IMAGENES
     public function getImagenAdminAttribute()
     {
         return "/upload/".$this->imagen_carpeta."200x120/".$this->imagen;
     }
 
-    public function getImagen490x300Attribute()
+    public function getImagenCategoriaAttribute()
     {
-        return "/upload/".$this->imagen_carpeta."490x300/".$this->imagen;
+        return "/upload/".$this->imagen_carpeta."710x450/".$this->imagen;
     }
 
-    public function getImagen620x470Attribute()
+    public function getImagenTagAttribute()
     {
-        return "/upload/".$this->imagen_carpeta."620x470/".$this->imagen;
+        return "/upload/".$this->imagen_carpeta."480x300/".$this->imagen;
     }
 
-    public function getImagenBlogNotaAttribute()
+    public function getImagenNoticiaAttribute()
     {
         return "/upload/".$this->imagen_carpeta."750/".$this->imagen;
     }
 
-    public function getUrlAttribute()
+    public function getImagenNoticiaDestacadaAttribute()
     {
-        return route('noticia', [$this->id, $this->slug_url]);
+        return "/upload/".$this->imagen_carpeta."620x470/".$this->imagen;
+    }
+
+    public function getImagenNoticiaNormalAttribute()
+    {
+        return "/upload/".$this->imagen_carpeta."490x300/".$this->imagen;
+    }
+
+    public function getImagenNoticiaRelacionadaAttribute()
+    {
+        return "/upload/".$this->imagen_carpeta."540x335/".$this->imagen;
     }
 
     /*
