@@ -182,6 +182,7 @@ return [
         // Sucesos\Providers\BroadcastServiceProvider::class,
         Sucesos\Providers\EventServiceProvider::class,
         Sucesos\Providers\RouteServiceProvider::class,
+        Sucesos\Providers\ComposerServiceProvider::class,
 
     ],
 
