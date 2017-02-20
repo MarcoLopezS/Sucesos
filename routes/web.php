@@ -17,7 +17,7 @@ Route::get('/upload/{folder}/{width}/{image}', ['as' => 'image.withResize', 'use
 Auth::routes();
 
 //ADMIN
-Route::group(['as' => 'admin.', 'middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
+Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth'], 'prefix' => 'admin'], function() {
 
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
