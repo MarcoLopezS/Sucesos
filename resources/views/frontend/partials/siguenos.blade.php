@@ -8,7 +8,7 @@
             <i class="fa fa-twitter"></i>
         </div>
         <div class='share s_plus'>
-            <i class="fa fa-google-plus"></i>
+            <i class="fa fa-play"></i>
         </div>
     </div>
     <div class="clearfix"></div>
