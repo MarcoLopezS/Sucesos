@@ -6,6 +6,8 @@
 @endphp
 
 @section('contenido_header')
+    {{-- FlexSlider --}}
+    {!! HTML::style(elixir('libs/flexslider/flexslider.css')) !!}
 @stop
 
 @section('contenido_body')
@@ -75,10 +77,161 @@
 
                 </div>
 
+                <div class="ads ad-300 margin-bottom-60">
+                    <span>Publicidad</span>
+                    <img src="http://placeholdit.imgix.net/~text?txtsize=30&bg=c6c6c6&txtclr=000000&txt=Publicidad&w=710&h=100" class="img-responsive" alt=""/>
+                </div>
+
                 <h3 class="heading-1"><span>Columnistas</span></h3>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <img src="/images/columnista.png" width="100%" alt="">
+                        <div class="flexslider loading">
+                            <ul class="slides">
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="datos">
+                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
+                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
+                                        </div>
+                                        <div class="columna">
+                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,6 +242,8 @@
                 @include('frontend.partials.mas-visto')
 
                 @include('frontend.partials.tags')
+
+                @include('frontend.partials.publicidad-sidebar')
 
                 @include('frontend.partials.portada')
             </aside>
@@ -212,4 +367,7 @@
 @stop
 
 @section('contenido_footer')
+    {{-- FlexSlider --}}
+    {!! HTML::script('libs/flexslider/jquery.flexslider.js') !!}
+    {!! HTML::script('js/flexslider.js') !!}
 @stop

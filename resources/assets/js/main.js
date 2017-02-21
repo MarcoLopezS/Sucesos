@@ -120,7 +120,7 @@
     }
 
     new WOW().init();
-    $('.wrapper div').addClass('wow fadeIn');
+    //$('.wrapper div').addClass('wow fadeIn');
     $('header div').removeClass('wow fadeIn');
 
     // POST CAROUSEL

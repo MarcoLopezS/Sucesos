@@ -143,7 +143,7 @@
     <script>
         $(document).on("ready", function() {
             $('.flexslider').flexslider({
-                animation: 'fade',
+                animation: 'slide',
                 animationLoop: true,
                 slideshow: true,
                 slideshowSpeed: 4000,

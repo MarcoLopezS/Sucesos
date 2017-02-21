@@ -2,7 +2,7 @@
     <div class="side-widget margin-bottom-0">
         <h3 class="heading-1"><span>Portada</span></h3>
         <div class="layout_3--item">
-            <div class="thumb">
+            <div class="thumb" style="border: 1px solid #a2a2a2;">
                 <a href="#"><img src="/images/portada.jpg" class="img-responsive" alt=""></a>
             </div>
         </div>
