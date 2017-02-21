@@ -252,7 +252,7 @@
 
     <div class="padding-bottom-50 video-container-white">
         <div class="container">
-            <h3 class="heading-1"><span>Sucesos TV</span></h3>
+            <h3 class="heading-1"><span class="tv"><img src="/images/logo-tv.png" class="img-responsive" alt="Sucesos TV"></span></h3>
             <div class="clearfix"></div>
             <div class="col-md-8 col-sm-7 no-padding">
                 <div class="video-container">
