@@ -68,11 +68,23 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Inicio</a></li>
-                    <li><a href="{{ route('categoria', 'politica') }}">Politica</a></li>
-                    <li><a href="{{ route('categoria', 'economia') }}">Economía</a></li>
-                    <li><a href="{{ route('categoria', 'tecnologia') }}">Tecnología</a></li>
-                    <li><a href="{{ route('categoria', 'mundo') }}">Mundo</a></li>
+                    <li class="dropdown dropdown-v2">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Actualidad <span class="fa fa-angle-down"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('categoria', 'investigacion') }}">Investigación</a></li>
+                            <li><a href="{{ route('categoria', 'economia') }}">Economía</a></li>
+                            <li><a href="{{ route('categoria', 'internacional') }}">Internacional</a></li>
+                            <li><a href="{{ route('categoria', 'tecnologia') }}">Tecnología</a></li>
+                            <li><a href="{{ route('categoria', 'denuncia') }}">Denuncia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ route('categoria', 'entrevistas') }}">Entrevistas</a></li>
+                    <li><a href="{{ route('categoria', 'historia') }}">Historia</a></li>
                     <li><a href="#">Columnistas</a></li>
+                    <li><a href="{{ route('categoria', 'emprendedores') }}">Emprendedores</a></li>
                     <li class="pull-right hidden-xs">
                         <div class="search-trigger search-trigger2"><i class="fa fa-search"></i></div>
                     </li>

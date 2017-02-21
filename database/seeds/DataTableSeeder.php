@@ -21,10 +21,14 @@ class DataTableSeeder extends Seeder
 
         //CATEGORIAS
         DB::table('categorias')->insert([
-            ['id' => '1', 'titulo' => 'Economía', 'slug_url' => 'economia', 'publicar' => 1],
-            ['id' => '2', 'titulo' => 'Mundo', 'slug_url' => 'mundo', 'publicar' => 1],
-            ['id' => '3', 'titulo' => 'Politica', 'slug_url' => 'politica', 'publicar' => 1],
-            ['id' => '4', 'titulo' => 'Tecnología', 'slug_url' => 'tecnologia', 'publicar' => 1]
+            ['id' => '1', 'titulo' => 'Investigación', 'slug_url' => 'investigacion', 'publicar' => 1],
+            ['id' => '2', 'titulo' => 'Economía', 'slug_url' => 'economia', 'publicar' => 1],
+            ['id' => '3', 'titulo' => 'Internacional', 'slug_url' => 'internacional', 'publicar' => 1],
+            ['id' => '4', 'titulo' => 'Tecnología', 'slug_url' => 'tecnologia', 'publicar' => 1],
+            ['id' => '5', 'titulo' => 'Denuncia', 'slug_url' => 'denuncia', 'publicar' => 1],
+            ['id' => '6', 'titulo' => 'Entrevistas', 'slug_url' => 'entrevistas', 'publicar' => 1],
+            ['id' => '7', 'titulo' => 'Historia', 'slug_url' => 'historia', 'publicar' => 1],
+            ['id' => '8', 'titulo' => 'Emprendedores', 'slug_url' => 'emprendedores', 'publicar' => 1],
         ]);
 
         //TAGS
@@ -36,7 +40,7 @@ class DataTableSeeder extends Seeder
         ]);
 
         //NOTICIAS
-        factory(\Sucesos\Entities\Sucesos\Noticia::class, 100)->create()->each(function ($u) {
+        factory(\Sucesos\Entities\Sucesos\Noticia::class, 150)->create()->each(function ($u) {
             $u->tags()->sync([1,2,3,4]);
         });
     }
