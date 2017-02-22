@@ -19,12 +19,14 @@ elixir((mix) => {
     mix.less('ts.less');
     mix.less('flexslider/flexslider.less', 'public/libs/flexslider/flexslider.css');
     mix.scripts(['main.js'], 'public/js/main.js');
+    mix.scripts(['flexslider.js'], 'public/js/flexslider.js');
 
     mix.version([
         'css/animate.css',
         'css/style.css',
         'css/ts.css',
         'libs/flexslider/flexslider.css',
-        'js/main.js'
+        'js/main.js',
+        'js/flexslider.js'
     ]);
 });

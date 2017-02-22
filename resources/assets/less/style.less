@@ -421,8 +421,7 @@ p {
 
 .heading-1 span {
 	background: #fff;
-	position: relative;
-	top: -4px;
+	position: relative;top: -4px;
 	padding-right: 15px;
 }
 
@@ -5391,8 +5390,8 @@ input.qtyminus {
 		overflow-x: hidden;
 	}
 
-	.header1 .navbar-nav > li > .dropdown-menu ,
-.header1.header-megamenu .navbar-nav > li.megamenu > .dropdown-menu {
+	.header1 .navbar-nav > li > .dropdown-menu,
+    .header1.header-megamenu .navbar-nav > li.megamenu > .dropdown-menu {
 		position: relative;
 		top: 0 !important;
 		left: 0;
@@ -5409,22 +5408,36 @@ input.qtyminus {
 	}
 }
 
-.columnista-item .datos, .columnista-item .columna{
-    float: left;
+.columnistas{
+    li{
+        border-right: 1px solid #e2e2e2;
+    }
+
+    li:last-child{
+        border: none;
+    }
+
+    .columnista-item{
+        padding: 0 15px;
+        text-align: center;
+
+        .nombre{
+            font-weight: bold;
+        }
+
+        .imagen img{
+            border-radius: 100%;
+        }
+
+        .titulo{
+            font-weight: bold;
+            font-size: 17px
+        }
+    }
 }
 
-.columnista-item .datos .imagen, .columnista-item .datos .nombre{
-    width: 50%;
-    float: left;
-    text-align: left;
-}
-
-.columnista-item .datos .nombre{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.columnista-item .columna .titulo{
-    font-size: 22px;
-    text-align: center;
+.seccion-columnistas{
+    .flex-control-nav.flex-control-paging{
+        display: none;
+    }
 }

@@ -83,151 +83,78 @@
                 </div>
 
                 <h3 class="heading-1"><span>Columnistas</span></h3>
-                <div class="row">
+                <div class="row seccion-columnistas">
                     <div class="col-md-12 col-sm-12">
                         <div class="flexslider loading">
-                            <ul class="slides">
+                            <ul class="slides columnistas">
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/1.jpg" alt=""></div>
+                                        <div class="titulo">América ruge</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/2.jpg" alt=""></div>
+                                        <div class="titulo">Argentina y España: el reencuentro</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/3.jpg" alt=""></div>
+                                        <div class="titulo">Steve Bannon contra el Islam</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/4.jpg" alt=""></div>
+                                        <div class="titulo">De una blanca a otra</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/1.jpg" alt=""></div>
+                                        <div class="titulo">América ruge</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/2.jpg" alt=""></div>
+                                        <div class="titulo">Argentina y España: el reencuentro</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/3.jpg" alt=""></div>
+                                        <div class="titulo">Steve Bannon contra el Islam</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/4.jpg" alt=""></div>
+                                        <div class="titulo">De una blanca a otra</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/1.jpg" alt=""></div>
+                                        <div class="titulo">América ruge</div>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="datos">
-                                            <div class="imagen"><img src="http://94557268b75eb4291d5e-41c649821d3b6b5cdbf6b11ec1d89955.r57.cf2.rackcdn.com/opinion/2015/04/28/1204715.jpg" alt=""></div>
-                                            <div class="nombre">PASCAL BELTRÁN DEL RÍO</div>
-                                        </div>
-                                        <div class="columna">
-                                            <div class="titulo">¿Institucionalidad o voluntarismo?</div>
-                                        </div>
+                                        <div class="nombre">Roberto Guerrero</div>
+                                        <div class="imagen"><img src="/upload/febrero2017/110x110/2.jpg" alt=""></div>
+                                        <div class="titulo">Argentina y España: el reencuentro</div>
                                     </div>
                                 </li>
                             </ul>
@@ -369,5 +296,5 @@
 @section('contenido_footer')
     {{-- FlexSlider --}}
     {!! HTML::script('libs/flexslider/jquery.flexslider.js') !!}
-    {!! HTML::script('js/flexslider.js') !!}
+    {!! HTML::script(elixir('js/flexslider.js')) !!}
 @stop
