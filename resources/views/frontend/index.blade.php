@@ -7,7 +7,7 @@
 
 @section('contenido_header')
     {{-- FlexSlider --}}
-    {!! HTML::style(elixir('libs/flexslider/flexslider.css')) !!}
+    {!! HTML::style('https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css') !!}
 @stop
 
 @section('contenido_body')
@@ -295,6 +295,6 @@
 
 @section('contenido_footer')
     {{-- FlexSlider --}}
-    {!! HTML::script('libs/flexslider/jquery.flexslider.js') !!}
+    {!! HTML::script('https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider.min.js') !!}
     {!! HTML::script(elixir('js/flexslider.js')) !!}
 @stop
