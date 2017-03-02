@@ -37,7 +37,7 @@
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="/">
-                    <img src="/assets/img/logo.png" width="175" alt="logo" class="logo-default" />
+                    <img src="/images/logo.png" width="175" alt="logo" class="logo-default" />
                 </a>
                 <div class="menu-toggler sidebar-toggler"></div>
             </div>
@@ -128,10 +128,31 @@
                             <span class="selected"></span>
                         </a>
                     </li>
+
+                    <li class="nav-item {!! (Request::is('admin/columnistas*') ? 'active open' : '') !!}" >
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span class="title">Columnistas</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item {!! (Request::is('admin/columnistas') ? 'active open' : '') !!}s">
+                                <a href="{{ route('admin.columnistas.index') }}" class="nav-link ">
+                                    <span class="title">Todas los columnistas</span>
+                                </a>
+                            </li>
+                            <li class="nav-item {!! (Request::is('admin/columnistas/create') ? 'active open' : '') !!}">
+                                <a href="{{ route('admin.columnistas.create') }}" class="nav-link ">
+                                    <span class="title">Nuevo columnista</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item {!! (Request::is('admin/noticias*') ? 'active open' : '') !!}" >
                         <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="fa fa-rss" aria-hidden="true"></i>
-                            <span class="title">Blog</span>
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                            <span class="title">Noticias</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
@@ -147,20 +168,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item {!! (Request::is('admin/formulario*') ? 'active open' : '') !!}" >
-                        <a href="" class="nav-link nav-toggle">
-                            <i class="fa fa-comments-o" aria-hidden="true"></i>
-                            <span class="title">Formulario</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu {!! (Request::is('admin/formulario/contaco*') ? 'active open' : '') !!}">
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <span class="title">Contacto</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+
                     <li class="">
                         <a href="{{ url('/logout') }}"
                            onclick="event.preventDefault();

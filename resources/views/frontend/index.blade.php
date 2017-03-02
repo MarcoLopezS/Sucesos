@@ -24,7 +24,7 @@
                                 $noticia_titulo = $noticia->titulo;
                                 $noticia_url = $noticia->url;
                                 $noticia_imagen = $noticia->imagen_noticia_destacada;
-                                $noticia_categoria = $noticia->categoria_nombre;
+                                $noticia_categoria = $noticia->categoria->titulo;
                                 $noticia_fecha = $noticia->fecha;
                             @endphp
                             <div id="destacado-{{ $IDdestacado }}" class="layout_1--item">
@@ -55,7 +55,7 @@
                             $noticia_titulo = $noticia->titulo;
                             $noticia_url = $noticia->url;
                             $noticia_imagen = $noticia->imagen_noticia_normal;
-                            $noticia_categoria = $noticia->categoria_nombre;
+                            $noticia_categoria = $noticia->categoria->titulo;
                             $noticia_fecha = $noticia->fecha;
                         @endphp
 
@@ -87,76 +87,25 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="flexslider loading">
                             <ul class="slides columnistas">
+
+                                @foreach($columnas as $columna)
+                                    @php
+                                        $columnista = $columna->columnista->nombre_completo;
+                                        $columnista_foto = $columna->columnista->imagen_home;
+                                        $columna_titulo = $columna->titulo;
+                                        $columna_url = $columna->url;
+                                    @endphp
                                 <li>
                                     <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/1.jpg" alt=""></div>
-                                        <div class="titulo">América ruge</div>
+                                        <div class="nombre">{{ $columnista }}</div>
+                                        <div class="imagen"><img src="{{ $columnista_foto }}" alt="{{ $columnista }}"></div>
+                                        <div class="titulo">
+                                            <a href="{{ $columna_url }}">{{ $columna_titulo }}</a>
+                                        </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/2.jpg" alt=""></div>
-                                        <div class="titulo">Argentina y España: el reencuentro</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/3.jpg" alt=""></div>
-                                        <div class="titulo">Steve Bannon contra el Islam</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/4.jpg" alt=""></div>
-                                        <div class="titulo">De una blanca a otra</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/1.jpg" alt=""></div>
-                                        <div class="titulo">América ruge</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/2.jpg" alt=""></div>
-                                        <div class="titulo">Argentina y España: el reencuentro</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/3.jpg" alt=""></div>
-                                        <div class="titulo">Steve Bannon contra el Islam</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/4.jpg" alt=""></div>
-                                        <div class="titulo">De una blanca a otra</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/1.jpg" alt=""></div>
-                                        <div class="titulo">América ruge</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="columnista-item">
-                                        <div class="nombre">Roberto Guerrero</div>
-                                        <div class="imagen"><img src="/upload/febrero2017/110x110/2.jpg" alt=""></div>
-                                        <div class="titulo">Argentina y España: el reencuentro</div>
-                                    </div>
-                                </li>
+                                @endforeach
+
                             </ul>
                         </div>
                     </div>
@@ -177,120 +126,120 @@
         </div>
     </div>
 
-    <div class="padding-bottom-50 video-container-white">
-        <div class="container">
-            <h3 class="heading-1"><span class="tv"><img src="/images/logo-tv.png" class="img-responsive" alt="Sucesos TV"></span></h3>
-            <div class="clearfix"></div>
-            <div class="col-md-8 col-sm-7 no-padding">
-                <div class="video-container">
-                    <video id="video" width="400" onclick="togglePause()" controls>
-                        <source src="video/1.mp4" type="video/mp4">
-                    </video>
-                    <div class="layout_1--item vc-item1 active">
-                        <div class="video-play"></div>
-                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
-                        <div class="overlay"></div>
-                        <img src="images/home/06/1.jpg" class="img-responsive" alt=""/>
-                        <div class="layout-detail padding-25">
-                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
-                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
-                        </div>
-                    </div>
-                    <div class="layout_1--item vc-item2">
-                        <div class="video-play"></div>
-                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
-                        <div class="overlay"></div>
-                        <img src="images/home/06/2.jpg" class="img-responsive" alt=""/>
-                        <div class="layout-detail padding-25">
-                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
-                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
-                        </div>
-                    </div>
-                    <div class="layout_1--item vc-item3">
-                        <div class="video-play"></div>
-                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
-                        <div class="overlay"></div>
-                        <img src="images/home/06/3.jpg" class="img-responsive" alt=""/>
-                        <div class="layout-detail padding-25">
-                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
-                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
-                        </div>
-                    </div>
-                    <div class="layout_1--item vc-item4">
-                        <div class="video-play"></div>
-                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
-                        <div class="overlay"></div>
-                        <img src="images/home/06/4.jpg" class="img-responsive" alt=""/>
-                        <div class="layout-detail padding-25">
-                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
-                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
-                        </div>
-                    </div>
-                    <div class="layout_1--item vc-item5">
-                        <div class="video-play"></div>
-                        <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
-                        <div class="overlay"></div>
-                        <img src="images/home/06/5.jpg" class="img-responsive" alt=""/>
-                        <div class="layout-detail padding-25">
-                            <h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>
-                            <div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-5 no-padding">
-                <div class="now-playing">
-                    <i class="fa fa-play"></i>
-                    <p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>
-                </div>
-                <div class="video-list">
-                    <ul>
-                        <li class="vl-video1">
-                            <div class="thumb">
-                                <div class="overlay-alt"></div>
-                                <div class="video-play-32"></div>
-                                <img src="images/home/06/thumb/1.jpg" class="img-responsive" alt=""/>
-                            </div>
-                            <p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>
-                        </li>
-                        <li class="vl-video2">
-                            <div class="thumb">
-                                <div class="overlay-alt"></div>
-                                <div class="video-play-32"></div>
-                                <img src="images/home/06/thumb/2.jpg" class="img-responsive" alt=""/>
-                            </div>
-                            <p>The Best New Features Coming to Your Windows<span>18:35</span></p>
-                        </li>
-                        <li class="vl-video3">
-                            <div class="thumb">
-                                <div class="overlay-alt"></div>
-                                <div class="video-play-32"></div>
-                                <img src="images/home/06/thumb/3.jpg" class="img-responsive" alt=""/>
-                            </div>
-                            <p>This Child Model Is So Over Being On Live TV <span>11:20</span></p>
-                        </li>
-                        <li class="vl-video4">
-                            <div class="thumb">
-                                <div class="overlay-alt"></div>
-                                <div class="video-play-32"></div>
-                                <img src="images/home/06/thumb/4.jpg" class="img-responsive" alt=""/>
-                            </div>
-                            <p>Outrage at bloodied Aleppo boy photo and lorem <span>15:25</span></p>
-                        </li>
-                        <li class="vl-video5">
-                            <div class="thumb">
-                                <div class="overlay-alt"></div>
-                                <div class="video-play-32"></div>
-                                <img src="images/home/06/thumb/5.jpg" class="img-responsive" alt=""/>
-                            </div>
-                            <p>The best lorem ipsum video of 2016 releaed <span>13:45</span></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
+    {{--<div class="padding-bottom-50 video-container-white">--}}
+        {{--<div class="container">--}}
+            {{--<h3 class="heading-1"><span class="tv"><img src="/images/logo-tv.png" class="img-responsive" alt="Sucesos TV"></span></h3>--}}
+            {{--<div class="clearfix"></div>--}}
+            {{--<div class="col-md-8 col-sm-7 no-padding">--}}
+                {{--<div class="video-container">--}}
+                    {{--<video id="video" width="400" onclick="togglePause()" controls>--}}
+                        {{--<source src="video/1.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="layout_1--item vc-item1 active">--}}
+                        {{--<div class="video-play"></div>--}}
+                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
+                        {{--<div class="overlay"></div>--}}
+                        {{--<img src="images/home/06/1.jpg" class="img-responsive" alt=""/>--}}
+                        {{--<div class="layout-detail padding-25">--}}
+                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
+                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="layout_1--item vc-item2">--}}
+                        {{--<div class="video-play"></div>--}}
+                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
+                        {{--<div class="overlay"></div>--}}
+                        {{--<img src="images/home/06/2.jpg" class="img-responsive" alt=""/>--}}
+                        {{--<div class="layout-detail padding-25">--}}
+                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
+                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="layout_1--item vc-item3">--}}
+                        {{--<div class="video-play"></div>--}}
+                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
+                        {{--<div class="overlay"></div>--}}
+                        {{--<img src="images/home/06/3.jpg" class="img-responsive" alt=""/>--}}
+                        {{--<div class="layout-detail padding-25">--}}
+                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
+                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="layout_1--item vc-item4">--}}
+                        {{--<div class="video-play"></div>--}}
+                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
+                        {{--<div class="overlay"></div>--}}
+                        {{--<img src="images/home/06/4.jpg" class="img-responsive" alt=""/>--}}
+                        {{--<div class="layout-detail padding-25">--}}
+                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
+                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="layout_1--item vc-item5">--}}
+                        {{--<div class="video-play"></div>--}}
+                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
+                        {{--<div class="overlay"></div>--}}
+                        {{--<img src="images/home/06/5.jpg" class="img-responsive" alt=""/>--}}
+                        {{--<div class="layout-detail padding-25">--}}
+                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
+                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="col-md-4 col-sm-5 no-padding">--}}
+                {{--<div class="now-playing">--}}
+                    {{--<i class="fa fa-play"></i>--}}
+                    {{--<p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>--}}
+                {{--</div>--}}
+                {{--<div class="video-list">--}}
+                    {{--<ul>--}}
+                        {{--<li class="vl-video1">--}}
+                            {{--<div class="thumb">--}}
+                                {{--<div class="overlay-alt"></div>--}}
+                                {{--<div class="video-play-32"></div>--}}
+                                {{--<img src="images/home/06/thumb/1.jpg" class="img-responsive" alt=""/>--}}
+                            {{--</div>--}}
+                            {{--<p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>--}}
+                        {{--</li>--}}
+                        {{--<li class="vl-video2">--}}
+                            {{--<div class="thumb">--}}
+                                {{--<div class="overlay-alt"></div>--}}
+                                {{--<div class="video-play-32"></div>--}}
+                                {{--<img src="images/home/06/thumb/2.jpg" class="img-responsive" alt=""/>--}}
+                            {{--</div>--}}
+                            {{--<p>The Best New Features Coming to Your Windows<span>18:35</span></p>--}}
+                        {{--</li>--}}
+                        {{--<li class="vl-video3">--}}
+                            {{--<div class="thumb">--}}
+                                {{--<div class="overlay-alt"></div>--}}
+                                {{--<div class="video-play-32"></div>--}}
+                                {{--<img src="images/home/06/thumb/3.jpg" class="img-responsive" alt=""/>--}}
+                            {{--</div>--}}
+                            {{--<p>This Child Model Is So Over Being On Live TV <span>11:20</span></p>--}}
+                        {{--</li>--}}
+                        {{--<li class="vl-video4">--}}
+                            {{--<div class="thumb">--}}
+                                {{--<div class="overlay-alt"></div>--}}
+                                {{--<div class="video-play-32"></div>--}}
+                                {{--<img src="images/home/06/thumb/4.jpg" class="img-responsive" alt=""/>--}}
+                            {{--</div>--}}
+                            {{--<p>Outrage at bloodied Aleppo boy photo and lorem <span>15:25</span></p>--}}
+                        {{--</li>--}}
+                        {{--<li class="vl-video5">--}}
+                            {{--<div class="thumb">--}}
+                                {{--<div class="overlay-alt"></div>--}}
+                                {{--<div class="video-play-32"></div>--}}
+                                {{--<img src="images/home/06/thumb/5.jpg" class="img-responsive" alt=""/>--}}
+                            {{--</div>--}}
+                            {{--<p>The best lorem ipsum video of 2016 releaed <span>13:45</span></p>--}}
+                        {{--</li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="clearfix"></div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 @stop
 
 @section('contenido_footer')

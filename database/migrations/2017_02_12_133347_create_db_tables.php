@@ -115,6 +115,37 @@ class CreateDbTables extends Migration
             $table->nullableTimestamps();
             $table->softDeletes();
         });
+
+        Schema::create('columnistas', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('nombre', 100);
+            $table->string('apellidos', 100);
+            $table->string('nombre_completo', 100);
+            $table->string('slug_url');
+            $table->text('descripcion')->nullable();
+            $table->string('imagen')->nullable();
+            $table->string('imagen_carpeta')->nullable();
+            $table->boolean('publicar')->default(false);
+            $table->timestamps();
+        });
+
+        Schema::create('columnas', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('titulo');
+            $table->string('slug_url');
+            $table->text('descripcion')->nullable();
+            $table->text('contenido')->nullable();
+            $table->boolean('publicar')->default(false);
+            $table->string('imagen', 150)->nullable();
+            $table->string('imagen_carpeta', 100)->nullable();
+            $table->integer('columnista_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->timestamp('published_at')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -124,6 +155,8 @@ class CreateDbTables extends Migration
      */
     public function down()
     {
+        Schema::drop('columnistas');
+        Schema::drop('columnas');
         Schema::drop('histories');
         Schema::drop('ajustes');
         Schema::drop('imagenes');

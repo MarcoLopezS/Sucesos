@@ -22,6 +22,6 @@ class Categoria extends BaseEntity {
      */
     public function getUrlAttribute()
     {
-        return route('noticias.categorias.select', [$this->slug_url]);
+        return route('categoria', [$this->slug_url]);
     }
 }

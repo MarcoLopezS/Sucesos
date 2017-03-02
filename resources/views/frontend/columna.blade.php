@@ -7,9 +7,10 @@
     $nota_descripcion = $noticia->descripcion;
     $nota_contenido = $noticia->contenido;
     $nota_imagen = $noticia->imagen_noticia;
-    $nota_categoria = $noticia->categoria->titulo;
-    $nota_categoria_url = $noticia->categoria->url;
+    $nota_categoria = $noticia->columnista->nombre_completo;
+    $nota_categoria_url = $noticia->columnista->url;
     $nota_fecha = $noticia->fecha;
+    $idRel = 1;
 @endphp
 
 @section('titulo')
@@ -28,6 +29,7 @@
     <meta property="og:site_name" content='@{{ configWeb()->titulo }}' >
     <meta property="fb:admins" content='1434798696787255'>
     <meta property="og:description" content='{{ $nota_descripcion }}'>
+    <meta property="article:author" content='{{ $nota_categoria_url }}'>
 @stop
 
 @section('contenido_body')
@@ -38,7 +40,7 @@
 				<div class="col-md-12">
 					<ul class="bcrumbs">
 						<li><a href="/">Inicio</a></li>
-						<li><a href="{{ $nota_categoria_url }}">{{ $nota_categoria }}</a></li>
+						<li><a href="#">{{ $nota_categoria }}</a></li>
 						<li>{{ $nota_titulo }}</li>
 					</ul>
 				</div>
@@ -53,15 +55,11 @@
 			<div class="clearfix"></div>
 			<div class="col-md-8 col-sm-7 padding-bottom-30">
 				<div class="blog-excerpt">
-					<img src="{{ $nota_imagen }}" class="img-responsive" alt="{{ $nota_titulo }}"/>
+                    @if($noticia->imagen <> "")
+					    <img src="{{ $nota_imagen }}" class="img-responsive" alt="{{ $nota_titulo }}"/>
+                    @endif
 
-                    {{--<div class="flexslider loading">--}}
-                        {{--<ul class="slides">--}}
-                            {{--<li><img src="images/category/slider/1.jpg" class="img-responsive" alt=""/></li>--}}
-                        {{--</ul>--}}
-                    {{--</div>--}}
-
-					<div class="blog-single-head margin-top-25">
+					<div class="blog-single-head {{ $noticia->imagen ? 'margin-top-25' : '' }}">
 						<h2>{{ $nota_titulo }}</h2>
 						<div class="meta"><span class="date">{{ $nota_fecha }}</span></div>
                         <p><em>{{ $nota_descripcion }}</em></p>
@@ -70,17 +68,6 @@
 					{!! $nota_contenido !!}
 				</div>	
 
-				<div class="single-topic">
-					<span>Etiquetas:</span>
-					<ul class="tags">
-                        @foreach($noticia->tags as $tag)
-						<li><a href="{{ $tag->url }}">{{ $tag->titulo }}</a></li>
-                        @endforeach
-					</ul>
-				</div>
-
-				<div class="clearfix"></div>
-				<div class="margin-bottom-10"></div>
 				<div class="clearfix"></div>
 
 				<div class="single-share">
@@ -93,33 +80,28 @@
 				<div class="margin-bottom-30"></div>
 				<hr class="l4">
 
-				<div class="clearfix"></div>
-
-                <h3 class="heading-1"><span>Articulos relacionados</span></h3>
-				<div class="row margin-bottom-30">
-
-                    @foreach($relacionadas->noticiasRelacionadas($nota_id) as $noticia)
-                        @php
-                            $noticia_titulo = $noticia->titulo;
-                            $noticia_url = $noticia->url;
-                            $noticia_categoria = $noticia->categoria->titulo;
-                            $noticia_categoria_url = $noticia->categoria->url;
-                            $noticia_imagen = $noticia->imagen_noticia_relacionada;
-                            $noticia_fecha = $noticia->fecha;
-                        @endphp
-                        <div class="col-md-4">
-                            <div class="layout_2--item">
-                                <div class="thumb">
-                                    <a href="{{ $noticia_url }}"><img src="{{ $noticia_imagen }}" class="img-responsive" alt=""></a>
-                                </div>
-                                <span class="cat"><a href="{{ $noticia_categoria_url }}">{{ $noticia_categoria }}</a></span>
-                                <h4><a href="{{ $noticia_url }}">{{ $noticia_titulo }}</a></h4>
-                                <div class="meta"><span class="date">{{ $noticia_fecha }}</span></div>
-                            </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="blog-prev">
+                            <i class="fa fa-angle-left"></i>
                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="blog-next text-right">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                    @foreach($relacionadas as $rel)
+                        @php
+                            $noticia_titulo = $rel->titulo;
+                            $noticia_url = $rel->url;
+                        @endphp
+                            <p id="rel-{{ $idRel }}"><a href="{{ $noticia_url }}">{{ $noticia_titulo }}</a></p>
+                        @php
+                            $idRel = $idRel + 1;
+                        @endphp
                     @endforeach
-
-				</div>
+                </div>
 			</div>
 	
 			<!-- SIDEBAR -->

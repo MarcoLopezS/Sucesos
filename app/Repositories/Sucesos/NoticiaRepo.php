@@ -44,13 +44,6 @@ class NoticiaRepo extends BaseRepo{
                     ->paginate(6);
     }
 
-    public function listaNoticiasRelacionadas($tags)
-    {
-        $tag = $tags->first()->id;
-
-        return $this->getModel()->where('');
-    }
-
     //BUSQUEDA DE REGISTROS
     public function findAndPaginate(Request $request)
     {

@@ -518,6 +518,9 @@ $.simpleWeather({
     }
 });
 
+$(".blog-prev").prepend($("#rel-1"));
+$(".blog-next").prepend($("#rel-2"));
+
 //AGREGANDO NOTICIAS EN CONTENEDORES DE DESTACADOS
 $("#destacado-izq").prepend($("#destacado-1"));
 $("#destacado-der").prepend($("#destacado-3"));

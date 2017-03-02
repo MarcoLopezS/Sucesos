@@ -5,7 +5,9 @@ Route::get('/', ['as' => 'home', 'uses' => 'FrontendController@home']);
 Route::get('seccion/{url}', ['as' => 'categoria', 'uses' => 'FrontendController@categoria']);
 Route::get('tag/{url}', ['as' => 'tag', 'uses' => 'FrontendController@tag']);
 Route::get('nota/{id}-{url}', ['as' => 'noticia', 'uses' => 'FrontendController@noticia']);
-
+Route::get('columnistas', ['as' => 'columnistas', 'uses' => 'FrontendController@columnistas']);
+Route::get('columnista/{url}', ['as' => 'columnista', 'uses' => 'FrontendController@columnista']);
+Route::get('columna/{id}-{url}', ['as' => 'columna', 'uses' => 'FrontendController@columna']);
 
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);
@@ -21,16 +23,9 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']
 
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
-    //EMPRESA
-//    Route::group(['prefix' => 'company'], function(){
-//        //NOSOTROS
-//        Route::get('us', ['as' => 'admin.company.us.edit', 'uses' => 'CompanyController@usEdit']);
-//        Route::put('us', ['as' => 'admin.company.us.update', 'uses' => 'CompanyController@usUpdate']);
-//
-//        //SOCIAL MEDIA
-//        Route::get('social', ['as' => 'admin.company.social.edit', 'uses' => 'CompanyController@socialEdit']);
-//        Route::put('social', ['as' => 'admin.company.social.update', 'uses' => 'CompanyController@socialUpdate']);
-//    });
+    //COLUMNISTAS
+    Route::resource('columnistas', 'ColumnistasController');
+    Route::resource('columnistas.columna', 'ColumnaController');
 
     //NOTICIAS
     Route::resource('noticias', 'NoticiasController');

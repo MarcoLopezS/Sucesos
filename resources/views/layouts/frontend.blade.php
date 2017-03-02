@@ -65,7 +65,7 @@
                     <li><a href="{{ route('categoria', 'entrevistas') }}">Entrevistas</a></li>
                     <li><a href="{{ route('categoria', 'historia') }}">Historia</a></li>
                     <li><a href="#">Columnistas</a></li>
-                    <li><a href="{{ route('categoria', 'emprendedores') }}">Emprendedores</a></li>
+                    <li><a href="{{ route('categoria', 'personajes') }}">Personajes</a></li>
                     <li class="pull-right hidden-xs">
                         <div class="search-trigger search-trigger2"><i class="fa fa-search"></i></div>
                     </li>
@@ -79,58 +79,9 @@
     @yield('contenido_body')
 
     <!-- FOOTER -->
-    <footer class="bg-dark footer1 padding-top-60">
+    <footer class="bg-dark footer1">
         <div class="container">
-            <div class="row margin-bottom-30">
-                <div class="col-md-4 col-sm-4 margin-bottom-30 footer-info">
-                    <a href="/"><img src="/images/logo-bn.png" class="img-responsive" alt=""/></a>
-                    <p>Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat.</p>
-                    <span><i class="fa fa-envelope"></i> <a href="mailto:info@watcher.com">info@sucesos.pe</a></span>
-                </div>
 
-                <div class="col-md-4 col-sm-4 margin-bottom-30 footer-trending">
-                    <h5>Trending</h5>
-                    <ul class="trending">
-                        <li>
-                            <a href="post_page_01.html" class="pull-left"><img src="/images/footer/trend/1.jpg" class="img-responsive" alt=""/></a>
-                            <h4><a href="post_page_02.html">Why Uber Is Trying To Make Nice With Its Drivers</a></h4>
-                            <span>Sep. 25, 2016</span>
-                        </li>
-                        <li>
-                            <a href="post_page_01.html" class="pull-left"><img src="/images/footer/trend/2.jpg" class="img-responsive" alt=""/></a>
-                            <h4><a href="post_page_02.html">How to See If Your Dropbox Account Was Hacked</a></h4>
-                            <span>Sep. 23, 2016</span>
-                        </li>
-                        <li>
-                            <a href="post_page_01.html" class="pull-left"><img src="/images/footer/trend/3.jpg" class="img-responsive" alt=""/></a>
-                            <h4><a href="post_page_02.html">You Can Now Bid on Steve Jobs' Famous Black Turtleneck</a></h4>
-                            <span>Sep. 21, 2016</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 col-sm-4 margin-bottom-30 footer-follow">
-                    <h5>Follow</h5>
-                    <div class="footer-newsletter">
-                        <form action="http://ckthemes.com/html/watcher/php/subscribe.php" id="invite1" method="POST">
-                            <i class="fa fa-envelope"></i>
-                            <input type="email" placeholder="Email address" class="e-mail" name="email" id="address1" data-validate="validate(required, email)">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                        <span>Don't worry we hate spam as much as you do</span>
-                        <div id="result1"></div>
-                    </div>
-                    <div class="footer-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FOOTER COPYRIGHT -->
             <div class="footer-bottom">
                 <div class="row">
                     <div class="col-md-6 col-sm-12">

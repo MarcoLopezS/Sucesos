@@ -39,8 +39,8 @@
                         $noticia_titulo = $noticia->titulo;
                         $noticia_url = $noticia->url;
                         $noticia_descripcion = $noticia->descripcion;
-                        $noticia_categoria = $noticia->categoria_nombre;
-                        $noticia_categoria_url = $noticia->categoria_url;
+                        $noticia_categoria = $noticia->categoria->titulo;
+                        $noticia_categoria_url = $noticia->categoria->url;
                         $noticia_imagen = $noticia->imagen_tag;
                         $noticia_fecha = $noticia->fecha;
                     @endphp

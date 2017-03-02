@@ -26,9 +26,10 @@ class DataTableSeeder extends Seeder
             ['id' => '3', 'titulo' => 'Internacional', 'slug_url' => 'internacional', 'publicar' => 1],
             ['id' => '4', 'titulo' => 'Tecnología', 'slug_url' => 'tecnologia', 'publicar' => 1],
             ['id' => '5', 'titulo' => 'Denuncia', 'slug_url' => 'denuncia', 'publicar' => 1],
-            ['id' => '6', 'titulo' => 'Entrevistas', 'slug_url' => 'entrevistas', 'publicar' => 1],
-            ['id' => '7', 'titulo' => 'Historia', 'slug_url' => 'historia', 'publicar' => 1],
-            ['id' => '8', 'titulo' => 'Emprendedores', 'slug_url' => 'emprendedores', 'publicar' => 1],
+            ['id' => '6', 'titulo' => 'Emprende', 'slug_url' => 'emprende', 'publicar' => 1],
+            ['id' => '7', 'titulo' => 'Entrevistas', 'slug_url' => 'entrevistas', 'publicar' => 1],
+            ['id' => '8', 'titulo' => 'Historia', 'slug_url' => 'historia', 'publicar' => 1],
+            ['id' => '9', 'titulo' => 'Personajes', 'slug_url' => 'personajes', 'publicar' => 1],
         ]);
 
         //TAGS
@@ -43,5 +44,11 @@ class DataTableSeeder extends Seeder
         factory(\Sucesos\Entities\Sucesos\Noticia::class, 150)->create()->each(function ($u) {
             $u->tags()->sync([1,2,3,4]);
         });
+
+        //COLUMNISTA
+        factory(\Sucesos\Entities\Sucesos\Columnista::class, 13)->create();
+
+        //COLUMNAS
+        factory(\Sucesos\Entities\Sucesos\Columna::class, 100)->create();
     }
 }
