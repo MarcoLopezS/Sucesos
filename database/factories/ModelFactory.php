@@ -25,6 +25,8 @@ $factory->define(\Sucesos\Entities\Sucesos\Columnista::class, function (Faker\Ge
         'apellidos' => $apellidos,
         'nombre_completo' => $nombre.' '.$apellidos,
         'slug_url' => SlugUrl($nombre.' '.$apellidos),
+        'imagen' => random_int(1, 10).'.jpg',
+        'imagen_carpeta' => 'febrero2017/',
         'publicar' =>  random_int(0, 1)
     ];
 });
