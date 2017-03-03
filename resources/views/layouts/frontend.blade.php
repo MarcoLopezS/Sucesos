@@ -50,7 +50,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">Inicio</a></li>
                     <li class="dropdown dropdown-v2">
-                        <a href="#" class="dropdown-toggle"
+                        <a href="{{ route('categoria', 'actualidad') }}" class="dropdown-toggle"
                            data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Actualidad <span class="fa fa-angle-down"></span>
                         </a>
@@ -60,6 +60,7 @@
                             <li><a href="{{ route('categoria', 'internacional') }}">Internacional</a></li>
                             <li><a href="{{ route('categoria', 'tecnologia') }}">Tecnología</a></li>
                             <li><a href="{{ route('categoria', 'denuncia') }}">Denuncia</a></li>
+                            <li><a href="{{ route('categoria', 'emprendedores') }}">Emprendedores</a></li>
                         </ul>
                     </li>
                     <li><a href="{{ route('categoria', 'entrevistas') }}">Entrevistas</a></li>
