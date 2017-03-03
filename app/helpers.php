@@ -55,7 +55,7 @@ function fechaPubAdmin($datetime)
 function fechaPublicacionBD($datetime)
 {
     $fecha = Date::createFromFormat('d/m/Y H:i:s', $datetime);
-    $fecha = $fecha->format('Y-m-d H:i');
+    $fecha = $fecha->format('Y-m-d H:i:s');
     return ucfirst($fecha);
 }
 
