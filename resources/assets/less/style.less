@@ -12,6 +12,7 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	background: #fff;
+    line-height: normal;
 }
 
 .wrapper {
@@ -5441,5 +5442,67 @@ input.qtyminus {
 .seccion-columnistas{
     .flex-control-nav.flex-control-paging{
         display: none;
+    }
+}
+
+//VIDEOS HOME
+#video-gallery {
+    width: 100%;
+}
+
+.videoGallery .rsTmb {
+    padding: 20px;
+}
+.videoGallery .rsThumbs .rsThumb {
+    width: 350px;
+    height: 80px;
+    border-bottom: 1px solid #2E2E2E;
+}
+.videoGallery .rsThumbs {
+    width: 350px;
+    padding: 0;
+    background-color: #1d1e20;
+}
+.videoGallery .rsThumb:hover {
+    background: #000;
+}
+.videoGallery .rsThumb.rsNavSelected {
+    background-color: #c10b19;
+    border-bottom-color: #c10b19;
+}
+
+.sampleBlock {
+    left: 3%;
+    top: 1%;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .videoGallery .rsTmb {
+        padding: 6px 8px;
+    }
+    .videoGallery .rsTmb h5 {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .videoGallery .rsThumbs.rsThumbsVer {
+        width: 100px;
+        padding: 0;
+    }
+    .videoGallery .rsThumbs .rsThumb {
+        width: 100px;
+        height: 47px;
+    }
+    .videoGallery .rsTmb span {
+        display: none;
+    }
+    .videoGallery .rsOverflow,
+    .royalSlider.videoGallery {
+        height: 300px !important;
+    }
+    .sampleBlock {
+        font-size: 14px;
     }
 }

@@ -8,6 +8,10 @@
 @section('contenido_header')
     {{-- FlexSlider --}}
     {!! HTML::style('https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css') !!}
+
+    {{-- Video --}}
+    {!! HTML::style('libs/royalslider/royalslider.css') !!}
+    {!! HTML::style('libs/royalslider/skins/default/rs-default.css') !!}
 @stop
 
 @section('contenido_body')
@@ -126,124 +130,68 @@
         </div>
     </div>
 
-    {{--<div class="padding-bottom-50 video-container-white">--}}
-        {{--<div class="container">--}}
-            {{--<h3 class="heading-1"><span class="tv"><img src="/images/logo-tv.png" class="img-responsive" alt="Sucesos TV"></span></h3>--}}
-            {{--<div class="clearfix"></div>--}}
-            {{--<div class="col-md-8 col-sm-7 no-padding">--}}
-                {{--<div class="video-container">--}}
-                    {{--<video id="video" width="400" onclick="togglePause()" controls>--}}
-                        {{--<source src="video/1.mp4" type="video/mp4">--}}
-                    {{--</video>--}}
-                    {{--<div class="layout_1--item vc-item1 active">--}}
-                        {{--<div class="video-play"></div>--}}
-                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
-                        {{--<div class="overlay"></div>--}}
-                        {{--<img src="images/home/06/1.jpg" class="img-responsive" alt=""/>--}}
-                        {{--<div class="layout-detail padding-25">--}}
-                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
-                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="layout_1--item vc-item2">--}}
-                        {{--<div class="video-play"></div>--}}
-                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
-                        {{--<div class="overlay"></div>--}}
-                        {{--<img src="images/home/06/2.jpg" class="img-responsive" alt=""/>--}}
-                        {{--<div class="layout-detail padding-25">--}}
-                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
-                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="layout_1--item vc-item3">--}}
-                        {{--<div class="video-play"></div>--}}
-                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
-                        {{--<div class="overlay"></div>--}}
-                        {{--<img src="images/home/06/3.jpg" class="img-responsive" alt=""/>--}}
-                        {{--<div class="layout-detail padding-25">--}}
-                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
-                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="layout_1--item vc-item4">--}}
-                        {{--<div class="video-play"></div>--}}
-                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
-                        {{--<div class="overlay"></div>--}}
-                        {{--<img src="images/home/06/4.jpg" class="img-responsive" alt=""/>--}}
-                        {{--<div class="layout-detail padding-25">--}}
-                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
-                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="layout_1--item vc-item5">--}}
-                        {{--<div class="video-play"></div>--}}
-                        {{--<span class="badge text-uppercase badge-overlay badge-tech">Tech</span>--}}
-                        {{--<div class="overlay"></div>--}}
-                        {{--<img src="images/home/06/5.jpg" class="img-responsive" alt=""/>--}}
-                        {{--<div class="layout-detail padding-25">--}}
-                            {{--<h4>Twitter Is Conflicted Over Shaunae Miller's Finish-Line Dive</h4>--}}
-                            {{--<div class="meta"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span><span class="views">284</span></div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="col-md-4 col-sm-5 no-padding">--}}
-                {{--<div class="now-playing">--}}
-                    {{--<i class="fa fa-play"></i>--}}
-                    {{--<p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>--}}
-                {{--</div>--}}
-                {{--<div class="video-list">--}}
-                    {{--<ul>--}}
-                        {{--<li class="vl-video1">--}}
-                            {{--<div class="thumb">--}}
-                                {{--<div class="overlay-alt"></div>--}}
-                                {{--<div class="video-play-32"></div>--}}
-                                {{--<img src="images/home/06/thumb/1.jpg" class="img-responsive" alt=""/>--}}
-                            {{--</div>--}}
-                            {{--<p>Desktop Showdown: Apple's Siri vs. Microsoft's Cortana <span>20:45</span></p>--}}
-                        {{--</li>--}}
-                        {{--<li class="vl-video2">--}}
-                            {{--<div class="thumb">--}}
-                                {{--<div class="overlay-alt"></div>--}}
-                                {{--<div class="video-play-32"></div>--}}
-                                {{--<img src="images/home/06/thumb/2.jpg" class="img-responsive" alt=""/>--}}
-                            {{--</div>--}}
-                            {{--<p>The Best New Features Coming to Your Windows<span>18:35</span></p>--}}
-                        {{--</li>--}}
-                        {{--<li class="vl-video3">--}}
-                            {{--<div class="thumb">--}}
-                                {{--<div class="overlay-alt"></div>--}}
-                                {{--<div class="video-play-32"></div>--}}
-                                {{--<img src="images/home/06/thumb/3.jpg" class="img-responsive" alt=""/>--}}
-                            {{--</div>--}}
-                            {{--<p>This Child Model Is So Over Being On Live TV <span>11:20</span></p>--}}
-                        {{--</li>--}}
-                        {{--<li class="vl-video4">--}}
-                            {{--<div class="thumb">--}}
-                                {{--<div class="overlay-alt"></div>--}}
-                                {{--<div class="video-play-32"></div>--}}
-                                {{--<img src="images/home/06/thumb/4.jpg" class="img-responsive" alt=""/>--}}
-                            {{--</div>--}}
-                            {{--<p>Outrage at bloodied Aleppo boy photo and lorem <span>15:25</span></p>--}}
-                        {{--</li>--}}
-                        {{--<li class="vl-video5">--}}
-                            {{--<div class="thumb">--}}
-                                {{--<div class="overlay-alt"></div>--}}
-                                {{--<div class="video-play-32"></div>--}}
-                                {{--<img src="images/home/06/thumb/5.jpg" class="img-responsive" alt=""/>--}}
-                            {{--</div>--}}
-                            {{--<p>The best lorem ipsum video of 2016 releaed <span>13:45</span></p>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="clearfix"></div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
+    <div class="padding-bottom-50 video-container-white">
+        <div class="container">
+            <h3 class="heading-1"><span class="tv"><img src="/images/logo-tv.png" class="img-responsive" alt="Sucesos TV"></span></h3>
+            <div class="clearfix"></div>
+
+            <div id="video-gallery" class="royalSlider videoGallery rsDefault">
+
+                @foreach($videos as $video)
+                    @php
+                        $video_titulo = $video->titulo;
+                        $video_youtube = $video->youtube;
+                        $video_imagen = $video->imagen_home;
+                    @endphp
+                <a class="rsImg" data-rsw="845" data-rsh="475" data-rsvideo="{{ $video_youtube }}" href="{{ $video_imagen }}">
+                    <div class="rsTmb">
+                        <h5>{{ $video_titulo }}</h5>
+                    </div>
+                </a>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('contenido_footer')
     {{-- FlexSlider --}}
     {!! HTML::script('https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider.min.js') !!}
     {!! HTML::script(elixir('js/flexslider.js')) !!}
+
+    {{-- Video --}}
+    {!! HTML::script('libs/royalslider/jquery.royalslider.min.js') !!}
+    <script>
+        $('#video-gallery').royalSlider({
+            arrowsNav: false,
+            fadeinLoadedSlide: true,
+            controlNavigationSpacing: 0,
+            controlNavigation: 'thumbnails',
+            thumbs: {
+                autoCenter: false,
+                fitInViewport: true,
+                orientation: 'vertical',
+                spacing: 0,
+                paddingBottom: 0
+            },
+            keyboardNavEnabled: true,
+            imageScaleMode: 'fill',
+            imageAlignCenter: true,
+            slidesSpacing: 0,
+            loop: false,
+            loopRewind: true,
+            numImagesToPreload: 3,
+            video: {
+                autoHideArrows: true,
+                autoHideControlNav: false,
+                autoHideBlocks: true
+            },
+            autoScaleSlider: true,
+            autoScaleSliderWidth: 960,
+            autoScaleSliderHeight: 400,
+            imgWidth: 800,
+            imgHeight: 400
+        });
+    </script>
 @stop

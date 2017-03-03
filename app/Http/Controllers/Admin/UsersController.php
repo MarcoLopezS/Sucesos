@@ -16,12 +16,11 @@ class UsersController extends Controller {
     protected $rulesUser = [
         'email' => 'required|email|unique:users,email',
         'password' => 'required|confirmed',
-        'password_confirmation' => 'required',
-        'type' => 'required|in:admin,editor'
+        'password_confirmation' => 'required'
     ];
 
     protected $rulesProfile = [
-        'nombre' => 'required',
+        'nombres' => 'required',
         'apellidos' => 'required'
     ];
 
@@ -35,14 +34,15 @@ class UsersController extends Controller {
         $this->userProfileRepo = $userProfileRepo;
     }
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+    /**
+     * Display a listing of the resource.
+     *
+     * @param Request $request
+     * @return Response
+     */
 	public function index(Request $request)
 	{
-        $users = $this->userRepo->findUsersAndPaginate();
+        $users = $this->userRepo->findUsersAndPaginate($request);
 
         return view('admin.users.list', compact('users'));
 	}
@@ -58,14 +58,15 @@ class UsersController extends Controller {
 	}
 
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param Request $request
+     * @return Response
+     */
 	public function store(Request $request)
 	{
-        $dataProfile = $request->only('nombre', 'apellidos');
+        $dataProfile = $request->only('nombres', 'apellidos');
         $dataUser = $request->only('email', 'password', 'type');
 
         $this->validate($request, $this->rulesProfile);
@@ -75,12 +76,8 @@ class UsersController extends Controller {
         $user->active = 1;
         $user->save();
 
-        $emailUser = User::whereEmail($request->input('email'))->first();
-        $actCodigo = $this->userRepo->CodigoAleatorio(50,true, true, false);
-
         $userProfile = new UserProfile($dataProfile);
-        $userProfile->user_id = $emailUser->id;
-        $userProfile->activacion_codigo = $actCodigo;
+        $userProfile->user_id = $user->id;
         $userProfile->save();
 
         //REDIRECCIONAR A PAGINA PARA VER DATOS
@@ -127,7 +124,7 @@ class UsersController extends Controller {
         $user = UserProfile::whereUserId($id)->first();
 
         $rules = [
-            'nombre' => 'required',
+            'nombres' => 'required',
             'apellidos' => 'required'
         ];
 

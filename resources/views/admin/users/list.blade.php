@@ -9,13 +9,7 @@
     <div class="row">
         <div class="col-lg-12">
 
-            <div class="portlet box blue-hoki">
-
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-globe"></i>Registros
-                    </div>
-                </div>
+            <div class="portlet light bordered">
 
                 <div class="portlet-body">
 
@@ -36,11 +30,7 @@
                             <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
                         </div>
 
-                        @if(Session::has('mensaje'))
-                            <div class="alert alert-success">
-                                {{ Session::get('mensaje') }}
-                            </div>
-                        @endif
+                        @include('flash::message')
 
                         <div id="mensajeAjax" class="alert alert-dismissable"></div>
                         

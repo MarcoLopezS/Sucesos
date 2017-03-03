@@ -46,9 +46,9 @@
                         {!! Form::model($user->profile, ['route' => ['admin.user.update', $user->id], 'method' => 'PUT', 'class' => 'form-horizontal form-bordered']) !!}
 
                             <div class="form-group">
-                                {!! Form::label('nombre', 'Nombre', ['class' => 'col-md-3 control-label']) !!}
+                                {!! Form::label('nombres', 'Nombres', ['class' => 'col-md-3 control-label']) !!}
                                 <div class="col-md-9">
-                                    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+                                    {!! Form::text('nombres', null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
 
@@ -63,7 +63,7 @@
                             <div class="form-group">
                                 <div class="col-md-12 text-right">
                                     {!! Form::submit('Guardar cambios', ['class' => 'btn btn-responsive btn-primary btn-md']) !!}
-                                    <a href="@{{ route('admin.user.profile') }}" class="btn btn-responsive btn-default btn-md">Cancelar</a>
+                                    {{--<a href="@{{ route('admin.user.profile') }}" class="btn btn-responsive btn-default btn-md">Cancelar</a>--}}
                                 </div>
                             </div>
 

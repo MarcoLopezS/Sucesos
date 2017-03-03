@@ -54,15 +54,16 @@
                     </button>
                     <ul class="dropdown-menu" role="menu">
                         <li>
+                            <a href="{{ route('admin.columnistas.create') }}">
+                                <i class="fa fa-plus" aria-hidden="true"></i> Nuevo columnista </a>
+                        </li>
+                        <li>
                             <a href="{{ route('admin.noticias.create') }}">
                                 <i class="fa fa-plus" aria-hidden="true"></i> Nueva noticia </a>
                         </li>
-                        <li class="divider"> </li>
                         <li>
-                            <a href="javascript:;">
-                                <i class="fa fa-commenting-o" aria-hidden="true"></i> Mensajes
-                                <span class="badge badge-success">4</span>
-                            </a>
+                            <a href="{{ route('admin.videos.create') }}">
+                                <i class="fa fa-plus" aria-hidden="true"></i> Nueva video </a>
                         </li>
                     </ul>
                 </div>
@@ -138,7 +139,7 @@
                         <ul class="sub-menu">
                             <li class="nav-item {!! (Request::is('admin/columnistas') ? 'active open' : '') !!}s">
                                 <a href="{{ route('admin.columnistas.index') }}" class="nav-link ">
-                                    <span class="title">Todas los columnistas</span>
+                                    <span class="title">Todos los columnistas</span>
                                 </a>
                             </li>
                             <li class="nav-item {!! (Request::is('admin/columnistas/create') ? 'active open' : '') !!}">
@@ -149,7 +150,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item {!! (Request::is('admin/noticias*') ? 'active open' : '') !!}" >
+                    <li class="nav-item {!! (Request::is('admin/noticias*') || Request::is('admin/tags*') ? 'active open' : '') !!}" >
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                             <span class="title">Noticias</span>
@@ -166,7 +167,40 @@
                                     <span class="title">Nueva noticia</span>
                                 </a>
                             </li>
+                            <li class="nav-item {!! (Request::is('admin/tags*') ? 'active open' : '') !!}">
+                                <a href="{{ route('admin.tags.index') }}" class="nav-link ">
+                                    <span class="title">Etiquetas</span>
+                                </a>
+                            </li>
                         </ul>
+                    </li>
+
+                    <li class="nav-item {!! (Request::is('admin/videos*') ? 'active open' : '') !!}" >
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <span class="title">Videos</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item {!! (Request::is('admin/videos') ? 'active open' : '') !!}s">
+                                <a href="{{ route('admin.videos.index') }}" class="nav-link ">
+                                    <span class="title">Todos los videos</span>
+                                </a>
+                            </li>
+                            <li class="nav-item {!! (Request::is('admin/videos/create') ? 'active open' : '') !!}">
+                                <a href="{{ route('admin.videos.create') }}" class="nav-link ">
+                                    <span class="title">Nuevo video</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item start {!! (Request::is('admin/user*') ? 'active open' : '') !!}">
+                        <a href="{{ route('admin.user.index') }}">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <span class="title">Usuarios</span>
+                            <span class="selected"></span>
+                        </a>
                     </li>
 
                     <li class="">

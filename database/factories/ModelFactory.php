@@ -46,3 +46,27 @@ $factory->define(\Sucesos\Entities\Sucesos\Columna::class, function (Faker\Gener
         'published_at' => '15/02/2017 01:02'
     ];
 });
+
+$factory->define(\Sucesos\Entities\Sucesos\Video::class, function (Faker\Generator $faker) {
+    $titulo = $faker->sentence(6, true);
+    return [
+        'titulo' => $titulo,
+        'slug_url' => SlugUrl($titulo),
+        'descripcion' => $faker->paragraphs(1, true),
+        'publicar' => random_int(0, 1),
+        'user_id' => 1,
+        'youtube' => $faker->randomElement([
+            'https://www.youtube.com/watch?v=1itm2NXQBmI',
+            'https://www.youtube.com/watch?v=OY_qgSO-6i8',
+            'https://www.youtube.com/watch?v=cmt48AQu1EU',
+            'https://www.youtube.com/watch?v=AistXSvg98Q',
+            'https://www.youtube.com/watch?v=PwNdsIh6sGY',
+            'https://www.youtube.com/watch?v=GHP2jLKPmPk',
+            'https://www.youtube.com/watch?v=vgJIqvC_BCE',
+            'https://www.youtube.com/watch?v=2IPWbaV5dBM'
+        ]),
+        'imagen' => random_int(1, 10).'.jpg',
+        'imagen_carpeta' => 'febrero2017/',
+        'published_at' => '15/02/2017 01:02'
+    ];
+});

@@ -100,6 +100,8 @@
     {!! HTML::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') !!}
     {!! HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') !!}
 
+    @yield('contenido_header')
+
     {{-- Estilos --}}
     {!! HTML::style(elixir('css/ts.css')) !!}
     {!! HTML::style('js/slick/slick.css') !!}
@@ -111,8 +113,6 @@
     {!! HTML::script('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') !!}
     {!! HTML::script('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') !!}
     <![endif]-->
-
-    @yield('contenido_header')
 
     {{-- Enlaces Externos --}}
     {!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js') !!}
@@ -129,20 +129,18 @@
 
     {!! HTML::script('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58a0ef96d417903d') !!}
 
-    <!-- Twitterfeed -->
-    <script src="js/tweecool.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#tweecool').tweecool({
-                //Change tweecool with touhr twitter username
-                username : 'tweecool',
-                profile_image: false,
-                limit : 3
-            });
-        });
-    </script>
-
     @yield('contenido_footer')
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-20229980-35', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
 </body>
 </html>

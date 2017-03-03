@@ -27,9 +27,11 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']
     Route::resource('columnistas', 'ColumnistasController');
     Route::resource('columnistas.columna', 'ColumnaController');
 
+    //TAGS
+    Route::resource('tags', 'TagsController');
+
     //NOTICIAS
     Route::resource('noticias', 'NoticiasController');
-
     Route::group(['as' => 'noticias.', 'prefix' => 'noticias/images'], function(){
         Route::get('{noticia}', ['as' => 'img.list', 'uses' => 'NoticiasController@photosList' ]);
         Route::post('{noticia}/order', ['as' => 'img.order', 'uses' => 'NoticiasController@photosOrder' ]);
@@ -37,6 +39,9 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']
         Route::post('{noticia}/upload', ['as' => 'img.store', 'uses' => 'NoticiasController@photosStore' ]);
         Route::delete('{noticia}/delete/{id}', ['as' => 'img.delete', 'uses' => 'NoticiasController@photosDelete' ]);
     });
+
+    //VIDEOS
+    Route::resource('videos', 'VideosController');
 
     //DOCUMENTOS
     Route::post('documentos/upload-imagen', ['as' => 'documentos.upload.imagen', 'uses' => 'HomeController@uploadImagen']);
@@ -47,9 +52,5 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']
 
     //USUARIOS
     Route::resource('user', 'UsersController');
-
-    //CONTACTO - MENSAJES
-//    Route::resource('contacto/mensajes', 'ContactoMensajesController', ['only' => ['index','show']]);
-//    Route::resource('contacto/sugerencias', 'ContactoSugerenciasController', ['only' => ['index','show']]);
-
+    Route::post('user/{user}/password', ['as' => 'user.updatePassword', 'uses' => 'UsersController@updatePassword']);
 });

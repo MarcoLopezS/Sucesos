@@ -7,6 +7,7 @@ use Sucesos\Repositories\Sucesos\ColumnaRepo;
 use Sucesos\Repositories\Sucesos\ColumnistaRepo;
 use Sucesos\Repositories\Sucesos\NoticiaRepo;
 use Sucesos\Repositories\Sucesos\TagRepo;
+use Sucesos\Repositories\Sucesos\VideoRepo;
 
 class FrontendController extends Controller
 {
@@ -15,6 +16,7 @@ class FrontendController extends Controller
     protected $categoriaRepo;
     protected $columnistaRepo;
     protected $columnaRepo;
+    protected $videoRepo;
 
     /**
      * FrontendController constructor.
@@ -23,18 +25,21 @@ class FrontendController extends Controller
      * @param TagRepo $tagRepo
      * @param ColumnistaRepo $columnistaRepo
      * @param ColumnaRepo $columnaRepo
+     * @param VideoRepo $videoRepo
      */
     public function __construct(CategoriaRepo $categoriaRepo,
                                 NoticiaRepo $noticiaRepo,
                                 TagRepo $tagRepo,
                                 ColumnistaRepo $columnistaRepo,
-                                ColumnaRepo $columnaRepo)
+                                ColumnaRepo $columnaRepo,
+                                VideoRepo $videoRepo)
     {
         $this->categoriaRepo = $categoriaRepo;
         $this->noticiaRepo = $noticiaRepo;
         $this->tagRepo = $tagRepo;
         $this->columnistaRepo = $columnistaRepo;
         $this->columnaRepo = $columnaRepo;
+        $this->videoRepo = $videoRepo;
     }
 
     /**
@@ -45,8 +50,9 @@ class FrontendController extends Controller
         $destacado = $this->noticiaRepo->listaNoticiasDestacada();
         $normal = $this->noticiaRepo->listaNoticiasNormal();
         $columnas = $this->columnaRepo->listaColumnasHome();
+        $videos = $this->videoRepo->listaVideosHome();
 
-        return view('frontend.index', compact('destacado','normal','columnas'));
+        return view('frontend.index', compact('destacado','normal','columnas','videos'));
     }
 
     /**
