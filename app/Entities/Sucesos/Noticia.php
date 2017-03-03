@@ -1,12 +1,13 @@
 <?php namespace Sucesos\Entities\Sucesos;
 
+use Laravel\Scout\Searchable;
 use Sucesos\Entities\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Sucesos\Entities\BaseEntity;
 
 class Noticia extends BaseEntity {
 
-    use SoftDeletes;
+    use SoftDeletes, Searchable;
     protected $dates = ['published_at','deleted_at'];
 	protected $fillable = ['titulo','slug_url','descripcion','contenido','publicar','tipo','published_at','user_id'];
     protected $table = "noticias";
@@ -124,5 +125,20 @@ class Noticia extends BaseEntity {
         {
             $query->where('tipo', $value);
         }
+    }
+
+    /*
+     * ALGOLIA
+     */
+    public function toSearchableArray()
+    {
+        return [
+            'id' => $this->id,
+            'titulo' => $this->titulo,
+            'descripcion' => $this->descripcion,
+            'categoria' => $this->categoria->titulo,
+            'tags' => $this->tags->implode('titulo', ', '),
+            'published_at' => $this->published_at
+        ];
     }
 }

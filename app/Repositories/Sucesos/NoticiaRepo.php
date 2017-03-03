@@ -56,4 +56,10 @@ class NoticiaRepo extends BaseRepo{
                     ->paginate();
     }
 
+    //BUSCADOR FRONT
+    public function busquedaFrontend($texto)
+    {
+        return $this->getModel()->search($texto)->paginate(6);
+    }
+
 }

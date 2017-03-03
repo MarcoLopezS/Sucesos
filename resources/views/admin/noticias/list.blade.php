@@ -110,7 +110,7 @@
                                         <ul class="dropdown-menu" role="menu">
                                             <li><a href="{{ route('admin.noticias.edit', $row_id) }}">Editar</a></li>
                                             <li><a href="#delete" class="btn-delete">Eliminar</a></li>
-                                            <li><a href="{{ route('admin.noticias.img.list', $row_id) }}">Galería de Imagenes</a></li>
+{{--                                            <li><a href="{{ route('admin.noticias.img.list', $row_id) }}">Galería de Imagenes</a></li>--}}
                                         </ul>
                                     </div>
                                 </td>

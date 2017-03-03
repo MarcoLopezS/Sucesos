@@ -121,4 +121,12 @@ class FrontendController extends Controller
 
         return view('frontend.columna', compact('noticia','relacionadas'));
     }
+
+    public function buscar(Request $request)
+    {
+        $texto = $request->input('b');
+        $rows = $this->noticiaRepo->busquedaFrontend($texto);
+
+        return view('frontend.buscar', compact('rows','texto'));
+    }
 }

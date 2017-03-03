@@ -40,8 +40,8 @@
             </button>
 
             <div class="search-wrap2">
-                <form>
-                    <input type="text" placeholder="Buscar">
+                <form action="/buscar" method="get">
+                    <input name="b" type="text" placeholder="Buscar">
                     <div class="sw2-close"><span class="fa fa-close"></span></div>
                 </form>
             </div>
