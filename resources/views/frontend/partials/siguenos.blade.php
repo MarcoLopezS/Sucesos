@@ -1,4 +1,4 @@
-<div class="side-widget margin-bottom-60">
+<div class="side-widget margin-bottom-50">
     <h3 class="heading-1"><span>Siguenos</span></h3>
     <div class="side-share side-share2">
         <a class='share s_facebook'>
