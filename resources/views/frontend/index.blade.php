@@ -83,7 +83,7 @@
 
                 <div class="ads ad-300 margin-bottom-60">
                     <span>Publicidad</span>
-                    <img src="http://placeholdit.imgix.net/~text?txtsize=30&bg=c6c6c6&txtclr=000000&txt=Publicidad&w=710&h=100" class="img-responsive" alt=""/>
+                    <img src="http://placeholdit.imgix.net/~text?txtsize=30&bg=c6c6c6&txtclr=000000&txt=Publicidad&w=730&h=100" class="img-responsive" alt=""/>
                 </div>
 
                 <h3 class="heading-1"><span>Columnistas</span></h3>
