@@ -43,9 +43,6 @@
         <div class="navbar-header padding-vertical-10">
             <div class="container">
 				<a href="/" class="navbar-brand"><img src="/images/logo.png" class="img-responsive" alt=""/></a>
-                <div class="ad-banner pull-right hidden-xs">
-                    <a href="#"><img src="/images/publicidad-logo.png" class="img-responsive" alt=""/></a>
-                </div>
             </div>
         </div>
         <div class="clearfix"></div>

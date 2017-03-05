@@ -125,8 +125,6 @@
 	
 			<!-- SIDEBAR -->
 			<aside class="col-md-4 col-sm-5">
-                @include('frontend.partials.publicidad-sidebar')
-
 				@include('frontend.partials.siguenos')
 
                 @include('frontend.partials.mas-visto')

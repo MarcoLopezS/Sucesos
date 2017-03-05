@@ -81,10 +81,6 @@
 
                 </div>
 
-                <div class="ads ad-300 margin-bottom-60">
-                    <span>Publicidad</span>
-                    <img src="/images/publicidad-noticias.png" class="img-responsive" alt=""/>
-                </div>
 
                 <h3 class="heading-1"><span>Columnistas</span></h3>
                 <div class="row seccion-columnistas">
@@ -122,8 +118,6 @@
                 @include('frontend.partials.mas-visto')
 
                 @include('frontend.partials.tags')
-
-                @include('frontend.partials.publicidad-sidebar')
 
                 @include('frontend.partials.portada')
             </aside>
