@@ -7,7 +7,7 @@ class ImageController extends Controller {
         $file = public_path().'/upload/' . $folder . '/' .$image;
         $image = \Image::make($file);
         $image->fit($width, $height);
-        return $image->response('jpg', 70);
+        return $image->response('jpg', 60);
     }
 
     public function withResize($folder, $width, $image)
@@ -17,7 +17,7 @@ class ImageController extends Controller {
         $image->resize($width, null, function ($constraint) {
             $constraint->aspectRatio();
         });
-        return $image->response('jpg', 70);
+        return $image->response('jpg', 60);
     }
 
 }
