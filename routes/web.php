@@ -9,6 +9,7 @@ Route::get('columnistas', ['as' => 'columnistas', 'uses' => 'FrontendController@
 Route::get('columnista/{url}', ['as' => 'columnista', 'uses' => 'FrontendController@columnista']);
 Route::get('columna/{id}-{url}', ['as' => 'columna', 'uses' => 'FrontendController@columna']);
 Route::get('buscar', ['as' => 'buscar', 'uses' => 'FrontendController@buscar']);
+Route::get('portada', ['as' => 'portada', 'uses' => 'FrontendController@portada']);
 
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);

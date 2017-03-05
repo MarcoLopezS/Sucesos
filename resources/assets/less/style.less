@@ -5512,75 +5512,116 @@ input.qtyminus {
     background-color: #ededed;
     width: 100%;
     margin-bottom: 24px;
-}
-.magazine-container .magazine-section .magazine-image-details {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    float: left;
-    width: 60%}
-.magazine-container .magazine-section .magazine-image-details .image {
-    width: 250px;
-    float: left;
-    padding: 25px;
-}
-.magazine-container .magazine-section .magazine-image-details .image img.fill {
-    width: 100%}
-.magazine-container .magazine-section .magazine-image-details .details {
-    width: 60%;
-    padding: 25px;
-    font-size: 1.3rem;
-}
-.magazine-container .magazine-section .magazine-image-details .details h3 {
-    color: #4AC0B9;
-    padding: 14px 0 3px;
-}
-.magazine-container .magazine-section .magazine-image-details .details ul {
-    list-style: none;
-    color: #4AC0B9;
-    margin-top: inherit;
-    padding-left: 0;
-}
-.magazine-container .magazine-section .magazine-image-details .details ul li.icon.bullet-arrow {
-    display: block;
-    list-style: none;
-    text-align: left;
-    line-height: 1.7em;
-    font-size: 14px;
-    padding-left: 22px;
-}
-.magazine-container .magazine-section .magazine-image-details .details ul li:before {
-    line-height: 1.3em;
-    font-size: 20px;
-    position: absolute;
-    margin-left: -25px;
-}
-.magazine-container .magazine-section .magazine-image-details .suscribe a {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    font-family: Martel;
-    padding: 6px 20px;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 1rem;
-}
-.magazine-container .magazine-section .magazine-image-details .suscribe :hover {
-    background-color: #4AC0B9;
-    color: #FFF;
-    border: 1px solid #fff;
-}
-.magazine-container .magazine-section .magazine-others {
-    width: 40%;
-    overflow: hidden;
-}
-.magazine-container .magazine-section .magazine-others .magazine {
-    float: left;
-    padding: 25px 0;
-    width: 30%}
-.magazine-container .magazine-section .magazine-others .clear {
-    clear: both;
+
+    .magazine-image-details {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        float: left;
+        width: 100%;
+
+        .image {
+            width: 600px;
+            float: left;
+            padding: 25px;
+
+            img.fill {
+                width: 100%;
+            }
+        }
+
+        .details {
+            width: 60%;
+            padding: 25px;
+            font-size: 1.3rem;
+
+            h3 {
+                color: #4AC0B9;
+                padding: 14px 0 3px;
+            }
+
+            ul {
+                list-style: none;
+                color: #4AC0B9;
+                margin-top: inherit;
+                padding-left: 0;
+
+                li.icon.bullet-arrow {
+                    display: block;
+                    list-style: none;
+                    text-align: left;
+                    line-height: 1.7em;
+                    font-size: 14px;
+                    padding-left: 22px;
+                }
+
+                li:before {
+                    font-size: 16px;
+                    position: absolute;
+                    margin-left: -25px;
+                    content: '\f138';
+                    font-family: FontAwesome;
+                }
+            }
+
+            .exp-button{
+
+                a{
+                    color: #000;
+                    font-size: 20px;
+                    padding: 10px 30px;
+                    text-align: center;
+                    border: 1px solid #000;
+                    display: inline-block;
+                    background-color: #FFF;
+                }
+            }
+        }
+
+        .suscribe a {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            font-family: Martel;
+            padding: 6px 20px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 1rem;
+
+            :hover {
+                background-color: #4AC0B9;
+                color: #FFF;
+                border: 1px solid #fff;
+            }
+        }
+
+        .magazine-others {
+            width: 100%;
+            overflow: hidden;
+
+            .magazine {
+                float: left;
+                padding: 25px 0;
+                width: 33.33333333%;
+
+                .image {
+                    width: 100%;
+                    float: left;
+                    padding: 10px;
+
+                    img.fill {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .clear {
+                clear: both;
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width:767px) {
@@ -5624,4 +5665,9 @@ input.qtyminus {
     .magazine-container .magazine-section .magazine-others .magazine {
         display: none;
     }
+}
+
+//CLASES
+.icon.bullet-arrow:before{
+
 }
