@@ -56,11 +56,11 @@
                                 <div class="form-group">
                                     {!! Form::label('descripcion', 'Descripción', ['class' => 'control-label bold']) !!}
                                     {!! Form::textarea('descripcion', null, ['class' => 'form-control', 'rows' => '3',
-                                    'onkeydown' => 'limitText(this.form.descripcion,this.form.countdown,220);',
-                                    'onkeyup' => 'limitText(this.form.descripcion,this.form.countdown,220);']) !!}
+                                    'onkeydown' => 'limitText(this.form.descripcion,this.form.countdown,300);',
+                                    'onkeyup' => 'limitText(this.form.descripcion,this.form.countdown,300);']) !!}
                                     <span class="help-block">Caracteres permitidos:
                                         <strong>
-                                            <input name="countdown" type="text" style="border:none; background:none;" value="220" size="3" readonly id="countdown">
+                                            <input name="countdown" type="text" style="border:none; background:none;" value="300" size="3" readonly id="countdown">
                                         </strong>
                                     </span>
                                 </div>
