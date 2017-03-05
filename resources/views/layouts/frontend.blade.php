@@ -17,6 +17,21 @@
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
+    {{-- Enlaces Externos --}}
+    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400') !!}
+    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:400i,500,700,700i,900') !!}
+    {!! HTML::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') !!}
+    {!! HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') !!}
+
+    @yield('contenido_header')
+
+    {{-- Estilos --}}
+    {!! HTML::style(elixir('css/ts.css')) !!}
+    {!! HTML::style('js/slick/slick.css') !!}
+    {!! HTML::style('js/lity/lity.min.css') !!}
+    {!! HTML::style(elixir('css/animate.css')) !!}
+    {!! HTML::style(elixir('css/style.css')) !!}
+
 </head>
 <body>
 
@@ -95,20 +110,6 @@
     <!-- // FOOTER -->
 
 </div>
-
-    {{-- Enlaces Externos --}}
-    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,700i,900') !!}
-    {!! HTML::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') !!}
-    {!! HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') !!}
-
-    @yield('contenido_header')
-
-    {{-- Estilos --}}
-    {!! HTML::style(elixir('css/ts.css')) !!}
-    {!! HTML::style('js/slick/slick.css') !!}
-    {!! HTML::style('js/lity/lity.min.css') !!}
-    {!! HTML::style(elixir('css/animate.css')) !!}
-    {!! HTML::style(elixir('css/style.css')) !!}
 
     <!--[if lt IE 9]>
     {!! HTML::script('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') !!}
