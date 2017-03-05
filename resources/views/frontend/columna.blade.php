@@ -55,27 +55,30 @@
 			<div class="clearfix"></div>
 			<div class="col-md-8 col-sm-7 padding-bottom-30">
 				<div class="blog-excerpt">
-                    @if($noticia->imagen <> "")
-					    <img src="{{ $nota_imagen }}" class="img-responsive" alt="{{ $nota_titulo }}"/>
-                    @endif
 
-					<div class="blog-single-head {{ $noticia->imagen ? 'margin-top-25' : '' }}">
-						<h2>{{ $nota_titulo }}</h2>
-						<div class="meta"><span class="date">{{ $nota_fecha }}</span></div>
+                    <div class="blog-single-head">
+                        <div class="meta"><span class="date">{{ $nota_fecha }}</span></div>
+                        <h2>{{ $nota_titulo }}</h2>
                         <p><em>{{ $nota_descripcion }}</em></p>
                     </div>
 
-					{!! $nota_contenido !!}
+                    <div class="single-share">
+                        <span>Compartir:</span>
+                        <div class="post-share">
+                            <div class="addthis_inline_share_toolbox"></div>
+                        </div>
+                    </div>
+
+                    @if($noticia->imagen <> "")
+					    <img src="{{ $nota_imagen }}" class="img-prin-blog img-responsive" alt="{{ $nota_titulo }}"/>
+                    @endif
+
+                    <div class="contenido-blog">
+                        {!! $nota_contenido !!}
+                    </div>
 				</div>	
 
 				<div class="clearfix"></div>
-
-				<div class="single-share">
-					<span>Compartir:</span>
-					<div class="post-share">
-                        <div class="addthis_inline_share_toolbox"></div>
-					</div>
-				</div>
 
 				<div class="margin-bottom-30"></div>
 				<hr class="l4">
