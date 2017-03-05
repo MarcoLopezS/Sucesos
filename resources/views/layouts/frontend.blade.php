@@ -66,8 +66,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">Inicio</a></li>
                     <li class="dropdown dropdown-v2">
-                        <a href="{{ route('categoria', 'actualidad') }}" class="dropdown-toggle"
-                           data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a href="{{ route('categoria', 'actualidad') }}" class="dropdown-toggle">
                             Actualidad <span class="fa fa-angle-down"></span>
                         </a>
                         <ul class="dropdown-menu">
