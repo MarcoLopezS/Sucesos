@@ -24,8 +24,8 @@
     <meta property="og:title" content='{{ $nota_titulo  }}'>
     <meta property="og:type" content='article' >
     <meta property="og:url" content='{{ $nota_url }}' >
-    <meta property="og:image" content='{{ $nota_imagen }}' >
-    <meta property="og:site_name" content='@{{ configWeb()->titulo }}' >
+    <meta property="og:image" content='http://sucesos.pe/{{ $nota_imagen }}' >
+    <meta property="og:site_name" content='http://sucesos.pe' >
     <meta property="fb:admins" content='1434798696787255'>
     <meta property="og:description" content='{{ $nota_descripcion }}'>
 @stop
@@ -75,8 +75,10 @@
                         {{--</ul>--}}
                     {{--</div>--}}
 
-					{!! $nota_contenido !!}
-				</div>	
+                    <div class="contenido-blog">
+                        {!! $nota_contenido !!}
+                    </div>
+				</div>
 
 				<div class="single-topic">
 					<span>Etiquetas:</span>
