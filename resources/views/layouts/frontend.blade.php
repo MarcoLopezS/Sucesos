@@ -28,7 +28,7 @@
             <div class="container">
 				<a href="/" class="navbar-brand"><img src="/images/logo.png" class="img-responsive" alt=""/></a>
                 <div class="ad-banner pull-right hidden-xs">
-                    <a href="#"><img src="http://placeholdit.imgix.net/~text?txtsize=30&bg=c6c6c6&txtclr=000000&txt=Publicidad&w=729&h=90" class="img-responsive" alt=""/></a>
+                    <a href="#"><img src="/images/publicidad-logo.png" class="img-responsive" alt=""/></a>
                 </div>
             </div>
         </div>
