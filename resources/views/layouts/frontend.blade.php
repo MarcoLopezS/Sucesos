@@ -122,7 +122,6 @@
     {{-- Enlaces --}}
     {!! HTML::script('js/slick/slick.min.js') !!}
     {!! HTML::script('js/socialShare.min.js') !!}
-    {!! HTML::script('js/jquery.simpleWeather.min.js') !!}
     {!! HTML::script('js/lity/lity.min.js') !!}
     {!! HTML::script('js/wow.js') !!}
 
