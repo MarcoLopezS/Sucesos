@@ -22,7 +22,7 @@
 
     {{-- Open Graph --}}
     <meta property="og:title" content='{{ $nota_titulo  }}'>
-    <meta property="og:type" content='website' >
+    <meta property="og:type" content='article' >
     <meta property="og:url" content='{{ $nota_url }}' >
     <meta property="og:image" content='http://sucesos.pe/{{ $nota_imagen }}' >
     <meta property="og:site_name" content='http://sucesos.pe' >
