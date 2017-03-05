@@ -18,8 +18,9 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
     {{-- Enlaces Externos --}}
-    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400') !!}
-    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:400i,500,700,700i,900') !!}
+    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:400,400i') !!}
+    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:500,700') !!}
+    {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:700i,900') !!}
     {!! HTML::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') !!}
     {!! HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') !!}
 
