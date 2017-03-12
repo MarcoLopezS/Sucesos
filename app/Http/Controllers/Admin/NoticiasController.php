@@ -16,7 +16,7 @@ class NoticiasController extends Controller {
 
 	protected $rules = [
         'titulo' => 'required',
-        'descripcion' => 'required|min:10|max:255',
+        'descripcion' => 'required',
         'contenido' => 'required',
         'tags' => 'required',
         'categoria' => 'required',
