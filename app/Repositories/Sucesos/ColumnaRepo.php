@@ -15,6 +15,7 @@ class ColumnaRepo extends BaseRepo{
     public function listaColumnasHome()
     {
         return $this->getModel()->where('publicar', 1)
+                                ->where('destacado', 1)
                                 ->where('published_at','<=',fechaActual())
                                 ->orderBy('published_at', 'desc')
                                 ->paginate(12);

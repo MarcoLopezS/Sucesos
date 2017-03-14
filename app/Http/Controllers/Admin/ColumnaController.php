@@ -72,10 +72,13 @@ class ColumnaController extends Controller
 
         $url = SlugUrl($request->input('titulo'));
 
+        $cols = $this->columnaRepo->where('columnista_id',$columnista)->update(['destacado' => 0]);
+
         $col = new Columna($request->all());
         $col->slug_url = $url;
         $col->columnista_id = $columnista;
-        $col->user_id = \Auth::user()->id;
+        $col->user_id = auth()->user()->id;
+        $col->destacado = 1;
         $this->columnaRepo->create($col, $request->all());
 
         flash()->success('El registro se agregó satisfactoriamente');
@@ -127,7 +130,7 @@ class ColumnaController extends Controller
      *
      * @param $columnista
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return array
      */
     public function destroy($columnista, $id)
     {
@@ -140,7 +143,5 @@ class ColumnaController extends Controller
         return [
             'message' => $message
         ];
-
-        return redirect()->route('admin.columnistas.columna.index', $columnista);
     }
 }
