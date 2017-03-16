@@ -95,9 +95,29 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'nombres' => [
+            'required' => 'Ingresa tu Nombre',
         ],
+        'apellidos' => [
+            'required' => 'Ingresa tus Apellidos',
+        ],
+        'dni' => [
+            'required' => 'Ingresa tu DNI',
+            'min' => 'Ingrese los 8 digitos del DNI',
+            'max' => 'Ingrese los 8 digitos del DNI',
+            'unique' => 'El DNI ya se encuentra registrado'
+        ],
+        'telefono' => [
+            'required' => 'Ingresa tu Teléfono',
+        ],
+        'email' => [
+            'required' => 'Ingresa tu Email',
+            'email' => 'Ingrese un Email válido',
+            'unique' => 'El Email ya se encuentra registrado'
+        ],
+        'direccion' => [
+            'required' => 'Ingresa tu Dirección',
+        ]
     ],
 
     /*
