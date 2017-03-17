@@ -15,6 +15,9 @@
         @show
     </title>
 
+    <meta name="robots" content="index,follow" />
+    <meta name='googlebot' content='index, follow' />
+    <meta name="token" id="token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
     {{-- Enlaces Externos --}}

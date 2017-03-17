@@ -20,6 +20,7 @@ elixir((mix) => {
     mix.less('flexslider/flexslider.less', 'public/libs/flexslider/flexslider.css');
     mix.scripts(['main.js'], 'public/js/main.js');
     mix.scripts(['flexslider.js'], 'public/js/flexslider.js');
+    mix.webpack('suscripcion.js');
 
     mix.version([
         'css/animate.css',
@@ -27,6 +28,7 @@ elixir((mix) => {
         'css/ts.css',
         'libs/flexslider/flexslider.css',
         'js/main.js',
-        'js/flexslider.js'
+        'js/flexslider.js',
+        'js/suscripcion.js'
     ]);
 });

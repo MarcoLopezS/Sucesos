@@ -45,7 +45,7 @@
                                     <li class="icon bullet-arrow">Kit lector: 03 libros originales de la editorial G7</li>
                                 </ul>
                                 <div class="exp-button">
-                                    <a href="#" target="_blank" data-cms-ai="0">Suscríbete aquí</a>
+                                    <a href="/suscripcion">Suscríbete aquí</a>
                                 </div>
 
                                 <div class="magazine-others column">

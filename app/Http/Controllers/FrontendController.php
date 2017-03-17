@@ -1,7 +1,10 @@
 <?php namespace Sucesos\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Sucesos\Entities\Sucesos\NoticiaView;
+use Sucesos\Entities\Sucesos\Suscripcion;
+use Sucesos\Mail\SuscripcionGracias;
 use Sucesos\Repositories\Sucesos\CategoriaRepo;
 use Sucesos\Repositories\Sucesos\ColumnaRepo;
 use Sucesos\Repositories\Sucesos\ColumnistaRepo;
@@ -134,8 +137,43 @@ class FrontendController extends Controller
         return view('frontend.buscar', compact('rows','texto'));
     }
 
+    /*
+     * PORTADA
+     */
     public function portada()
     {
         return view('frontend.portada');
+    }
+
+    /*
+     * SUSCRIPCION
+     */
+    public function suscripcion()
+    {
+        return view('frontend.suscripcion');
+    }
+
+    public function suscripcionPost(Request $request)
+    {
+        $rules = [
+            'nombres' => 'required',
+            'apellidos' => 'required',
+            'dni' => 'required|min:8|max:8|unique:suscripcion,dni',
+            'telefono' => 'required',
+            'email' => 'required|email|unique:suscripcion,email',
+            'direccion' => 'required'
+        ];
+
+        $this->validate($request, $rules);
+
+        $row = new Suscripcion($request->all());
+        $row->save();
+
+        Mail::to($request->input('email'), $request->input('nombres'))
+                ->send(new SuscripcionGracias($row));
+
+        return [
+            'success' => true
+        ];
     }
 }
