@@ -31,7 +31,7 @@ class SuscripcionGracias extends Mailable
     public function build()
     {
         return $this->view('emails.suscripcion')
-                    ->from('no-reply@sucesos.pe', 'Sucesos.pe')
+                    ->from('noreply@email.sucesos.pe', 'Sucesos.pe')
                     ->subject('Gracias por Suscribirte');
     }
 }
