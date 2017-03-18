@@ -42,6 +42,24 @@ class User extends BaseEntity implements AuthenticatableContract, CanResetPasswo
         }
     }
 
+    /*
+     * GETTERS
+     */
+    public function getNombreCompletoAttribute()
+    {
+        return $this->profile->nombres.' '.$this->profile->apellidos;
+    }
+
+    public function getFotoAttribute()
+    {
+        return '/upload/'.$this->profile->imagen_carpeta.'200x200/'.$this->profile->imagen;
+    }
+
+    public function getFotoHomeAttribute()
+    {
+        return '/upload/'.$this->profile->imagen_carpeta.'135x135/'.$this->profile->imagen;
+    }
+
     /**
      * Get the unique identifier for the user.
      *

@@ -56,5 +56,6 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']
 
     //USUARIOS
     Route::resource('user', 'UsersController');
+    Route::post('user/{user}/foto', ['as' => 'user.updateFoto', 'uses' => 'UsersController@updateFoto']);
     Route::post('user/{user}/password', ['as' => 'user.updatePassword', 'uses' => 'UsersController@updatePassword']);
 });

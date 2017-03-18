@@ -19,6 +19,10 @@ class UsersController extends Controller {
         'password_confirmation' => 'required'
     ];
 
+    protected $rulesFoto = [
+        'imagen' => 'required'
+    ];
+
     protected $rulesProfile = [
         'nombres' => 'required',
         'apellidos' => 'required'
@@ -67,18 +71,20 @@ class UsersController extends Controller {
 	public function store(Request $request)
 	{
         $dataProfile = $request->only('nombres', 'apellidos');
-        $dataUser = $request->only('email', 'password', 'type');
+        $dataUser = $request->only('email', 'password');
 
         $this->validate($request, $this->rulesProfile);
         $this->validate($request, $this->rulesUser);
 
         $user = new User($dataUser);
         $user->active = 1;
-        $user->save();
+        $row = $this->userRepo->create($user, $dataUser);
 
         $userProfile = new UserProfile($dataProfile);
-        $userProfile->user_id = $user->id;
-        $userProfile->save();
+        $userProfile->user_id = $row->id;
+        $userProfile->imagen = 'icon-users.png';
+        $userProfile->imagen_carpeta = 'carpeta/';
+        $this->userProfileRepo->create($userProfile, $dataProfile);
 
         //REDIRECCIONAR A PAGINA PARA VER DATOS
         return redirect()->route('admin.user.index');
@@ -113,15 +119,16 @@ class UsersController extends Controller {
 	}
 
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @param Request $request
+     * @return Response
+     */
 	public function update($id, Request $request)
     {
-        $user = UserProfile::whereUserId($id)->first();
+        $user = $this->userProfileRepo->where('user_id', $id)->first();
 
         $rules = [
             'nombres' => 'required',
@@ -130,19 +137,50 @@ class UsersController extends Controller {
 
         $this->validate($request, $rules);
 
-        $user->fill($request->all());
-        $user->save();
+        $nombre_completo = $request->input('nombres').' '.$request->input('apellidos');
+        $url = SlugUrl($nombre_completo);
+        $cargo = $request->input('cargo');
+        $descripcion = $request->input('descripcion');
+
+        $user->nombre_completo = $nombre_completo;
+        $user->slug_url = $url;
+        $user->cargo = $cargo;
+        $user->descripcion = $descripcion;
+        $this->userProfileRepo->update($user, $request->all());
 
         //REDIRECCIONAR A PAGINA PARA VER DATOS
         return redirect()->route('admin.user.index');
     }
 
+    /*
+     * Funcion para cambiar foto
+     * @param $id
+     * @param Request $request
+     * @return Response
+     */
+    public function updateFoto($id, Request $request)
+    {
+        $this->validate($request, $this->rulesFoto);
+
+        $user = $this->userProfileRepo->where('user_id',$id)->first();
+
+        $this->userProfileRepo->update($user, $request->only('imagen','imagen_carpeta'));
+
+        //MENSAJE
+        flash()->success('El registro se actualizó satisfactoriamente.');
+
+        return redirect()->route('admin.user.index');
+    }
+
     /**
      * Funcion para cambiar contraseña de Perfil de usuario logeado
+     * @param $id
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function updatePassword($id, Request $request)
     {
-        $user = User::findOrFail($id);
+        $user = $this->userRepo->findOrFail($id);
 
         $rules = [
             'password' => 'required|confirmed',
@@ -177,7 +215,7 @@ class UsersController extends Controller {
 
     public function profile()
     {
-        $user = Auth::user();
+        $user = auth()->user();
 
         return view('admin.users.profile', compact('user'));
 

@@ -10,6 +10,11 @@
     $nota_categoria = $noticia->categoria->titulo;
     $nota_categoria_url = $noticia->categoria->url;
     $nota_fecha = $noticia->fecha;
+
+    $nota_user = $noticia->user->nombre_completo;
+    $nota_user_cargo = $noticia->user->profile->cargo;
+    $nota_user_descripcion = $noticia->user->profile->descripcion;
+    $nota_user_imagen = $noticia->user->foto_home;
 @endphp
 
 @section('titulo')
@@ -93,6 +98,14 @@
 
 				<div class="margin-bottom-30"></div>
 				<hr class="l4">
+
+                <div class="post-author margin-bottom-90">
+                    <img src="{{ $nota_user_imagen }}" alt="{{ $nota_user }}"/>
+
+                    <h5>{{ $nota_user }}</h5>
+                    <p>{{ $nota_user_cargo }}</p>
+                    <p>{{ $nota_user_descripcion }}</p>
+                </div>
 
 				<div class="clearfix"></div>
 

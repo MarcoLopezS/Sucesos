@@ -31,6 +31,5 @@ class DataTableSeeder extends Seeder
             ['id' => '8', 'titulo' => 'Historia', 'slug_url' => 'historia', 'publicar' => 1],
             ['id' => '9', 'titulo' => 'Personajes', 'slug_url' => 'personajes', 'publicar' => 1],
         ]);
-
     }
 }

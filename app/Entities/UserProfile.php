@@ -2,7 +2,7 @@
 
 class UserProfile extends BaseEntity {
 
-	protected $fillable = ['nombres','apellidos','user_id'];
+	protected $fillable = ['nombres','apellidos','nombre_completo','slug_url','cargo','descripcion','imagen','imagen_carpeta','user_id'];
 
 	public function user()
     {
