@@ -117,6 +117,9 @@ return [
         ],
         'direccion' => [
             'required' => 'Ingresa tu Dirección',
+        ],
+        'referencia' => [
+            'required' => 'Ingresa una referencia de la Dirección',
         ]
     ],
 

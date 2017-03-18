@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Sucesos\Entities\Sucesos\NoticiaView;
 use Sucesos\Entities\Sucesos\Suscripcion;
+use Sucesos\Mail\SuscripcionAdmin;
 use Sucesos\Mail\SuscripcionGracias;
 use Sucesos\Repositories\Sucesos\CategoriaRepo;
 use Sucesos\Repositories\Sucesos\ColumnaRepo;
@@ -161,7 +162,8 @@ class FrontendController extends Controller
             'dni' => 'required|min:8|max:8|unique:suscripcion,dni',
             'telefono' => 'required',
             'email' => 'required|email|unique:suscripcion,email',
-            'direccion' => 'required'
+            'direccion' => 'required',
+            'referencia' => 'required'
         ];
 
         $this->validate($request, $rules);
@@ -171,6 +173,8 @@ class FrontendController extends Controller
 
         Mail::to($request->input('email'), $request->input('nombres'))
                 ->send(new SuscripcionGracias($row));
+
+        Mail::send(new SuscripcionAdmin($row));
 
         return [
             'success' => true

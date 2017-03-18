@@ -388,10 +388,11 @@
             </tr>
             </tbody>
         </table><!-- /.header -->
-        <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+
+        <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
             <tbody>
             <tr>
-                <td class="content_cell" align="center" valign="top" style="padding: 0;text-align: center;background-color: #ffffff;font-size: 0 !important;">
+                <td class="jumbotron_cell" align="center" valign="top" style="padding: 0;text-align: center;background-color: #fafafa;font-size: 0 !important;">
                     <!--[if (gte mso 9)|(IE)]>
                     <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
                         <tbody>
@@ -410,20 +411,23 @@
                                 <tbody>
                                 <tr>
                                     <td class="column_cell font_default" align="center" valign="top" style="padding: 16px;font-family: Helvetica, Arial, sans-serif;font-size: 15px;text-align: center;vertical-align: top;color: #888888;">
-                                        <h5 style="font-family: Helvetica, Arial, sans-serif;margin-left: 0;margin-right: 0;margin-top: 16px;margin-bottom: 8px;padding: 0;font-size: 18px;line-height: 26px;font-weight: bold;color: #666666;">Hola {{ $suscripcion->nombres }}</h5>
-                                        <p style="font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 23px;margin-top: 16px;margin-bottom: 24px;">Gracias por suscribirte a <strong>Suscesos.pe</strong></p>
-                                        <table class="primary_btn" align="center" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;clear: both;margin: 0 auto;">
+                                        <table class="icon_holder icon_secondary" width="80" border="0" align="center" cellpadding="0" cellspacing="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 48px;margin-left: auto;margin-right: auto;clear: both;">
                                             <tbody>
                                             <tr>
-                                                <td class="font_default" style="padding: 12px 24px;font-family: Helvetica, Arial, sans-serif;font-size: 16px;mso-line-height-rule: exactly;text-align: center;vertical-align: middle;-webkit-border-radius: 4px;border-radius: 4px;background-color: #666666;">
-                                                    <a href="{{ url('/') }}" style="display: block;text-decoration: none;font-family: Helvetica, Arial, sans-serif;color: #ffffff;font-weight: bold;text-align: center;">
-                                                        <span style="text-decoration: none;color: #ffffff;text-align: center;display: block;">Visita nuestra Web</span>
-                                                    </a>
+                                                <td class="hspace" style="padding: 0;font-size: 0;height: 8px;overflow: hidden;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="icon_cell" style="padding: 8px;font-size: 0;line-height: 1;-webkit-border-radius: 80px;border-radius: 80px;height: 48px;background-color: #dbdbdb;border-color: #f2f2f2;">
+                                                    <img src="{{ asset('upload/carpeta/icon_person.png') }}" width="48" height="48" alt="" style="line-height: 1;outline: none;border: 0;text-decoration: none;-ms-interpolation-mode: bicubic;mso-line-height-rule: exactly;">
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td class="hspace" style="padding: 0;font-size: 0;height: 8px;overflow: hidden;">&nbsp;</td>
+                                            </tr>
                                             </tbody>
-                                        </table><!-- end .primary_btn -->
-                                        <p style="font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 23px;margin-top: 16px;margin-bottom: 24px;">&nbsp; </p>
+                                        </table><!-- /.icon_holder:icon_secondary -->
+                                        <h4 style="font-family: Helvetica, Arial, sans-serif;margin-left: 0;margin-right: 0;margin-top: 16px;margin-bottom: 8px;padding: 0;font-size: 22px;line-height: 30px;font-weight: bold;color: #666666;">{{ $suscripcion->nombres.' '.$suscripcion->apellidos }}</h4>
+                                        <p class="lead" style="font-family: Helvetica, Arial, sans-serif;font-size: 19px;line-height: 27px;margin-top: 16px;margin-bottom: 16px;">Se ha suscrito a Sucesos.pe</p>
                                     </td><!-- /.column_cell -->
                                 </tr>
                                 </tbody>
@@ -442,31 +446,60 @@
                     </tbody>
                     </table>
                     <![endif]-->
-                </td><!-- /.content_cell -->
+                </td><!-- /.jumbotron_cell -->
             </tr>
             </tbody>
-        </table><!-- /.content -->
-        <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+        </table><!-- /.jumbotron -->
+        <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
             <tbody>
             <tr>
-                <td class="content_cell image_responsive" align="center" valign="top" style="padding: 0;text-align: center;background-color: #ffffff;font-size: 0 !important;">
+                <td class="jumbotron_cell product_row" align="center" valign="top" style="padding: 0 0 16px;text-align: center;background-color: #ffffff;border-top: 1px solid;border-color: #f2f2f2;font-size: 0 !important;">
                     <!--[if (gte mso 9)|(IE)]>
                     <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
                         <tbody>
                         <tr>
                             <td width="580" align="center" valign="top">
                     <![endif]-->
-                    <img src="{{ asset('upload/carpeta/email.jpg') }}" alt="" width="580" height="" style="line-height: 1;outline: none;border: 0;text-decoration: none;-ms-interpolation-mode: bicubic;mso-line-height-rule: exactly;display: block;width: 100%;height: auto;max-width: 580px;margin-left: auto;margin-right: auto;">
+                    <div class="row" style="display: inline-block;width: 100%;vertical-align: top;text-align: center;max-width: 580px;margin: 0 auto;">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                            <tbody>
+                            <tr>
+                                <td width="390" align="center" valign="top">
+                        <![endif]-->
+                        <div class="col-13" style="display: inline-block;width: 100%;vertical-align: top;text-align: center;max-width: 390px;">
+                            <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;vertical-align: top;">
+                                <tbody>
+                                <tr>
+                                    <td class="column_cell font_default" align="center" valign="top" style="padding: 16px 16px 0;font-family: Helvetica, Arial, sans-serif;font-size: 15px;text-align: left;vertical-align: top;color: #888888;">
+                                        <h6 style="font-family: Helvetica, Arial, sans-serif;margin-left: 0;margin-right: 0;margin-top: 0;margin-bottom: 8px;padding: 0;font-size: 16px;line-height: 24px;font-weight: bold;color: #666666;"><small style="font-size: 86%;font-weight: normal;">DNI: </small> {{ $suscripcion->dni }}</h6>
+                                        <h6 style="font-family: Helvetica, Arial, sans-serif;margin-left: 0;margin-right: 0;margin-top: 0;margin-bottom: 8px;padding: 0;font-size: 16px;line-height: 24px;font-weight: bold;color: #666666;"><small style="font-size: 86%;font-weight: normal;">Teléfono: </small> {{ $suscripcion->telefono }}</h6>
+                                        <h6 style="font-family: Helvetica, Arial, sans-serif;margin-left: 0;margin-right: 0;margin-top: 0;margin-bottom: 8px;padding: 0;font-size: 16px;line-height: 24px;font-weight: bold;color: #666666;"><small style="font-size: 86%;font-weight: normal;">Email: </small> {{ $suscripcion->email }}</h6>
+                                        <h6 style="font-family: Helvetica, Arial, sans-serif;margin-left: 0;margin-right: 0;margin-top: 0;margin-bottom: 8px;padding: 0;font-size: 16px;line-height: 24px;font-weight: bold;color: #666666;"><small style="font-size: 86%;font-weight: normal;">Dirección: </small> {{ $suscripcion->direccion }}</h6>
+                                        <h6 style="font-family: Helvetica, Arial, sans-serif;margin-left: 0;margin-right: 0;margin-top: 0;margin-bottom: 8px;padding: 0;font-size: 16px;line-height: 24px;font-weight: bold;color: #666666;"><small style="font-size: 86%;font-weight: normal;">Referencia: </small> {{ $suscripcion->referencia }}</h6>
+                                    </td><!-- /.column_cell -->
+                                </tr>
+                                </tbody>
+                            </table><!-- /.column -->
+                        </div><!-- /.col-13 -->
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <![endif]-->
+                    </div><!-- /.row -->
                     <!--[if (gte mso 9)|(IE)]>
                     </td>
                     </tr>
                     </tbody>
                     </table>
                     <![endif]-->
-                </td><!-- /.content_cell:product_row -->
+                </td><!-- /.jumbotron_cell -->
             </tr>
             </tbody>
-        </table><!-- /.content -->
+        </table><!-- /.jumbotron -->
+
         <table class="footer" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
             <tbody>
             <tr>

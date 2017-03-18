@@ -17,7 +17,8 @@ var vm = new Vue({
             dni: '',
             telefono: '',
             email: '',
-            direccion: ''
+            direccion: '',
+            referencia: '',
         }
     },
     ready: function () {
@@ -30,7 +31,7 @@ var vm = new Vue({
             resource.save({}, this.suscripcion).then(function (response) {
                 this.enviado = true;
                 this.loading = false;
-                this.suscripcion = { nombres: '', apellidos: '', dni: '', telefono: '', email: '', direccion: '' }
+                this.suscripcion = { nombres: '', apellidos: '', dni: '', telefono: '', email: '', direccion: '', referencia: '' }
             }, function (response) {
                 this.enviado = false;
                 this.errors = response.data;

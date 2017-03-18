@@ -87,6 +87,14 @@
                                         <p class="help-block" v-if="errors.direccion">@{{ errors.direccion }}</p>
                                     </div>
                                 </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group" v-bind:class="{'has-error': errors.referencia}">
+                                        <label for="referencia">Referencia:</label>
+                                        <input type="text" name="referencia" class="form-control" v-model="suscripcion.referencia">
+                                        <p class="help-block" v-if="errors.referencia">@{{ errors.referencia }}</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="col-md-12 text-center">
