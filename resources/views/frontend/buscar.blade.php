@@ -65,8 +65,12 @@
                 @endforeach
 
 				<!-- PAGINATION -->
-                <div class="text-center">
+                <div class="pull-left">
                     {!! $rows->appends(Request::all())->render() !!}
+                </div>
+
+                <div class="pull-right">
+                    <img src="/images/logo-algolia.jpg" height="30" alt="Algolia">
                 </div>
 			</div>
 			<!-- // CATEGORY -->
