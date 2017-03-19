@@ -42,8 +42,17 @@
                                 <h3>La suscripción por un año incluye:</h3>
                                 <ul>
                                     <li class="icon bullet-arrow">52 ediciones físicas (incluye ediciones especiales)</li>
-                                    <li class="icon bullet-arrow">Kit lector: 03 libros originales de la editorial G7</li>
+                                    <li class="icon bullet-arrow">Kit lector: 03 libros originales de la editorial G7 *</li>
                                 </ul>
+
+                                <h3>Precios</h3>
+                                <ul class="precios">
+                                    <li class="icon bullet-arrow">1 año: S/. 120.00</li>
+                                    <li class="icon bullet-arrow">6 meses: S/. 65.00</li>
+                                    <li class="icon bullet-arrow">3 meses: S/. 35.00</li>
+                                </ul>
+                                <p>* Más S/. 30.00 Kit Lector en suscripción de 1 año</p>
+
                                 <div class="exp-button">
                                     <a href="#">Suscríbete aquí</a>
                                 </div>
