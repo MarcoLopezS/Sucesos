@@ -11,6 +11,7 @@ use Sucesos\Http\Controllers\Controller;
 
 use Sucesos\Repositories\Sucesos\NoticiaRepo;
 use Sucesos\Repositories\Sucesos\TagRepo;
+use Sucesos\Repositories\UserRepo;
 
 class NoticiasController extends Controller {
 
@@ -29,6 +30,7 @@ class NoticiasController extends Controller {
     protected $imagenRepo;
     protected $categoriaRepo;
     protected $tagRepo;
+    protected $userRepo;
 
     /**
      * NoticiasController constructor.
@@ -36,16 +38,19 @@ class NoticiasController extends Controller {
      * @param ImagenRepo $imagenRepo
      * @param NoticiaRepo $noticiaRepo
      * @param TagRepo $tagRepo
+     * @param UserRepo $userRepo
      */
     public function __construct(CategoriaRepo $categoriaRepo,
                                 ImagenRepo $imagenRepo,
                                 NoticiaRepo $noticiaRepo,
-                                TagRepo $tagRepo)
+                                TagRepo $tagRepo,
+                                UserRepo $userRepo)
 	{
         $this->categoriaRepo = $categoriaRepo;
         $this->imagenRepo = $imagenRepo;
         $this->noticiaRepo = $noticiaRepo;
         $this->tagRepo = $tagRepo;
+        $this->userRepo = $userRepo;
     }
 
     /**
@@ -69,10 +74,11 @@ class NoticiasController extends Controller {
 	 */
 	public function create()
 	{
+        $autor = $this->userRepo->listAutores();
         $categorias = $this->categoriaRepo->listPub();
         $tags = $this->tagRepo->listPub();
 
-		return view('admin.noticias.create', compact('categorias','tags'));
+		return view('admin.noticias.create', compact('autor','categorias','tags'));
 	}
 
     /**
@@ -88,6 +94,7 @@ class NoticiasController extends Controller {
 		//VARIABLES
 		$titulo = $request->input('titulo');
 		$slug_url = SlugUrl($titulo);
+        $autor = $request->input('autor');
         $categoria = $request->input('categoria');
         $tags = $request->input('tags');
         $imagen = $request->input('imagen');
@@ -97,7 +104,7 @@ class NoticiasController extends Controller {
 		$post = new Noticia($request->all());
 		$post->slug_url = $slug_url;
         $post->categoria_id = $categoria;
-		$post->user_id = auth()->user()->id;
+		$post->user_id = $autor;
         $post->imagen = $imagen;
         $post->imagen_carpeta = $imagen_carpeta;
         $row = $this->noticiaRepo->create($post, $request->all());
@@ -132,10 +139,11 @@ class NoticiasController extends Controller {
 	public function edit($id)
 	{
 		$post = $this->noticiaRepo->findOrFail($id);
+        $autor = $this->userRepo->listAutores();
         $categorias = $this->categoriaRepo->listPub();
         $tags = $this->tagRepo->listPub();
 
-		return view('admin.noticias.edit', compact('post','categorias','tags'));
+		return view('admin.noticias.edit', compact('post','autor','categorias','tags'));
 	}
 
     /**
@@ -156,12 +164,16 @@ class NoticiasController extends Controller {
 		//VARIABLES
 		$titulo = $request->input('titulo');
 		$slug_url = SlugUrl($titulo);
+        $autor = $request->input('autor');
+        $categoria = $request->input('categoria');
         $tags = $request->input('tags');
         $imagen = $request->input('imagen');
         $imagen_carpeta = $request->input('imagen_carpeta');
 
 		//GUARDAR DATOS
 		$post->slug_url = $slug_url;
+        $post->categoria_id = $categoria;
+        $post->user_id = $autor;
         $post->imagen = $imagen;
         $post->imagen_carpeta = $imagen_carpeta;
 		$row = $this->noticiaRepo->update($post, $request->all());
