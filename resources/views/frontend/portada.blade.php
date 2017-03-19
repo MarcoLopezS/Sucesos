@@ -54,7 +54,7 @@
                                 <p>* Más S/. 30.00 Kit Lector en suscripción de 1 año</p>
 
                                 <div class="exp-button">
-                                    <a href="#">Suscríbete aquí</a>
+                                    <a href="/suscripcion">Suscríbete aquí</a>
                                 </div>
 
                                 <div class="magazine-others column">
