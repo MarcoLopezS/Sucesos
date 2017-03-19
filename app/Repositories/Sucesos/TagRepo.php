@@ -27,6 +27,6 @@ class TagRepo extends BaseRepo{
     //LISTAR TAGS EN FRONTEND
     public function listTags()
     {
-        return $this->getModel()->where('publicar', 1)->orderBy('titulo','asc')->get();
+        return $this->getModel()->where('publicar', 1)->orderBy('titulo','asc')->paginate(20);
     }
 }
