@@ -17,4 +17,10 @@ class UserRepo extends BaseRepo{
                     ->paginate();
 	}
 
+	//LISTAR USUARIOS
+    public function listAutores()
+    {
+        return $this->getModel()->get()->pluck('nombre_completo','id')->toArray();
+    }
+
 }

@@ -91,6 +91,11 @@
                         <div class="form-body">
 
                             <div class="form-group">
+                                {!! Form::label('autor', 'Autor', ['class' => 'control-label bold']) !!}
+                                {!! Form::select('autor', ['' => 'Seleccionar'] + $autor, $post->user_id, ['class' => 'form-control']) !!}
+                            </div>
+
+                            <div class="form-group">
                                 {!! Form::label('categoria', 'Categoria', ['class' => 'control-label bold']) !!}
                                 {!! Form::select('categoria', ['' => 'Seleccionar'] + $categorias, $post->categoria_id, ['class' => 'form-control']) !!}
                             </div>
