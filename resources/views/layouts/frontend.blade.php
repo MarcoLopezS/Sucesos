@@ -11,7 +11,7 @@
 
     <title>
         @section('titulo')
-            Sucesos - Él poder de la información digital
+            Sucesos - El poder de la información digital
         @show
     </title>
 
