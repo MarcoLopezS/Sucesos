@@ -71,7 +71,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('categoria', 'investigacion') }}">Investigación</a></li>
-                            <li><a href="{{ route('categoria', 'economia') }}">Economía</a></li>
+                            <li><a href="{{ route('categoria', 'reportaje') }}">Reportaje</a></li>
                             <li><a href="{{ route('categoria', 'internacional') }}">Internacional</a></li>
                             <li><a href="{{ route('categoria', 'tecnologia') }}">Tecnología</a></li>
                             <li><a href="{{ route('categoria', 'denuncia') }}">Denuncia</a></li>
