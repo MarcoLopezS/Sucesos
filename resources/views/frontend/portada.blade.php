@@ -35,7 +35,7 @@
                     <div class="magazine-section stackable">
                         <div class="magazine-image-details column">
                             <div class="image">
-                                <img class="fill" src="/images/portada-008.jpg">
+                                <img class="fill" src="/images/portada-009.jpg">
                             </div>
                             <div class="details">
                                 <h2>Suscríbete a Sucesos</h2>
