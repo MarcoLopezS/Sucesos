@@ -150,6 +150,26 @@
                         </ul>
                     </li>
 
+	                <li class="nav-item {!! (Request::is('admin/portadas*') ? 'active open' : '') !!}" >
+		                <a href="javascript:;" class="nav-link nav-toggle">
+			                <i class="fa fa-book" aria-hidden="true"></i>
+			                <span class="title">Portadas</span>
+			                <span class="arrow"></span>
+		                </a>
+		                <ul class="sub-menu">
+			                <li class="nav-item {!! (Request::is('admin/portadas') ? 'active open' : '') !!}s">
+				                <a href="{{ route('admin.portadas.index') }}" class="nav-link ">
+					                <span class="title">Todas las portadas</span>
+				                </a>
+			                </li>
+			                <li class="nav-item {!! (Request::is('admin/portadas/create') ? 'active open' : '') !!}">
+				                <a href="{{ route('admin.portadas.create') }}" class="nav-link ">
+					                <span class="title">Nueva portada</span>
+				                </a>
+			                </li>
+		                </ul>
+	                </li>
+
                     <li class="nav-item {!! (Request::is('admin/noticias*') || Request::is('admin/tags*') ? 'active open' : '') !!}" >
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="fa fa-newspaper-o" aria-hidden="true"></i>

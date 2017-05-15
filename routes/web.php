@@ -34,6 +34,9 @@ Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']
     //TAGS
     Route::resource('tags', 'TagsController');
 
+    //PORTADAS
+    Route::resource('portadas', 'PortadasController');
+
     //NOTICIAS
     Route::resource('noticias', 'NoticiasController');
     Route::group(['as' => 'noticias.', 'prefix' => 'noticias/images'], function(){
