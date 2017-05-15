@@ -11,6 +11,14 @@ class PortadaRepo extends BaseRepo{
         return new Portada();
     }
 
+    //LISTAR PORTADAS
+    public function listaPortadaHome()
+    {
+        return $this->getModel()
+                    ->orderBy('published_at', 'desc')
+                    ->first();
+    }
+
     //BUSQUEDA DE REGISTROS
     public function findAndPaginate()
     {

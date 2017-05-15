@@ -10,6 +10,7 @@ use Sucesos\Repositories\Sucesos\CategoriaRepo;
 use Sucesos\Repositories\Sucesos\ColumnaRepo;
 use Sucesos\Repositories\Sucesos\ColumnistaRepo;
 use Sucesos\Repositories\Sucesos\NoticiaRepo;
+use Sucesos\Repositories\Sucesos\PortadaRepo;
 use Sucesos\Repositories\Sucesos\TagRepo;
 use Sucesos\Repositories\Sucesos\VideoRepo;
 
@@ -21,6 +22,7 @@ class FrontendController extends Controller
     protected $columnistaRepo;
     protected $columnaRepo;
     protected $videoRepo;
+    protected $portadaRepo;
 
     /**
      * FrontendController constructor.
@@ -30,13 +32,15 @@ class FrontendController extends Controller
      * @param ColumnistaRepo $columnistaRepo
      * @param ColumnaRepo $columnaRepo
      * @param VideoRepo $videoRepo
+     * @param PortadaRepo $portadaRepo
      */
     public function __construct(CategoriaRepo $categoriaRepo,
                                 NoticiaRepo $noticiaRepo,
                                 TagRepo $tagRepo,
                                 ColumnistaRepo $columnistaRepo,
                                 ColumnaRepo $columnaRepo,
-                                VideoRepo $videoRepo)
+                                VideoRepo $videoRepo,
+                                PortadaRepo $portadaRepo)
     {
         $this->categoriaRepo = $categoriaRepo;
         $this->noticiaRepo = $noticiaRepo;
@@ -44,6 +48,7 @@ class FrontendController extends Controller
         $this->columnistaRepo = $columnistaRepo;
         $this->columnaRepo = $columnaRepo;
         $this->videoRepo = $videoRepo;
+        $this->portadaRepo = $portadaRepo;
     }
 
     /**
@@ -55,8 +60,9 @@ class FrontendController extends Controller
         $normal = $this->noticiaRepo->listaNoticiasNormal();
         $columnas = $this->columnaRepo->listaColumnasHome();
         $videos = $this->videoRepo->listaVideosHome();
+        $portada = $this->portadaRepo->listaPortadaHome();
 
-        return view('frontend.index', compact('destacado','normal','columnas','videos'));
+        return view('frontend.index', compact('destacado','normal','columnas','videos','portada'));
     }
 
     /**
@@ -143,7 +149,9 @@ class FrontendController extends Controller
      */
     public function portada()
     {
-        return view('frontend.portada');
+        $portada = $this->portadaRepo->listaPortadaHome();
+
+        return view('frontend.portada', compact('portada'));
     }
 
     /*
