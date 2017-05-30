@@ -50,6 +50,11 @@
                                     {!! Form::text('titulo', null, ['id' => 'titulo', 'class' => 'form-control']) !!}
                                 </div>
 
+	                            <div class="form-group">
+		                            {!! Form::label('embed', 'Codigo de Issuu', ['class' => 'control-label bold']) !!}
+		                            {!! Form::textarea('embed', null, ['class' => 'form-control', 'rows' => '8']) !!}
+	                            </div>
+
                             </div>
 
                         </div>

@@ -98,11 +98,11 @@ class PortadasController extends Controller {
      */
 	public function update($id, Request $request)
 	{
+        //VALIDACION DE DATOS
+        $this->validate($request, $this->rules);
+
 		//BUSCAR ID
 		$post = $this->portadaRepo->findOrFail($id);
-
-		//VALIDACION DE DATOS
-		$this->validate($request, $this->rules);
 
 		//VARIABLES
 		$titulo = $request->input('titulo');

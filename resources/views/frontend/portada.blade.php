@@ -36,6 +36,10 @@
                         <div class="magazine-image-details column">
                             <div class="image">
                                 <img class="fill" src="{{ $portada->imagen_interior }}">
+
+	                            <div class="exp-button">
+		                            <a href="/ediciones-anteriores">Ediciones Anteriores</a>
+	                            </div>
                             </div>
                             <div class="details">
                                 <h2>Suscríbete a Sucesos</h2>

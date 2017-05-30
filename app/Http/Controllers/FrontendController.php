@@ -154,6 +154,20 @@ class FrontendController extends Controller
         return view('frontend.portada', compact('portada'));
     }
 
+    public function portadaFecha($fecha)
+    {
+        $portada = $this->portadaRepo->listaPortadaSelect($fecha);
+
+        return view('frontend.portada-select', compact('portada'));
+    }
+
+    public function edAnterior()
+    {
+        $ediciones = $this->portadaRepo->listaEdicionAnterior();
+
+        return view('frontend.edicion-anterior', compact('ediciones'));
+    }
+
     /*
      * SUSCRIPCION
      */

@@ -45,6 +45,13 @@ function fechaBlogLista($datetime)
     return ucfirst($fecha);
 }
 
+function fechaEdicionAnterior($datetime)
+{
+    $fecha = Date::create($datetime->year, $datetime->month, $datetime->day, $datetime->hour, $datetime->minute, $datetime->second);
+    $fecha = $fecha->format('d M Y');
+    return ucfirst($fecha);
+}
+
 function fechaPubAdmin($datetime)
 {
     $fecha = Date::create($datetime->year, $datetime->month, $datetime->day, $datetime->hour, $datetime->minute, $datetime->second);
@@ -56,6 +63,13 @@ function fechaPublicacionBD($datetime)
 {
     $fecha = Date::createFromFormat('d/m/Y H:i:s', $datetime);
     $fecha = $fecha->format('Y-m-d H:i:s');
+    return ucfirst($fecha);
+}
+
+function fechaPublicacionSelect($datetime)
+{
+    $fecha = Date::create($datetime->year, $datetime->month, $datetime->day, $datetime->hour, $datetime->minute, $datetime->second);
+    $fecha = $fecha->format('Y-m-d');
     return ucfirst($fecha);
 }
 

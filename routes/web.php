@@ -10,6 +10,8 @@ Route::get('columnista/{url}', ['as' => 'columnista', 'uses' => 'FrontendControl
 Route::get('columna/{id}-{url}', ['as' => 'columna', 'uses' => 'FrontendController@columna']);
 Route::get('buscar', ['as' => 'buscar', 'uses' => 'FrontendController@buscar']);
 Route::get('portada', ['as' => 'portada', 'uses' => 'FrontendController@portada']);
+Route::get('portada/{fecha}', ['as' => 'portada.fecha', 'uses' => 'FrontendController@portadaFecha']);
+Route::get('ediciones-anteriores', ['as' => 'ed-anterior', 'uses' => 'FrontendController@edAnterior']);
 Route::get('suscripcion', ['as' => 'suscripcion', 'uses' => 'FrontendController@suscripcion']);
 Route::post('suscripcion', ['as' => 'suscripcion.post', 'uses' => 'FrontendController@suscripcionPost']);
 

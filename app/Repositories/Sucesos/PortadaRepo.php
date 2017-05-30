@@ -11,12 +11,30 @@ class PortadaRepo extends BaseRepo{
         return new Portada();
     }
 
-    //LISTAR PORTADAS
+    //LISTAR PORTADA
     public function listaPortadaHome()
     {
         return $this->getModel()
                     ->orderBy('published_at', 'desc')
                     ->first();
+    }
+
+    //PORTADA SELECCIONADA
+    public function listaPortadaSelect($fecha)
+    {
+        return $this->getModel()
+                    ->whereDate('published_at', '=', $fecha)
+                    ->first();
+    }
+
+    //LISTAR EDICIONES ANTERIORES
+    public function listaEdicionAnterior()
+    {
+        return $this->getModel()
+                    ->where('publicar', 1)
+                    ->where('embed', '<>', '')
+                    ->orderBy('published_at', 'asc')
+                    ->get();
     }
 
     //BUSQUEDA DE REGISTROS
