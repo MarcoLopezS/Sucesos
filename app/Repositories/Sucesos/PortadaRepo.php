@@ -33,7 +33,7 @@ class PortadaRepo extends BaseRepo{
         return $this->getModel()
                     ->where('publicar', 1)
                     ->where('embed', '<>', '')
-                    ->orderBy('published_at', 'asc')
+                    ->orderBy('published_at', 'desc')
                     ->get();
     }
 
