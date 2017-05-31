@@ -115,6 +115,20 @@
                                     </div>
                                 </div>
 
+	                            <div class="form-group">
+		                            {!! Form::label('texto_edicion', 'Texto en Edición Impresa', ['class' => 'control-label bold']) !!}
+		                            <div class="mt-radio-inline">
+			                            <label class="mt-radio">
+				                            {!! Form::radio('texto_edicion', 1, null) !!} Si
+				                            <span></span>
+			                            </label>
+			                            <label class="mt-radio">
+				                            {!! Form::radio('texto_edicion', 0, true) !!} No
+				                            <span></span>
+			                            </label>
+		                            </div>
+	                            </div>
+
                                 <div class="form-group">
                                     {!! Form::label('published_at', 'Fecha de publicación', ['class' => 'control-label bold']) !!}
                                     {!! Form::text('published_at', date('d/m/Y H:i'), ['class' => 'form-control datetimepicker']) !!}

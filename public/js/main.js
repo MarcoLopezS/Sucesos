@@ -365,4 +365,3 @@ $("#normal-sup").prepend($("#normal-1"));
 $("#normal-inf").prepend($("#normal-6"));
 $("#normal-inf").prepend($("#normal-5"));
 $("#normal-inf").prepend($("#normal-4"));
-//# sourceMappingURL=main.js.map

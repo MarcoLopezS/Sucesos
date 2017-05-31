@@ -10,6 +10,7 @@
     $nota_categoria = $noticia->categoria->titulo;
     $nota_categoria_url = $noticia->categoria->url;
     $nota_fecha = $noticia->fecha;
+    $nota_impresa = $noticia->texto_edicion;
 
     $nota_user = $noticia->user->nombre_completo;
     $nota_user_cargo = $noticia->user->profile->cargo;
@@ -83,6 +84,12 @@
                     <div class="contenido-blog">
                         {!! $nota_contenido !!}
                     </div>
+
+					@if($nota_impresa == 1)
+					<div class="contenido-blog texto-impresa">
+						< Texto completo en la edición impresa >
+					</div>
+					@endif
 				</div>
 
 				<div class="single-topic">

@@ -9,7 +9,7 @@ class Noticia extends BaseEntity {
 
     use SoftDeletes, Searchable;
     protected $dates = ['published_at','deleted_at'];
-	protected $fillable = ['titulo','slug_url','descripcion','contenido','publicar','tipo','published_at','user_id'];
+	protected $fillable = ['titulo','slug_url','descripcion','contenido','publicar','texto_edicion','tipo','published_at','user_id'];
     protected $table = "noticias";
 
     /*

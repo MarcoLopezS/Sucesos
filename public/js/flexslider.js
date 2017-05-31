@@ -29,4 +29,3 @@
         flexslider.vars.maxItems = gridSize;
     });
 }());
-//# sourceMappingURL=flexslider.js.map
