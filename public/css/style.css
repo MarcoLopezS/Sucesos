@@ -4756,6 +4756,28 @@ input.qtyminus {
 .item-edicion-anterior:nth-child(2) {
   margin-top: 0;
 }
+.item-edicion-anterior .imagen {
+  position: relative;
+}
+.item-edicion-anterior .imagen .boton {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.item-edicion-anterior .imagen .boton a {
+  margin: 20px 50px;
+  display: block;
+  color: #fff;
+  background: #f00;
+  padding: 10px;
+  font-size: 20px;
+}
+.item-edicion-anterior .imagen:hover .boton {
+  display: block;
+}
 .item-edicion-anterior .fecha {
   text-align: center;
   margin: 15px 0 0 0;

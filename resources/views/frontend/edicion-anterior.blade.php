@@ -47,6 +47,9 @@
 							<a href="{{ $edicion_url }}">
 								<img src="{{ $edicion_imagen }}" alt="{{ $edicion_titulo }}" class="img-responsive">
 							</a>
+							<div class="boton">
+								<a href="{{ $edicion_url }}">Ver edición online</a>
+							</div>
 						</div>
 						<div class="fecha">
 							<i class="fa fa-chevron-circle-up" aria-hidden="true"></i>

@@ -1,5 +1,5 @@
 const elixir = require('laravel-elixir');
-
+elixir.config.sourcemaps = false;
 require('laravel-elixir-vue-2');
 
 /*
