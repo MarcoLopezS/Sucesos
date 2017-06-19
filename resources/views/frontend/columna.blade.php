@@ -9,6 +9,7 @@
     $nota_imagen = $noticia->imagen_noticia;
     $nota_categoria = $noticia->columnista->nombre_completo;
     $nota_categoria_url = $noticia->columnista->url;
+    $nota_categoria_imagen = $noticia->columnista->imagen_admin;
     $nota_fecha = $noticia->fecha;
     $idRel = 1;
 @endphp
@@ -25,8 +26,8 @@
     <meta property="og:title" content='{{ $nota_titulo  }}'>
     <meta property="og:type" content='article' >
     <meta property="og:url" content='{{ $nota_url }}' >
-    <meta property="og:image" content='{{ $nota_imagen }}' >
-    <meta property="og:site_name" content='@{{ configWeb()->titulo }}' >
+    <meta property="og:image" content='{{ asset($nota_categoria_imagen) }}' >
+    <meta property="og:site_name" content='http://sucesos.pe' >
     <meta property="fb:admins" content='1434798696787255'>
     <meta property="og:description" content='{{ $nota_descripcion }}'>
     <meta property="article:author" content='{{ $nota_categoria_url }}'>
