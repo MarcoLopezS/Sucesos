@@ -19,6 +19,7 @@
     <meta name='googlebot' content='index, follow' />
     <meta name="token" id="token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<meta property="fb:admins" content='1434798696787255'>
 
     {{-- Enlaces Externos --}}
     {!! HTML::style('https://fonts.googleapis.com/css?family=Roboto:400,400i') !!}

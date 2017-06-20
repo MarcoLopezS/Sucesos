@@ -27,13 +27,12 @@
     {!! HTML::style(elixir('libs/flexslider/flexslider.css')) !!}
 
     {{-- Open Graph --}}
+    <meta property="og:type" content="article" >
     <meta property="og:title" content='{{ $nota_titulo  }}'>
-    <meta property="og:type" content='article' >
     <meta property="og:url" content='{{ $nota_url }}' >
-    <meta property="og:image" content='{{ asset($nota_imagen) }}' >
-    <meta property="og:site_name" content='http://sucesos.pe' >
-    <meta property="fb:admins" content='1434798696787255'>
+    <meta property="og:image" content='{{ $nota_imagen }}' >
     <meta property="og:description" content='{{ $nota_descripcion }}'>
+    <meta property="og:site_name" content="sucesos.pe" />
 @stop
 
 @section('contenido_body')
