@@ -30,7 +30,7 @@
     <meta property="og:type" content="article" >
     <meta property="og:title" content='{{ $nota_titulo  }}'>
     <meta property="og:url" content='{{ $nota_url }}' >
-    <meta property="og:image" content='{{ $nota_imagen }}' >
+    <meta property="og:image" content='{{ asset($nota_imagen) }}' >
     <meta property="og:description" content='{{ $nota_descripcion }}'>
     <meta property="og:site_name" content="sucesos.pe" />
 @stop
