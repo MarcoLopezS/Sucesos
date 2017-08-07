@@ -31,13 +31,13 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ $nota_titulo }}">
     <meta property="og:url" content="{{ $nota_url }}">
-    <meta property="og:image" content="{{ asset($nota_imagen) }}">
+    <meta property="og:image" content="{{ asset($nota_imagen_or) }}">
     <meta property="og:description" content="{{ $nota_descripcion }}">
 
     {{-- Twitter Card --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $nota_titulo }}">
-    <meta name="twitter:image" content="{{ asset($nota_imagen) }}">
+    <meta name="twitter:image" content="{{ asset($nota_imagen_or) }}">
     <meta name="twitter:description" content="{{ $nota_descripcion }}">
 
     {{-- JSON-LD --}}
@@ -51,7 +51,7 @@
 		    "@type": "ImageObject",
 		    "height": "200",
 		    "width": "200",
-		    "url": "{{ asset($nota_imagen) }}"
+		    "url": "{{ asset($nota_imagen_or) }}"
 		  },
 		  "articleBody": "{!! $nota_contenido !!}"
 		}
