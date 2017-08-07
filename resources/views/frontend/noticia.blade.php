@@ -6,6 +6,7 @@
     $nota_url = $noticia->url;
     $nota_descripcion = $noticia->descripcion;
     $nota_contenido = $noticia->contenido;
+    $nota_imagen_or = $noticia->imagen_original;
     $nota_imagen = $noticia->imagen_noticia;
     $nota_categoria = $noticia->categoria->titulo;
     $nota_categoria_url = $noticia->categoria->url;
@@ -27,12 +28,34 @@
     {!! HTML::style(elixir('libs/flexslider/flexslider.css')) !!}
 
     {{-- Open Graph --}}
-    <meta property="og:type" content="article" >
-    <meta property="og:title" content='{{ $nota_titulo  }}'>
-    <meta property="og:url" content='{{ $nota_url }}' >
-    <meta property="og:image" content='{{ asset($nota_imagen) }}' >
-    <meta property="og:description" content='{{ $nota_descripcion }}'>
-    <meta property="og:site_name" content="sucesos.pe" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ $nota_titulo }}">
+    <meta property="og:url" content="{{ $nota_url }}">
+    <meta property="og:image" content="{{ asset($nota_imagen) }}">
+    <meta property="og:description" content="{{ $nota_descripcion }}">
+
+    {{-- Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $nota_titulo }}">
+    <meta name="twitter:image" content="{{ asset($nota_imagen) }}">
+    <meta name="twitter:description" content="{{ $nota_descripcion }}">
+
+    {{-- JSON-LD --}}
+    <script type="application/ld+json">
+		{
+		  "@context": "http://schema.org/",
+		  "@type": "NewsArticle",
+		  "headline": "{{ $nota_titulo }}",
+		  "description": "{{ $nota_descripcion }}",
+		  "image": {
+		    "@type": "ImageObject",
+		    "height": "200",
+		    "width": "200",
+		    "url": "{{ asset($nota_imagen) }}"
+		  },
+		  "articleBody": "{!! $nota_contenido !!}"
+		}
+	</script>
 @stop
 
 @section('contenido_body')

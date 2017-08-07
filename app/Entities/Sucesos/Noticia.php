@@ -100,6 +100,11 @@ class Noticia extends BaseEntity {
         return "/upload/".$this->imagen_carpeta."540x335/".$this->imagen;
     }
 
+    public function getImagenOriginalAttribute()
+    {
+        return "/upload/".$this->imagen_carpeta.$this->imagen;
+    }
+
     /*
      * SETTERS
      */
