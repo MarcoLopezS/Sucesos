@@ -42,6 +42,15 @@
 
 <div class="wrapper">
 
+    <div class="banner">
+        <div class="container">
+            <a href="http://cumbrecp.com/congresospe/" target="_blank">
+                <img src="/images/banner-superior.jpg" class="img-responsive" style="margin: 0 auto;"
+                     alt="Primer Congreso Internacional - Campañas Políticas para Gobiernos Locales">
+            </a>
+        </div>
+    </div>
+
     <!-- HEADER / MENU -->
     <header class="header1 header-megamenu">
         <div class="navbar-header padding-vertical-10">
