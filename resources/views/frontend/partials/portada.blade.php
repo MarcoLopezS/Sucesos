@@ -1,13 +1,13 @@
-<div class="side-widget margin-bottom-60">
-    <div class="side-widget margin-bottom-0">
-        <div class="banner">
-            <a href="http://cumbrecp.com/congresospe/" target="_blank">
-                <img src="/images/banner-sidebar.jpg" class="img-responsive" style="margin: 0 auto;"
-                     alt="Primer Congreso Internacional - Campañas Políticas para Gobiernos Locales">
-            </a>
-        </div>
-    </div>
-</div>
+{{--<div class="side-widget margin-bottom-60">--}}
+    {{--<div class="side-widget margin-bottom-0">--}}
+        {{--<div class="banner">--}}
+            {{--<a href="http://cumbrecp.com/congresospe/" target="_blank">--}}
+                {{--<img src="/images/banner-sidebar.jpg" class="img-responsive" style="margin: 0 auto;"--}}
+                     {{--alt="Primer Congreso Internacional - Campañas Políticas para Gobiernos Locales">--}}
+            {{--</a>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 <div class="side-widget margin-bottom-60">
     <div class="side-widget margin-bottom-0">
