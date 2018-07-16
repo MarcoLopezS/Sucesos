@@ -31,8 +31,8 @@
 
                         <div class="panel-body" style="padding:0px !important;">
                             <div class="col-md-12" style="padding:30px; float:center;">
-                                {!! Form::open(['route' => ['admin.noticias.img.store', $posts->id], 'method' => 'POST', 'class' => 'dropzone']) !!}
-                                {!! Form::close() !!}
+								{!! Form::open(['route' => ['admin.noticias.img.store', $posts->id], 'method' => 'POST', 'class' => 'dropzone']) !!}
+								{!! Form::close() !!}
                             </div>
                         </div>
                     </div>
