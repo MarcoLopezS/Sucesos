@@ -72,7 +72,7 @@
 
                                 <div class="form-group">
                                     {!! Form::label('youtube', 'Video actual de Youtube', ['class' => 'control-label bold']) !!}
-                                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/{{ $video[1] }}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	                                <a href="{{ $post->youtube }}" target="_blank">{{ $post->youtube }}</a>
                                 </div>
 
                             </div>
