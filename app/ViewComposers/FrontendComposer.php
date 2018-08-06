@@ -21,6 +21,7 @@ class FrontendComposer
     {
         //NOTICIAS MAS VISTAS
         $masVisto = NoticiaView::select(['noticia_id', \DB::raw('COUNT(*) visitas')])
+                                ->whereNotIn('noticia_id',[63,88,97,117,125,131,135,176,212,318])
                                 ->orderBy('visitas', 'desc')
                                 ->groupBy('noticia_id')
                                 ->havingRaw('COUNT(*)')
