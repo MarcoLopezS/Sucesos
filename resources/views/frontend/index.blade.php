@@ -80,6 +80,33 @@
                     @endforeach
 
                 </div>
+
+                <h3 class="heading-1"><span>Columnistas</span></h3>
+                <div class="row seccion-columnistas">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="flexslider loading">
+                            <ul class="slides columnistas">
+                                @foreach($columnas as $columna)
+                                    @php
+                                        $columnista = $columna->columnista->nombre_completo;
+                                        $columnista_foto = $columna->columnista->imagen_home;
+                                        $columna_titulo = $columna->titulo;
+                                        $columna_url = $columna->url;
+                                    @endphp
+                                <li>
+                                    <div class="columnista-item">
+                                        <div class="nombre">{{ $columnista }}</div>
+                                        <div class="imagen"><img src="{{ $columnista_foto }}" alt="{{ $columnista }}"></div>
+                                        <div class="titulo">
+                                            <a href="{{ $columna_url }}">{{ $columna_titulo }}</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <aside class="col-md-4 col-sm-4">
